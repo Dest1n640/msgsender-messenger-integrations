@@ -1,0 +1,1092 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VMmanager 1.0\n"
+"POT-Creation-Date: 2026-05-28 16:27+0000\n"
+"PO-Revision-Date: 2026-05-28 16:27+0000\n"
+"Last-Translator: Your Name <you@example.com>\n"
+"Language-Team: Russian <you@example.com>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%1 ? 2 :(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2))\n"
+
+msgid ":"
+msgstr ":"
+
+msgid ";"
+msgstr ";"
+
+msgid "ADDITIONAL"
+msgstr "дополнительный"
+
+msgid "ADMINISTRATOR"
+msgstr "Администратор"
+
+msgid "ADVANCED_USER"
+msgstr "Продвинутый пользователь"
+
+msgid "BACKUP_CREATION_ERROR"
+msgstr "Ошибка создания бэкапа"
+
+msgid "BACKUP_CREATION_FAILED_TEXT"
+msgstr "Не удалось выполнить бэкап по расписанию на этапе %(NAME)s задачи %(ID)s. Была создана задача на удаление нового бэкапа. Проверьте состояние узлов и хранилищ для бэкапов виртуальных машин."
+
+msgid "BACKUP_ID"
+msgstr "Id бэкапа:"
+
+msgid "BACKUP_NAME"
+msgstr "Имя бэкапа:"
+
+msgid "BARCODE:"
+msgstr "Имя:"
+
+msgid "CHASSIS"
+msgstr "Шасси"
+
+msgid "CHASSIS_SLOT"
+msgstr ", Шасси: %(chassis)s, слот: %(slot)s"
+
+msgid "COMPONENT_STATUS_CRITICAL"
+msgstr "Критическое состояние %(component_name)s"
+
+msgid "COMPONENT_STATUS_NORMAL"
+msgstr "Состояние %(component_name)s вернулось в пределы нормы"
+
+msgid "COMPONENT_STATUS_WARNING"
+msgstr "Возможны неполадки на %(component_name)s"
+
+msgid "CONFIRM"
+msgstr "Подтвердить"
+
+msgid "CONGRATULATIONS"
+msgstr "Поздравляем!"
+
+msgid "CREATION_DATE_FIELD"
+msgstr "Дата создания:"
+
+msgid "CRITICAL_NODE_LOAD"
+msgstr "Загрузка %(type)s на узле превысила пороговое значение"
+
+msgid "CRITICAL_VM_LOAD"
+msgstr "Загрузка %(type)s на VM превысила пороговое значение"
+
+msgid "CUSTOMER_GREETINGS"
+msgstr "Здравствуйте!"
+
+msgid "DAY"
+msgid_plural "DAY_MANY"
+msgstr[0] "день"
+msgstr[1] "дня"
+msgstr[2] "дней"
+
+msgid "DCI_PASSWORD_RECOVERY"
+msgstr "DCImanager. Восстановление пароля"
+
+msgid "DCI_SUBMITTED_PASSWORD_RECOVERY"
+msgstr "Чтобы восстановить пароль в DCImanager, перейдите по ссылке и следуйте инструкциям."
+
+msgid "DEFAULT_PHONE_NUMBER"
+msgstr "8-800-775-4771"
+
+msgid "DEMO_VALID_TIME"
+msgstr "Доступ действителен 12 часов с момента перехода по ссылке."
+
+msgid "DEMO_VERSION_ACCESS"
+msgstr "Доступ к демо-версии DCImanager"
+
+msgid "DIAGNOSIS_CANCELLED_BY_ADMIN"
+msgstr "Диагностика отменена администратором. На сервере %(error_found_phrase)s"
+
+msgid "DIAGNOSIS_CANCELLED_BY_ADMIN_ONLY"
+msgstr "Диагностика отменена администратором."
+
+msgid "DIAGNOSIS_COMPLETE_ONLY_ERROR"
+msgstr "Операция диагностики завершена с ошибкой."
+
+msgid "DIAGNOSIS_COMPLETE_SUCCESS"
+msgstr "Диагностика успешно завершена. На сервере %(error_found_phrase)s"
+
+msgid "DIAGNOSIS_COMPLETE_WITH_ERROR"
+msgstr "Операция диагностики завершена с ошибкой. На сервере %(error_found_phrase)s"
+
+msgid "DISKS_FIELD"
+msgstr "Диски:"
+
+msgid "DISK_ID"
+msgstr "Id диска:"
+
+msgid "DISK_NAME"
+msgstr "Имя диска:"
+
+msgid "DOCUMENTATION_LINK"
+msgstr "Подробнее в документации..."
+
+msgid "DOMAIN_FIELD"
+msgstr "Домен:"
+
+msgid "DSS:"
+msgstr "СХД:"
+
+msgid "DSS_CONTROLLER_CPU_UTILIZATION"
+msgstr "Контроллеры - Утилизация CPU, %%: более %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_CPU_UTILIZATION_RESOLVED"
+msgstr "Контроллеры - Утилизация CPU, %%: значение вернулось в норму"
+
+msgid "DSS_CONTROLLER_HEALTH"
+msgstr "Контроллеры - Health-статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_CONTROLLER_HEALTH_RESOLVED"
+msgstr "Контроллеры - Health-статус: значение вернулось в норму"
+
+msgid "DSS_CONTROLLER_IOPS"
+msgstr "Контроллеры - IOPS: более %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_IOPS_RESOLVED"
+msgstr "Контроллеры - IOPS: значение вернулось в норму"
+
+msgid "DSS_CONTROLLER_READ_RATE"
+msgstr "Контроллеры - Скорость чтения, MБ/c: более %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_READ_RATE_RESOLVED"
+msgstr "Контроллеры - Скорость чтения, MБ/c: значение вернулось в норму"
+
+msgid "DSS_CONTROLLER_STATUS"
+msgstr "Контроллеры - Статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_CONTROLLER_STATUS_RESOLVED"
+msgstr "Контроллеры - Статус: значение вернулось в норму"
+
+msgid "DSS_CONTROLLER_WRITE_RATE"
+msgstr "Контроллеры - Скорость записи, MБ/c: более %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_WRITE_RATE_RESOLVED"
+msgstr "Контроллеры - Скорость записи, MБ/c: значение вернулось в норму"
+
+msgid "DSS_DISK_GROUP_HEALTH"
+msgstr "Дисковые группы - Health-статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_DISK_GROUP_HEALTH_RESOLVED"
+msgstr "Дисковые группы - Health-статус: значение вернулось в норму"
+
+msgid "DSS_DISK_GROUP_IOPS"
+msgstr "Дисковые группы - IOPS: более %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_IOPS_RESOLVED"
+msgstr "Дисковые группы - IOPS: значение вернулось в норму"
+
+msgid "DSS_DISK_GROUP_READ_RATE"
+msgstr "Дисковые группы - Скорость чтения, MБ/c: более %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_READ_RATE_RESOLVED"
+msgstr "Дисковые группы - Скорость чтения, MБ/c: значение вернулось в норму"
+
+msgid "DSS_DISK_GROUP_SPACE_UTILIZATION"
+msgstr "Дисковые группы - Утилизация дискового пространства, %%: более %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_SPACE_UTILIZATION_RESOLVED"
+msgstr "Дисковые группы - Утилизация дискового пространства, %%: значение вернулось в норму"
+
+msgid "DSS_DISK_GROUP_STATUS"
+msgstr "Дисковые группы - Статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_DISK_GROUP_STATUS_RESOLVED"
+msgstr "Дисковые группы - Статус: значение вернулось в норму"
+
+msgid "DSS_DISK_GROUP_WRITE_RATE"
+msgstr "Дисковые группы - Скорость записи, MБ/c: более %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_WRITE_RATE_RESOLVED"
+msgstr "Дисковые группы - Скорость записи, MБ/c: значение вернулось в норму"
+
+msgid "DSS_DISK_HEALTH"
+msgstr "Диски - Health-статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_DISK_HEALTH_RESOLVED"
+msgstr "Диски - Health-статус: значение вернулось в норму"
+
+msgid "DSS_DISK_TEMPERATURE_STATUS"
+msgstr "Диски - Статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_DISK_TEMPERATURE_STATUS_RESOLVED"
+msgstr "Диски - Статус: значение вернулось в норму"
+
+msgid "DSS_ENCLOSURE_HEALTH"
+msgstr "Дисковые полки - Health-статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_ENCLOSURE_HEALTH_RESOLVED"
+msgstr "Дисковые полки - Health-статус: значение вернулось в норму"
+
+msgid "DSS_ENCLOSURE_STATUS"
+msgstr "Дисковые полки - Статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_ENCLOSURE_STATUS_RESOLVED"
+msgstr "Дисковые полки - Статус: значение вернулось в норму"
+
+msgid "DSS_FAN_HEALTH"
+msgstr "Вентиляторы - Health-статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_FAN_HEALTH_RESOLVED"
+msgstr "Вентиляторы - Health-статус: значение вернулось в норму"
+
+msgid "DSS_FAN_STATUS"
+msgstr "Вентиляторы - Статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_FAN_STATUS_RESOLVED"
+msgstr "Вентиляторы - Статус: значение вернулось в норму"
+
+msgid "DSS_HOST_PORT_HEALTH"
+msgstr "Порты - Health-статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_HOST_PORT_HEALTH_RESOLVED"
+msgstr "Порты - Health-статус: значение вернулось в норму"
+
+msgid "DSS_HOST_PORT_STATUS"
+msgstr "Порты - Статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_HOST_PORT_STATUS_RESOLVED"
+msgstr "Порты - Статус: значение вернулось в норму"
+
+msgid "DSS_MANAGEMENT_PORT_HEALTH"
+msgstr "Порты - Health-статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_MANAGEMENT_PORT_HEALTH_RESOLVED"
+msgstr "Порты - Health-статус: значение вернулось в норму"
+
+msgid "DSS_POOL_HEALTH"
+msgstr "Пулы - Статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_POOL_HEALTH_RESOLVED"
+msgstr "Пулы - Статус: значение вернулось в норму"
+
+msgid "DSS_POWER_SUPPLY_HEALTH"
+msgstr "Блоки питания - Health-статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_POWER_SUPPLY_HEALTH_RESOLVED"
+msgstr "Блоки питания - Health-статус: значение вернулось в норму"
+
+msgid "DSS_POWER_SUPPLY_STATUS"
+msgstr "Блоки питания - Статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_POWER_SUPPLY_STATUS_RESOLVED"
+msgstr "Блоки питания - Статус: значение вернулось в норму"
+
+msgid "DSS_SYSTEM_HEALTH"
+msgstr "Система - Health-статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_SYSTEM_HEALTH_RESOLVED"
+msgstr "Система - Health-статус: значение вернулось в норму"
+
+msgid "DSS_SYSTEM_STATUS"
+msgstr "Система - Статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_SYSTEM_STATUS_RESOLVED"
+msgstr "Система - Статус: значение вернулось в норму"
+
+msgid "DSS_VOLUME_HEALTH"
+msgstr "Тома - Health-статус: не соответствует ожидаемому %(time_period)s"
+
+msgid "DSS_VOLUME_HEALTH_RESOLVED"
+msgstr "Тома - Health-статус: значение вернулось в норму"
+
+msgid "DSS_VOLUME_IOPS"
+msgstr "Тома - IOPS: более %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_IOPS_RESOLVED"
+msgstr "Тома - IOPS: значение вернулось в норму"
+
+msgid "DSS_VOLUME_READ_RATE"
+msgstr "Тома - Скорость чтения, MБ/c: более %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_READ_RATE_RESOLVED"
+msgstr "Тома - Скорость чтения, MБ/c: значение вернулось в норму"
+
+msgid "DSS_VOLUME_SPACE_UTILIZATION"
+msgstr "Тома - Утилизация дискового пространства, %%: более %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_SPACE_UTILIZATION_RESOLVED"
+msgstr "Тома - Утилизация дискового пространства, %%: значение вернулось в норму"
+
+msgid "DSS_VOLUME_WRITE_RATE"
+msgstr "Тома - Скорость записи, MБ/c: более %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_WRITE_RATE_RESOLVED"
+msgstr "Тома - Скорость записи, MБ/c: значение вернулось в норму"
+
+msgid "DURATION_FIELD"
+msgstr "Длительность:"
+
+msgid "EMAIL_CONFIRMATION"
+msgstr "Подтвердите email"
+
+msgid "END_WARRANTY_WARNING"
+msgstr "Рекомендуем принять меры по обеспечению безопасности и надежности работы оборудования после истечения гарантийного срока."
+
+msgid "ENTER_PARAMS"
+msgstr "Данные для входа:"
+
+msgid "ENTITY_TYPE_CHASSIS"
+msgstr "шасси"
+
+msgid "ENTITY_TYPE_CPU"
+msgstr "процессор"
+
+msgid "ENTITY_TYPE_DSS_CACHE_MODULE"
+msgstr "cache модуль"
+
+msgid "ENTITY_TYPE_DSS_CHASSIS"
+msgstr "шасси СХД"
+
+msgid "ENTITY_TYPE_DSS_CHASSIS_CONTROLLER"
+msgstr "контроллер"
+
+msgid "ENTITY_TYPE_DSS_CHASSIS_IO_MODULE"
+msgstr "I/O модуль"
+
+msgid "ENTITY_TYPE_OTHER"
+msgstr "другое оборудование"
+
+msgid "ENTITY_TYPE_PCI"
+msgstr "PCI-е устройство"
+
+msgid "ENTITY_TYPE_PDU"
+msgstr "распределителя питания"
+
+msgid "ENTITY_TYPE_PSU"
+msgstr "блок питания"
+
+msgid "ENTITY_TYPE_RAM"
+msgstr "оперативная память"
+
+msgid "ENTITY_TYPE_SERVER"
+msgstr "сервер"
+
+msgid "ENTITY_TYPE_STORAGE"
+msgstr "накопитель"
+
+msgid "ENTITY_TYPE_SWITCH"
+msgstr "коммутатор"
+
+msgid "ENTITY_TYPE_UPS"
+msgstr "ИБП"
+
+msgid "ERRORS_FIELD"
+msgstr "Ошибки:"
+
+msgid "ERROR_FIELD"
+msgstr "Ошибка:"
+
+msgid "ERROR_LIST_IPMI"
+msgstr "Не удалось проверить доступность IPMI после его настройки"
+
+msgid "ERROR_LIST_LOCAL_SPEED"
+msgstr "Выявлена низкая скорость локального соединения"
+
+msgid "ERROR_LIST_SMART"
+msgstr "%(count)d %(smart_error_word)s технологией SMART дисков"
+
+msgid "ERROR_ONE"
+msgid_plural "ERROR_ONE_MANY"
+msgstr[0] "ошибка"
+msgstr[1] "ошибки"
+msgstr[2] "ошибок"
+
+msgid "EXPIRING_OR_EXPIRED_RESERVATION_UNIT_PERIOD"
+msgid_plural "EXPIRING_OR_EXPIRED_RESERVATION_UNIT_PERIOD_MANY"
+msgstr[0] "У %(count)s юнита заканчивается или закончился срок резервирования"
+msgstr[1] "У %(count)s юнитов заканчиваются или закончились сроки резервирования"
+msgstr[2] "У %(count)s юнитов заканчиваются или закончились сроки резервирования"
+
+msgid "FAN"
+msgstr "скорость вращения вентиляторов"
+
+msgid "FAN_BACK"
+msgstr "скорость вращения вентиляторов вернулась"
+
+msgid "FINISH_REGISTRATION_GUIDE"
+msgstr "Для завершения регистрации подтвердите ваш email. Если вы не регистрировались в сервисе, проигнорируйте это письмо."
+
+msgid "FOUND_ONE"
+msgid_plural "FOUND_ONE_MANY"
+msgstr[0] "найдена"
+msgstr[1] "найдены"
+msgstr[2] "найдено"
+
+msgid "GET_STARTED"
+msgstr "Начать работу"
+
+msgid "GO_TO"
+msgstr "Перейти"
+
+msgid "GO_TO_COMPONENTS"
+msgstr "Перейти в комплектующие"
+
+msgid "GO_TO_DEVICE"
+msgid_plural "GO_TO_DEVICE_MANY"
+msgstr[0] "Перейти к устройству"
+msgstr[1] "Перейти к устройствам"
+msgstr[2] "Перейти к устройствам"
+
+msgid "GO_TO_RACK"
+msgstr "Перейти к стойке"
+
+msgid "GO_TO_SERVER"
+msgstr "Перейти к серверу"
+
+msgid "GO_TO_SERVER_COMPONENTS"
+msgstr "Перейти к комплектующим сервера"
+
+msgid "GO_TO_SERVER_EQUIPMENT"
+msgstr "Перейти в комплектующие"
+
+msgid "GO_TO_SERVER_SETTINGS"
+msgstr "Перейти к настройкам сервера"
+
+msgid "GO_TO_VM_MANAGER"
+msgstr "Перейти в VMmanager"
+
+msgid "GRANTED_ACCESS_TO_DEMO_VERSION"
+msgstr "Вы получили доступ к демо-версии DCImanager - платформы управления IT‑инфраструктурой в едином интерфейсе. Ознакомьтесь с возможностями для автоматизации, мониторинга и учёта на добавленном нами оборудовании. Часть функционала недоступна в демо-версии."
+
+msgid "HEALTH_STATUS_FIELD"
+msgstr "Health-статус:"
+
+msgid "HELLO_WORD"
+msgstr "Здравствуйте!"
+
+msgid "HELP_PHONE_NUMBER"
+msgstr "+7-800-775-4778"
+
+msgid "HELP_PHONE_NUMBER_INTER"
+msgstr "7-495-109-4264"
+
+msgid "HELP_PHONE_NUMBER_INTER_RAW"
+msgstr "74951094264"
+
+msgid "HELP_PHONE_NUMBER_RAW"
+msgstr "+78007754778"
+
+msgid "HELP_PHONE_NUMBER_SPAN_1"
+msgstr "+1-800-"
+
+msgid "HELP_PHONE_NUMBER_SPAN_2"
+msgstr "775-4778"
+
+msgid "INCONSISTENCIES_IN_SERVER_COMPONENTS"
+msgstr "Несоответствия в комплектующих сервера"
+
+msgid "INCONSISTENCIES_IN_SERVER_COMPONENTS_DETECTED"
+msgstr "Обнаружены несоответствия в комплектующих сервера"
+
+msgid "INCONSISTENCIES_IN_SERVER_PROFILE_PARAMETERS"
+msgstr "Обнаружены несоответствия в параметрах профиля сервера"
+
+msgid "INCONSISTENCIES_SERVER_PROFILE_PARAMS"
+msgstr "Несоответствия в параметрах профиля сервера"
+
+msgid "INVITED_MSG"
+msgstr "Вас пригласили в сервис VMmanager с уровнем доступа “%(role)s”. Перейдите по ссылке и придумайте пароль от своей учетной записи %(email)s."
+
+msgid "IN_WAREHOUSE"
+msgstr "на складе %(name)s"
+
+msgid "IP_ADDRESS_FIELD"
+msgstr "IP адрес:"
+
+msgid "LAST_VALUE_FIELD"
+msgstr "Последнее значение:"
+
+msgid "LETS_START"
+msgstr "Начать работу"
+
+msgid "LINK_ERROR_PHRASE_EMPTY"
+msgstr "Подробнее"
+
+msgid "LINK_ERROR_PHRASE_PLURAL"
+msgstr "Подробнее об ошибках"
+
+msgid "LINK_ERROR_PHRASE_SINGULAR"
+msgstr "Подробнее об ошибке"
+
+msgid "LINK_PHONE_NUMBER"
+msgstr "<a href=\"tel:+74956681264\" class=\"footer-link text-right\" style=\"color: #344A5E; font-family: Roboto,Tahoma,sans-serif; font-size: 12px; font-weight: 400; line-height: 1.5; margin: 0; padding: 0; text-align: right; text-decoration: underline;\">7-495-668-12-64</a>, <a href=\"tel:+78007754771\" class=\"footer-link text-right\" style=\"color: #344A5E; font-family: Roboto,Tahoma,sans-serif; font-size: 12px; font-weight: 400; line-height: 1.5; margin: 0; padding: 0; text-align: right; text-decoration: underline;\">8-800-775-4771</a>"
+
+msgid "LOCATION:"
+msgstr "Расположение:"
+
+msgid "LOGIN_FIELD"
+msgstr "Логин:"
+
+msgid "LOG_IN"
+msgstr "Перейти к управлению"
+
+msgid "MANAGE_VM_VIA_SSH_GUIDE"
+msgstr "Чтобы управлять виртуальной машиной по SSH, используйте данные для входа:"
+
+msgid "MANUAL_BACKUP_CREATION_FAILED_TEXT"
+msgstr "Не удалось выполнить бэкап на этапе %(NAME)s задачи %(ID)s. Была создана задача на удаление нового бэкапа. Проверьте состояние узлов и хранилищ для бэкапов виртуальных машин."
+
+msgid "MASTER;"
+msgstr "основной;"
+
+msgid "NEW_PASSWORD_FIELD"
+msgstr "Новый пароль:"
+
+msgid "NEW_PLATFORM_ADDRESS_FIELD"
+msgstr "Новый адрес доступа к платформе:"
+
+msgid "NODE_AVAILABLE"
+msgstr "Доступ к узлу кластера восстановлен"
+
+msgid "NODE_DESCRIPTION"
+msgstr "Узел кластера %(id)s %(name)s"
+
+msgid "NODE_LOAD_BELOW_CRITICAL_VALUE"
+msgstr "Загрузка %(type)s на узле теперь ниже порогового значения"
+
+msgid "NODE_TIME_EMPTY"
+msgstr "Нет информации о синхронизации времени на узле"
+
+msgid "NODE_TIME_EMPTY_DETAILED"
+msgstr "Нет информации о синхронизации времени на узле %(name)s #%(id)s, потому что не запущен NTP-сервис"
+
+msgid "NODE_TIME_NOT_SYNCHRONIZED"
+msgstr "Время на узле не синхронизировано"
+
+msgid "NODE_TIME_NOT_SYNCHRONIZED_DETAILED"
+msgstr "Время на узле %(name)s #%(id)s не синхронизировано"
+
+msgid "NODE_TIME_PACKAGE_ERROR"
+msgstr "Время на узле не синхронизируется"
+
+msgid "NODE_TIME_PACKAGE_ERROR_DETAILED"
+msgstr "Время на узле %(name)s #%(id)s не синхронизируется, потому что произошла ошибка в NTP-пакетах"
+
+msgid "NODE_TIME_SYNCHRONIZED"
+msgstr "Время на узле синхронизировано"
+
+msgid "NODE_TIME_SYNCHRONIZED_DETAILED"
+msgstr "Время на узле кластера %(name)s #%(id)s синхронизировано"
+
+msgid "NODE_TIME_TIMEDRIFT_ERROR"
+msgstr "Время на узле не синхронизировано"
+
+msgid "NODE_TIME_TIMEDRIFT_ERROR_DETAILED"
+msgstr "Время на узле %(name)s #%(id)s не синхронизировано: превышено допустимое отклонение от эталонного времени"
+
+msgid "NODE_TIME_UNDEFINED"
+msgstr "Время на узле не определено"
+
+msgid "NODE_TIME_UNDEFINED_DETAILED"
+msgstr "Время на узле %(name)s #%(id)s не определено, потому что произошла ошибка в Nodewarden"
+
+msgid "NODE_TIME_UNKNOWN"
+msgstr "Состояние синхронизации времени на узле неизвестно"
+
+msgid "NODE_TIME_UNKNOWN_DETAILED"
+msgstr "Состояние синхронизации времени на узле %(name)s #%(id)s неизвестно, потому что произошла внутренняя ошибка. Проверьте нотификации или логи"
+
+msgid "NODE_UNAVAILABLE"
+msgstr "Узел кластера недоступен"
+
+msgid "OPEN_DEMO"
+msgstr "Перейти к демо"
+
+msgid "OS_FIELD"
+msgstr "ОС:"
+
+msgid "PARAMS_FIELD"
+msgstr "Параметры:"
+
+msgid "PASSWORD_CHANGE_ERROR_FIELD"
+msgstr "Ошибка смены пароля:"
+
+msgid "PASSWORD_FIELD"
+msgstr "Пароль:"
+
+msgid "PASSWORD_RECOVERY"
+msgstr "Восстановление пароля"
+
+msgid "PERMISSIBLE RANGE:"
+msgstr "Допустимый диапазон:"
+
+msgid "PLATFORM_MANAGMENT_INTERFACE_INVITE"
+msgstr "Вас пригласили в сервис управления платформой"
+
+msgid "PLATFORM_MANAGMENT_INTERFACE_INVITE_PERMISSION"
+msgstr "Вас пригласили в сервис управления платформой с уровнем доступа “%(role)s”."
+
+msgid "PLATFORM_MIGRATION"
+msgstr "Платформа VMmanager перенесена на VM"
+
+msgid "PLATFORM_MIGRATION_ERROR"
+msgstr "Ошибка переноса платформы VMmanager на VM"
+
+msgid "PLATFORM_MIGRATION_STOPPED"
+msgstr "Перенос платформы остановлен. Платформа доступна и работает в том же состоянии, как до начала переноса."
+
+msgid "PLATFORM_MIGRATION_TO_VM"
+msgstr "Платформа перенесена на VM"
+
+msgid "PLATFORM_MIGRATION_TO_VM_ERROR"
+msgstr "Перенос платформы на VM завершился с ошибкой."
+
+msgid "PLATFORM_MIGRATION_TO_VM_SUCCESS"
+msgstr "Перенос платформы на VM завершился успешно."
+
+msgid "RACK"
+msgstr "Стойка"
+
+msgid "RACK_INFO"
+msgstr ", Стойка: %(rack)s"
+
+msgid "RECOVER"
+msgstr "Восстановить"
+
+msgid "RESERVED_UNTIL"
+msgstr "В резерве до %(end_date)s"
+
+msgid "RESERVED_UNTIL:"
+msgstr "В резерве до:"
+
+msgid "RESOLVE_RECOMMENDATIONS"
+msgstr "Для устранения рекомендуем проверить исправность оборудования сервера, а затем повторно провести диагностику."
+
+msgid "ROOT_PASSWORD_FIELD"
+msgstr "Root пароль:"
+
+msgid "Reserved until %(date)s"
+msgstr "В резерве до %(date)s"
+
+msgid "SCHEDULE_ID"
+msgstr "Id расписания:"
+
+msgid "SECONDS"
+msgstr "с"
+
+msgid "SENSOR_BACK_TO_NORMAL"
+msgstr "Сервер %(server)s, %(sensor)s: %(status)s в пределы нормы"
+
+msgid "SENSOR_EXCEEDS_LIMIT"
+msgstr "Сервер %(server)s, %(sensor)s: %(type)s превышает допустимый диапазон"
+
+msgid "SENSOR_EXCEEDS_LIMIT_TIME"
+msgstr "Сервер %(server)s, %(sensor)s: %(type)s превышает допустимый диапазон%(time)s"
+
+msgid "SERVER_ERROR_PHRASE_PLURAL"
+msgstr "Ошибки сервера:"
+
+msgid "SERVER_ERROR_PHRASE_SINGULAR"
+msgstr "Ошибка сервера:"
+
+msgid "SERVER_FIELD"
+msgstr "Сервер:"
+
+msgid "SET_PASSWORD_LINK"
+msgstr "Перейдите по ссылке и придумайте пароль от своей учетной записи."
+
+msgid "SLOT"
+msgstr "слот"
+
+msgid "SUBJECT_CRITICAL"
+msgstr "Критическое состояние %(component)s. Проверьте состояние устройства"
+
+msgid "SUBJECT_RESOLVED"
+msgstr "Состояние %(component)s вернулось в пределы нормы"
+
+msgid "SUBJECT_WARNING"
+msgstr "Возможны неполадки на %(component)s. Незамедлительно проверьте устройство"
+
+msgid "SUPPORT_CONTACT"
+msgstr "Если у вас возникнут вопросы или трудности, обращайтесь в <a href=\"https://www.ispsystem.com/support\" target=\"_blank\" style=\"color: #2F82C4;text-decoration: underline;\">службу&nbsp;техподдержки</a>.<br />Отвечаем круглосуточно и без выходных."
+
+msgid "TASK_SUBJECT_FAILED"
+msgstr "Задача завершилась с ошибкой: %(task)s"
+
+msgid "TASK_SUBJECT_RUNNING"
+msgstr "Новая задача запущена: %(task)s"
+
+msgid "TEMPERATURE"
+msgstr "температура"
+
+msgid "TEMPERATURE_BACK"
+msgstr "температура вернулась"
+
+msgid "TEST_EMAIL_SUBJECT"
+msgstr "Тестовое письмо."
+
+msgid "TEST_EMAIL_TEXT"
+msgstr "Это тестовое письмо для проверки настроек почты. Отвечать на него не нужно."
+
+msgid "TIME_RANGE_ONE"
+msgid_plural "TIME_RANGE_ONE_MANY"
+msgstr[0] " в течение %(minutes)s минуты"
+msgstr[1] " в течение %(minutes)s минут"
+msgstr[2] " в течение %(minutes)s минут"
+
+msgid "TIMING_UNIT_RESERVATIONS_VARIES."
+msgstr "Сроки резервирования юнитов различаются."
+
+msgid "UNIT_HAS_REACHED_THE_END_OF_ITS_RESERVATION_PERIOD"
+msgid_plural "UNIT_HAS_REACHED_THE_END_OF_ITS_RESERVATION_PERIOD_MANY"
+msgstr[0] "У юнита закончился срок резервирования."
+msgstr[1] "У юнитов подошли к концу сроки резервирования."
+msgstr[2] "У юнитов подошли к концу сроки резервирования."
+
+msgid "UNIT_NEARING_RESERVATION_PERIOD_WARNING"
+msgid_plural "UNIT_NEARING_RESERVATION_PERIOD_WARNING_MANY"
+msgstr[0] "Срок резервирования юнита подходит к концу."
+msgstr[1] "Срок резервирования юнитов подходит к концу."
+msgstr[2] "Срок резервирования юнитов подходит к концу."
+
+msgid "UNIT_RANGE"
+msgstr ", U: %(u_start)s-%(u_end)s (%(u_size)sU)"
+
+msgid "UNIT_RESERVATION_HAS_EXPIRED"
+msgid_plural "UNIT_RESERVATION_HAS_EXPIRED_MANY"
+msgstr[0] "Резервирование юнита закончилось"
+msgstr[1] "Резервирование %(count)s юнитов закончилось"
+msgstr[2] "Резервирование %(count)s юнитов закончилось"
+
+msgid "UNIT_RESERVATION_WILL_EXPIRE_IN"
+msgid_plural "UNIT_RESERVATION_WILL_EXPIRE_IN_MANY"
+msgstr[0] "Резервирование юнита закончится через %(days)s %(day_word)s"
+msgstr[1] "Резервирование %(count)s юнитов закончится через %(days)s %(day_word)s"
+msgstr[2] "Резервирование %(count)s юнитов закончится через %(days)s %(day_word)s"
+
+msgid "UNIT_SINGLE"
+msgstr ", U: %(u)s"
+
+msgid "UNIT_START_END"
+msgstr "U: %(start)s-%(end)s"
+
+msgid "USER"
+msgstr "Пользователь"
+
+msgid "VALUE_RETURNED_TO_NORMAL"
+msgstr "значение вернулось в норму"
+
+msgid "VIRTUAL_MACHINE"
+msgstr "Виртуальная машина:"
+
+msgid "VIRTUAL_MACHINE_PARAMS_FIELD"
+msgstr "Параметры виртуальной машины:"
+
+msgid "VM_ACCESS_GUIDE"
+msgstr "Чтобы управлять виртуальной машиной, используйте данные для входа:"
+
+msgid "VM_ACCOUNT_CREATED"
+msgstr "Для вас создан аккаунт в сервисе VMmanager. Для входа используйте ваш email: %(email)s."
+
+msgid "VM_ACTIVE"
+msgstr "Виртуальная машина в статусе: активна"
+
+msgid "VM_ACTIVE_NOW"
+msgstr "Виртуальная машина %(name)s (#%(id)s) в статусе: активна"
+
+msgid "VM_CHANGE_PASSWORD"
+msgstr "Пароль успешно изменён"
+
+msgid "VM_CHANGE_PASSWORD_DETAILED"
+msgstr "Пароль для виртуальной машины \"%(name)s\" изменён."
+
+msgid "VM_CHANGE_PASSWORD_ERROR"
+msgstr "Пароль не был изменен. Для доступа к виртуальной машине измените пароль:"
+
+msgid "VM_CRASHED"
+msgstr "Виртуальная машина повреждена"
+
+msgid "VM_CRASHED_DETAILED"
+msgstr "Виртуальная машина %(name)s (#%(id)s) повреждена"
+
+msgid "VM_CREATED"
+msgstr "Создание виртуальной машины"
+
+msgid "VM_CREATED_DETAILED"
+msgstr "Для вас создана виртуальная машина \"%(name)s\" на сервере %(link)s со следующими параметрами:"
+
+msgid "VM_DESCRIPTION"
+msgstr "Виртуальная машина #%(id)s %(name)s"
+
+msgid "VM_EMAIL_CONFIRMATION"
+msgstr "Подтверждение email"
+
+msgid "VM_LOAD_BELOW_CRITICAL_VALUE"
+msgstr "Загрузка %(type)s на VM ниже порогового значения"
+
+msgid "VM_LOAD_BELOW_DETAILED"
+msgstr "Загрузка %(type)s на VM %(name)s (#%(id)s) ниже %(value)s%%:"
+
+msgid "VM_LOAD_EXCEEDED"
+msgstr "Загрузка %(type)s на VM %(name)s (#%(id)s) превысила пороговое значение %(value)s%%:"
+
+msgid "VM_MANAGER_INVITE"
+msgstr "Вас пригласили в VMmanager"
+
+msgid "VM_PASSWORD_RECOVERY"
+msgstr "Восстановление пароля"
+
+msgid "VM_REINSTALLED"
+msgstr "Переустановка виртуальной машины"
+
+msgid "VM_REINSTALLED_ON_SERVER_SUCCESSFULLY"
+msgstr "Ваша виртуальная машина \"%(name)s\" на сервере %(server)s была успешно переустановлена."
+
+msgid "VM_SUBMITTED_PASSWORD_RECOVERY"
+msgstr "Чтобы восстановить пароль в сервисе VMmanager перейдите по ссылке и следуйте инструкциям."
+
+msgid "VOLTAGE"
+msgstr "напряжение"
+
+msgid "VOLTAGE_BACK"
+msgstr "напряжение вернулось"
+
+msgid "WAREHOUSE_ENTITY_COUNT:"
+msgstr "Количество оборудования:"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_RESERVATION_EXPIRED_MANY"
+msgstr[0] "Резервирование устройства закончилось"
+msgstr[1] "На %(count)s устройстве закончился срок резервирования"
+msgstr[2] "На %(count)s устройствах закончился срок резервирования"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_EXPIRING_OR_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_RESERVATION_EXPIRING_OR_EXPIRED_MANY"
+msgstr[0] "На устройстве закончился или заканчивается срок резервирования"
+msgstr[1] "На %(count)s устройстве заканчивается или закончился срок резервирования"
+msgstr[2] "На %(count)s устройствах заканчивается или закончился срок резервирования"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_PERIOD_EXPIRED"
+msgstr "На оборудовании подошел к концу срок резервирования"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_VARIES."
+msgstr "Сроки резервирования оборудования различаются."
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_WILL_EXPIRED_IN_DAYS"
+msgid_plural "WAREHOUSE_ENTITY_RESERVATION_WILL_EXPIRED_IN_DAYS_MANY"
+msgstr[0] "Резервирование устройства закончится через %(days)s %(day_word)s"
+msgstr[1] "Резервирование %(count)s устройств закончится через %(days)s %(day_word)s"
+msgstr[2] "Резервирование %(count)s устройств закончится через %(days)s %(day_word)s"
+
+msgid "WAREHOUSE_ENTITY_RESERVED_UNTIL"
+msgstr "Устройства в резерве до %(date)s"
+
+msgid "WAREHOUSE_ENTITY_TYPE:"
+msgstr "Тип оборудования:"
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_WARRANTY_EXPIRED_MANY"
+msgstr[0] "Гарантия устройства закончилось"
+msgstr[1] "На %(count)s устройствах закончился срок гарантии"
+msgstr[2] "На %(count)s устройствах закончился срок гарантии"
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_EXPIRING_OR_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_WARRANTY_EXPIRING_OR_EXPIRED_MANY"
+msgstr[0] "На устройстве закончился или заканчивается срок гарантии"
+msgstr[1] "На %(count)s устройствах заканчивается или закончился срок гарантии"
+msgstr[2] "На %(count)s устройствах заканчивается или закончился срок гарантии"
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_VARIES."
+msgstr "Сроки гарантии оборудования различаются."
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_WILL_EXPIRED_IN_DAYS"
+msgid_plural "WAREHOUSE_ENTITY_WARRANTY_WILL_EXPIRED_IN_DAYS_MANY"
+msgstr[0] "Гарантия устройства закончится через %(days)s %(day_word)s"
+msgstr[1] "Гарантия %(count)s устройств закончится через %(days)s %(day_word)s"
+msgstr[2] "Гарантия %(count)s устройств закончится через %(days)s %(day_word)s"
+
+msgid "WARRANTY_UNTIL"
+msgstr "На гарантии до %(date)s"
+
+msgid "WARRANTY_UNTIL:"
+msgstr "На гарантии до:"
+
+msgid "WELCOME_TO_VM_MANAGER"
+msgstr "Добро пожаловать в VMmanager"
+
+msgid "WELCOME_TO_VM_MANAGER!"
+msgstr "Добро пожаловать в VMmanager!"
+
+msgid "alert_exp_active"
+msgstr "Загрузка %(subtype)s на узле %(name)s #%(id)s превысила пороговое значение %(value)s%%:"
+
+msgid "alert_exp_resolved"
+msgstr "Загрузка %(subtype)s на узле %(name)s #%(id)s теперь ниже порогового значения %(value)s%%:"
+
+msgid "alert_subject_active"
+msgstr "Загрузка %(subtype)s на узле превысила пороговое значение"
+
+msgid "alert_subject_resolved"
+msgstr "Загрузка %(subtype)s на узле теперь ниже порогового значения"
+
+msgid "fan"
+msgstr "скорость вращения вентиляторов"
+
+msgid "status_exp_active"
+msgstr "Узел %(name)s #%(id)s недоступен"
+
+msgid "status_exp_resolved"
+msgstr "Доступ к узлу кластера %(name)s #%(id)s восстановлен"
+
+msgid "status_subject_active"
+msgstr "Узел кластера недоступен"
+
+msgid "status_subject_resolved"
+msgstr "Доступ к узлу кластера восстановлен"
+
+msgid "task_entity_host"
+msgstr "Виртуальная машина #%(id)s %(name)s"
+
+msgid "task_entity_node"
+msgstr "Узел кластера #%(id)s %(name)s"
+
+msgid "task_name_change_password"
+msgstr "Изменение пароля VM"
+
+msgid "task_name_check_storage"
+msgstr "Проверка хранилища"
+
+msgid "task_name_connect_storages"
+msgstr "Подключение хранилища"
+
+msgid "task_name_disk_resize"
+msgstr "Изменение размера диска"
+
+msgid "task_name_ha_generate_metadata"
+msgstr "Обновление метаданных отказоустойчивости"
+
+msgid "task_name_host_boot_order"
+msgstr "Изменение порядка загрузки дисков"
+
+msgid "task_name_host_change_params"
+msgstr "Изменение параметров VM"
+
+msgid "task_name_host_clone"
+msgstr "Клонирование VM"
+
+msgid "task_name_host_create"
+msgstr "Создание VM"
+
+msgid "task_name_host_delete"
+msgstr "Удаление VM"
+
+msgid "task_name_host_hibernate"
+msgstr "Приостановка VM на диск"
+
+msgid "task_name_host_iface_create"
+msgstr "Добавление сетевого интерфейса"
+
+msgid "task_name_host_iface_delete"
+msgstr "Удаление сетевого интерфейса"
+
+msgid "task_name_host_iface_edit"
+msgstr "Редактирование сетевого интерфейса"
+
+msgid "task_name_host_image_create"
+msgstr "Создание образа VM"
+
+msgid "task_name_host_iso_mount"
+msgstr "Подключение ISO-образа к VM"
+
+msgid "task_name_host_iso_unmount"
+msgstr "Отключение ISO-образа от VM"
+
+msgid "task_name_host_migrate"
+msgstr "Миграция VM"
+
+msgid "task_name_host_recipe"
+msgstr "Запуск скрипта на VM"
+
+msgid "task_name_host_recover_domain"
+msgstr "Восстановление xml файла VM"
+
+msgid "task_name_host_reinstall"
+msgstr "Переустановка VM"
+
+msgid "task_name_host_relocate"
+msgstr "Аварийное восстановление VM"
+
+msgid "task_name_host_rescue_enter"
+msgstr "Вход в режим восстановления VM"
+
+msgid "task_name_host_rescue_exit"
+msgstr "Выход из режима восстановления VM"
+
+msgid "task_name_host_restart"
+msgstr "Перезапуск VM"
+
+msgid "task_name_host_resume"
+msgstr "Возобновление VM"
+
+msgid "task_name_host_run_recipe"
+msgstr "Запуск скрипта на VM"
+
+msgid "task_name_host_spice_configure"
+msgstr "Разрешено подключение по протоколу SPICE"
+
+msgid "task_name_host_start"
+msgstr "Запуск VM"
+
+msgid "task_name_host_stop"
+msgstr "Остановка VM"
+
+msgid "task_name_host_suspend"
+msgstr "Приостановка VM"
+
+msgid "task_name_host_update_metadata"
+msgstr "Обновление метаданных VM"
+
+msgid "task_name_host_vnc_password"
+msgstr "Изменение пароля VNC на VM"
+
+msgid "task_name_ip_allocate"
+msgstr "Выделение IP-адреса"
+
+msgid "task_name_ip_delete"
+msgstr "Удаление IP-адреса"
+
+msgid "task_name_node_create"
+msgstr "Подключение узла"
+
+msgid "task_name_node_create_finish"
+msgstr "Завершилась проверка состояния узла"
+
+msgid "task_name_node_ha_disable"
+msgstr "Отключение отказоустойчивости на узле"
+
+msgid "task_name_node_ha_enable"
+msgstr "Включение отказоустойчивости на узле"
+
+msgid "task_name_node_timesync_check"
+msgstr "Проверка синхронизации времени на узле"
+
+msgid "task_name_node_timesync_config"
+msgstr "Конфигурация синхронизации времени на узле"
+
+msgid "task_name_node_timesync_prepare"
+msgstr "Подготовка узла к синхронизации времени"
+
+msgid "task_name_node_update_certificate"
+msgstr "Обновление сертификатов TLS на узле"
+
+msgid "task_name_node_update_certificates"
+msgstr "Обновление сертификатов TLS на узле"
+
+msgid "task_name_ptr_change"
+msgstr "Изменение PTR-записи"
+
+msgid "task_name_snapshot_create"
+msgstr "Создание снимка VM"
+
+msgid "task_name_snapshot_delete2"
+msgstr "Удаление снимков VM"
+
+msgid "temperature"
+msgstr "температура"
+
+msgid "test_remove_sync_branch"
+msgstr "Это только для теста. Потом можно удалить эту строчку"
+
+msgid "voltage"
+msgstr "напряжение"

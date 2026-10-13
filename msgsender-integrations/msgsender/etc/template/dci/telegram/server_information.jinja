@@ -1,0 +1,40 @@
+{%- if params.entity.extra.rack is defined -%}
+    {%- set extra_unit = none -%}
+    {%- if params.entity.extra.unit is defined and params.entity.extra.unit is not none and params.entity.extra.unit is not mapping -%}
+        {%- set extra_unit = params.entity.extra.unit -%}
+    {%- elif params.entity.extra.rack_unit is defined and params.entity.extra.rack_unit is not none -%}
+        {%- set extra_unit = params.entity.extra.rack_unit -%}
+    {%- endif -%}
+    {%- if params.entity.extra.rack is not none and extra_unit is not none -%}
+        {%- set rack_name_str = gettext("RACK_INFO", rack=params.entity.extra.rack.name) -%}
+        {%- set server_unit_size_str = gettext("UNIT_SINGLE",u=extra_unit) -%}
+        {%- if params.entity.extra.platform.size > 1 -%}
+            {%- set server_unit_size_str = gettext("UNIT_RANGE", u_start=extra_unit, u_end=(extra_unit|float + params.entity.extra.platform.size|float - 1), u_size=params.entity.extra.platform.size) -%}
+        {%- endif -%}
+    {%- endif -%}
+    {%- if params.entity.extra.slot is not none -%}
+        {%- set server_chassis_str = gettext("CHASSIS_SLOT",chassis=params.entity.extra.chassis.name,slot=params.entity.extra.slot) -%}
+    {%- endif -%}
+{%- elif params.entity.extra.server.rack_name is defined -%}
+    {%- if params.entity.extra.server.rack_name is not none and params.entity.extra.server.unit is not none -%}
+        {%- set rack_name_str = gettext("RACK_INFO", rack=params.entity.extra.server.rack_name) -%}
+        {%- set server_unit_size_str = gettext("UNIT_SINGLE",u=params.entity.extra.server.unit) -%}
+        {%- if params.entity.extra.server.platform_size > 1 -%}
+            {%- set server_unit_size_str = gettext("UNIT_RANGE", u_start=params.entity.extra.server.unit, u_end=(params.entity.extra.server.unit|float + params.entity.extra.server.platform_size|float - 1), u_size=params.entity.extra.server.platform_size) -%}
+        {%- endif -%}
+    {%- endif -%}
+    {%- if params.entity.extra.server.slot is defined -%}
+        {%- set server_chassis_str = gettext("CHASSIS_SLOT",chassis=params.entity.extra.server.chassis_name,slot=params.entity.extra.server.slot) -%}
+    {%- endif -%}
+{%- endif -%}
+
+{%- if params.entity.extra.location_info is defined -%}
+    {%- set location_name = params.entity.extra.location_info.name -%}
+{%- elif params.entity.extra.server.location_name is defined -%}
+    {%- set location_name = params.entity.extra.server.location_name -%}
+{%- endif -%}
+{%- set server_location = location_name ~ rack_name_str ~ server_unit_size_str ~ server_chassis_str -%}
+
+{{ gettext("SERVER_FIELD") }} {{ params.entity.server.name }}
+{{ gettext("IP_ADDRESS_FIELD") }} <a href="{{ params.message.product_info.url }}dci/server/{{ params.entity.server.id }}/settings/main">{{ params.entity.server.ip }}</a>
+{{ gettext("LOCATION:") }} {{ server_location }}

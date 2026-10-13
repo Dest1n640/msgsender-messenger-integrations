@@ -1,0 +1,26 @@
+services:
+  max-srv:
+    build: .
+    container_name: max-srv
+    restart: always
+    ports:
+      - "8083:8080"
+    environment:
+      - MAX_RETRIES=5
+      - LOG_LEVEL=INFO
+      - LOG_DAYS=3          # сколько дней хранить архивы логов
+      - LOG_MAX_MB=50       # макс. размер файла в МБ до досрочной ротации
+      - MAX_BOT_TOKEN
+    networks:
+      - vm_vm_box_net
+    volumes:
+      - ./logs:/var/log
+      - ./data:/app/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"   # лимит одного файла Docker-лога
+        max-file: "3"     # хранить не более 3 файлов
+networks:
+  vm_vm_box_net:
+    external: true

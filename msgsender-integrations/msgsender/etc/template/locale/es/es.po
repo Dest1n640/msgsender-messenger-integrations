@@ -1,0 +1,1092 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VMmanager 1.0\n"
+"POT-Creation-Date: 2026-05-28 16:27+0000\n"
+"PO-Revision-Date: 2026-05-28 16:27+0000\n"
+"Last-Translator: Your Name <you@example.com>\n"
+"Language-Team: Spanish <you@example.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : (n % 1000000 == 0 && n != 0 ? 1 : 2));\n"
+
+msgid ":"
+msgstr ":"
+
+msgid ";"
+msgstr ";"
+
+msgid "ADDITIONAL"
+msgstr "adicional"
+
+msgid "ADMINISTRATOR"
+msgstr "Administrador"
+
+msgid "ADVANCED_USER"
+msgstr "Usuario avanzado"
+
+msgid "BACKUP_CREATION_ERROR"
+msgstr "Error al crear una copia de seguridad"
+
+msgid "BACKUP_CREATION_FAILED_TEXT"
+msgstr "Una copia de seguridad programada falló en la etapa %(NAME)s de la tarea %(ID)s. Se creó una tarea para eliminar una nueva copia de seguridad. Compruebe el estado de los hosts y el almacenamiento para las copias de seguridad de máquinas virtuales."
+
+msgid "BACKUP_ID"
+msgstr "Id. de copia de seguridad:"
+
+msgid "BACKUP_NAME"
+msgstr "Nombre de la copia de seguridad:"
+
+msgid "BARCODE:"
+msgstr "Código de barras:"
+
+msgid "CHASSIS"
+msgstr "Chasis"
+
+msgid "CHASSIS_SLOT"
+msgstr ", Chasis: %(chassis)s, ranura: %(slot)s"
+
+msgid "COMPONENT_STATUS_CRITICAL"
+msgstr "El estado de %(component_name)s es crítico"
+
+msgid "COMPONENT_STATUS_NORMAL"
+msgstr "El estado del %(component_name)s ha vuelto a la normalidad"
+
+msgid "COMPONENT_STATUS_WARNING"
+msgstr "Es posible que haya un problema con %(component_name)s"
+
+msgid "CONFIRM"
+msgstr "Confirmar"
+
+msgid "CONGRATULATIONS"
+msgstr "¡Felicidades!"
+
+msgid "CREATION_DATE_FIELD"
+msgstr "Fecha de creación:"
+
+msgid "CRITICAL_NODE_LOAD"
+msgstr "Carga crítica del nodo %(type)s"
+
+msgid "CRITICAL_VM_LOAD"
+msgstr "Carga crítica de VM %(type)s"
+
+msgid "CUSTOMER_GREETINGS"
+msgstr "¡Hola, cliente!"
+
+msgid "DAY"
+msgid_plural "DAY_MANY"
+msgstr[0] "día"
+msgstr[1] "días"
+msgstr[2] "días"
+
+msgid "DCI_PASSWORD_RECOVERY"
+msgstr "Administrador de DCI. Recuperación de contraseña"
+
+msgid "DCI_SUBMITTED_PASSWORD_RECOVERY"
+msgstr "Ha solicitado la recuperación de contraseña de DCImanager. Siga el siguiente enlace para restablecer su contraseña."
+
+msgid "DEFAULT_PHONE_NUMBER"
+msgstr "1-941-487-8209"
+
+msgid "DEMO_VALID_TIME"
+msgstr "La versión de demostración es válida por 12 horas después de que haya seguido el enlace."
+
+msgid "DEMO_VERSION_ACCESS"
+msgstr "Acceso a la versión demo de DCIManager"
+
+msgid "DIAGNOSIS_CANCELLED_BY_ADMIN"
+msgstr "El administrador canceló la operación de diagnóstico. En el servidor %(error_found_phrase)s"
+
+msgid "DIAGNOSIS_CANCELLED_BY_ADMIN_ONLY"
+msgstr "El administrador canceló la operación de diagnóstico."
+
+msgid "DIAGNOSIS_COMPLETE_ONLY_ERROR"
+msgstr "La operación de diagnóstico se completó con un error."
+
+msgid "DIAGNOSIS_COMPLETE_SUCCESS"
+msgstr "La operación de diagnóstico se completó correctamente. En el servidor %(error_found_phrase)s"
+
+msgid "DIAGNOSIS_COMPLETE_WITH_ERROR"
+msgstr "La operación de diagnóstico se completó con un error. En el servidor %(error_found_phrase)s"
+
+msgid "DISKS_FIELD"
+msgstr "Discos:"
+
+msgid "DISK_ID"
+msgstr "Disco Id:"
+
+msgid "DISK_NAME"
+msgstr "Nombre del disco:"
+
+msgid "DOCUMENTATION_LINK"
+msgstr "Más detalles en la documentación..."
+
+msgid "DOMAIN_FIELD"
+msgstr "Dominio:"
+
+msgid "DSS:"
+msgstr "DSS:"
+
+msgid "DSS_CONTROLLER_CPU_UTILIZATION"
+msgstr "Controladores - Utilización de la CPU, %%: supera %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_CPU_UTILIZATION_RESOLVED"
+msgstr "Controladores - Utilización de la CPU, %%: valor normalizado"
+
+msgid "DSS_CONTROLLER_HEALTH"
+msgstr "Controladores - Estado de salud: no es el esperado %(time_period)s"
+
+msgid "DSS_CONTROLLER_HEALTH_RESOLVED"
+msgstr "Controladores - Estado de salud: el valor ha vuelto a la normalidad"
+
+msgid "DSS_CONTROLLER_IOPS"
+msgstr "Controladores - IOPS: supera %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_IOPS_RESOLVED"
+msgstr "Controladores - IOPS: el valor ha vuelto a la normalidad"
+
+msgid "DSS_CONTROLLER_READ_RATE"
+msgstr "Controladores - Velocidad de lectura, MB/s: supera %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_READ_RATE_RESOLVED"
+msgstr "Controladores - Velocidad de lectura, MB/s: valor normalizado"
+
+msgid "DSS_CONTROLLER_STATUS"
+msgstr "Controladores - Estado: no es el esperado %(time_period)s"
+
+msgid "DSS_CONTROLLER_STATUS_RESOLVED"
+msgstr "Controladores - Estado: valor normalizado"
+
+msgid "DSS_CONTROLLER_WRITE_RATE"
+msgstr "Controladores - Velocidad de escritura, MB/s: supera %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_WRITE_RATE_RESOLVED"
+msgstr "Controladores - Velocidad de escritura, MB/s: valor normalizado"
+
+msgid "DSS_DISK_GROUP_HEALTH"
+msgstr "Grupos de discos - Estado de salud: no es el esperado %(time_period)s"
+
+msgid "DSS_DISK_GROUP_HEALTH_RESOLVED"
+msgstr "Grupos de discos - Estado de salud: el valor ha vuelto a la normalidad"
+
+msgid "DSS_DISK_GROUP_IOPS"
+msgstr "Grupos de discos - IOPS: supera %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_IOPS_RESOLVED"
+msgstr "Grupos de discos - IOPS: el valor vuelve a ser normal."
+
+msgid "DSS_DISK_GROUP_READ_RATE"
+msgstr "Grupos de discos - Velocidad de lectura, MB/s: supera %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_READ_RATE_RESOLVED"
+msgstr "Grupos de discos - Velocidad de lectura, MB/s: valor normalizado"
+
+msgid "DSS_DISK_GROUP_SPACE_UTILIZATION"
+msgstr "Grupos de discos - Utilización del almacenamiento, %%: excede : por encima de %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_SPACE_UTILIZATION_RESOLVED"
+msgstr "Grupos de discos - Utilización del espacio en disco, %%: el valor ha vuelto a la normalidad."
+
+msgid "DSS_DISK_GROUP_STATUS"
+msgstr "Grupos de discos - Estado: no como se esperaba %(time_period)s"
+
+msgid "DSS_DISK_GROUP_STATUS_RESOLVED"
+msgstr "Grupos de discos - Estado: valor normalizado"
+
+msgid "DSS_DISK_GROUP_WRITE_RATE"
+msgstr "Grupos de discos - Velocidad de escritura, MB/s: excede %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_WRITE_RATE_RESOLVED"
+msgstr "Grupos de discos - Velocidad de escritura, MB/s: valor normalizado"
+
+msgid "DSS_DISK_HEALTH"
+msgstr "Discos - Estado de salud: no es el esperado %(time_period)s"
+
+msgid "DSS_DISK_HEALTH_RESOLVED"
+msgstr "Discos - Estado de salud: el valor ha vuelto a la normalidad"
+
+msgid "DSS_DISK_TEMPERATURE_STATUS"
+msgstr "Discos - Estado: no como se esperaba %(time_period)s"
+
+msgid "DSS_DISK_TEMPERATURE_STATUS_RESOLVED"
+msgstr "Discos - Estado: valor normalizado"
+
+msgid "DSS_ENCLOSURE_HEALTH"
+msgstr "Archivos adjuntos - Estado de salud: no es el esperado %(time_period)s"
+
+msgid "DSS_ENCLOSURE_HEALTH_RESOLVED"
+msgstr "Estanterías de disco - Estado de salud: el valor ha vuelto a la normalidad"
+
+msgid "DSS_ENCLOSURE_STATUS"
+msgstr "Enclosures - Status: not as expected %(time_period)s"
+
+msgid "DSS_ENCLOSURE_STATUS_RESOLVED"
+msgstr "Estanterías de disco - Estado: valor normalizado"
+
+msgid "DSS_FAN_HEALTH"
+msgstr "Fans - Estado de salud: no es el esperado %(time_period)s"
+
+msgid "DSS_FAN_HEALTH_RESOLVED"
+msgstr "Ventiladores - Estado de salud: el valor ha vuelto a la normalidad"
+
+msgid "DSS_FAN_STATUS"
+msgstr "Ventiladores - Estado: no como se esperaba %(time_period)s"
+
+msgid "DSS_FAN_STATUS_RESOLVED"
+msgstr "Ventiladores - Estado: el valor ha vuelto a la normalidad"
+
+msgid "DSS_HOST_PORT_HEALTH"
+msgstr "Puertos - Estado de salud: no es el esperado %(time_period)s"
+
+msgid "DSS_HOST_PORT_HEALTH_RESOLVED"
+msgstr "Puertos - Estado de salud: el valor ha vuelto a la normalidad"
+
+msgid "DSS_HOST_PORT_STATUS"
+msgstr "Puertos - Estado: no como se esperaba %(time_period)s"
+
+msgid "DSS_HOST_PORT_STATUS_RESOLVED"
+msgstr "Puertos - Estado: valor normalizado"
+
+msgid "DSS_MANAGEMENT_PORT_HEALTH"
+msgstr "Puertos - Estado de salud: no es el esperado %(time_period)s"
+
+msgid "DSS_MANAGEMENT_PORT_HEALTH_RESOLVED"
+msgstr "Puertos - Estado de salud: el valor ha vuelto a la normalidad"
+
+msgid "DSS_POOL_HEALTH"
+msgstr "Pools - Estado: no como se esperaba %(time_period)s"
+
+msgid "DSS_POOL_HEALTH_RESOLVED"
+msgstr "Piscinas - Estado: el valor ha vuelto a la normalidad"
+
+msgid "DSS_POWER_SUPPLY_HEALTH"
+msgstr "Fuentes de alimentación - Estado de salud: no es el esperado %(time_period)s"
+
+msgid "DSS_POWER_SUPPLY_HEALTH_RESOLVED"
+msgstr "Fuentes de alimentación - Estado de salud: el valor ha vuelto a la normalidad"
+
+msgid "DSS_POWER_SUPPLY_STATUS"
+msgstr "Fuentes de alimentación - Estado: no como se esperaba %(time_period)s"
+
+msgid "DSS_POWER_SUPPLY_STATUS_RESOLVED"
+msgstr "Fuentes de alimentación - Estado: valor normalizado"
+
+msgid "DSS_SYSTEM_HEALTH"
+msgstr "Sistema - Estado de salud: no es el esperado %(time_period)s"
+
+msgid "DSS_SYSTEM_HEALTH_RESOLVED"
+msgstr "Sistema - Estado de salud: el valor ha vuelto a la normalidad"
+
+msgid "DSS_SYSTEM_STATUS"
+msgstr "Sistema - Estado: no es el esperado %(time_period)s"
+
+msgid "DSS_SYSTEM_STATUS_RESOLVED"
+msgstr "Sistema - Estado: valor normalizado"
+
+msgid "DSS_VOLUME_HEALTH"
+msgstr "Volúmenes - Estado de salud: no es el esperado %(time_period)s"
+
+msgid "DSS_VOLUME_HEALTH_RESOLVED"
+msgstr "Volúmenes - Estado de salud: el valor ha vuelto a la normalidad"
+
+msgid "DSS_VOLUME_IOPS"
+msgstr "Volúmenes - IOPS: supera %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_IOPS_RESOLVED"
+msgstr "Volúmenes - IOPS: el valor ha vuelto a la normalidad"
+
+msgid "DSS_VOLUME_READ_RATE"
+msgstr "Volúmenes - Velocidad de lectura, MB/s: supera %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_READ_RATE_RESOLVED"
+msgstr "Volúmenes - Velocidad de lectura, MB/s: valor normalizado"
+
+msgid "DSS_VOLUME_SPACE_UTILIZATION"
+msgstr "Volúmenes - Utilización del almacenamiento, %%: supera %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_SPACE_UTILIZATION_RESOLVED"
+msgstr "Volumen - Utilización del espacio en disco, %%: el valor ha vuelto a la normalidad."
+
+msgid "DSS_VOLUME_WRITE_RATE"
+msgstr "Volúmenes - Velocidad de escritura, MB/s: supera %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_WRITE_RATE_RESOLVED"
+msgstr "Volumen - Velocidad de escritura, MB/s: valor normalizado"
+
+msgid "DURATION_FIELD"
+msgstr "Duración:"
+
+msgid "EMAIL_CONFIRMATION"
+msgstr "Confirmación de email"
+
+msgid "END_WARRANTY_WARNING"
+msgstr "Recomendamos tomar medidas para garantizar el funcionamiento seguro y confiable del equipo después de la expiración del período de garantía."
+
+msgid "ENTER_PARAMS"
+msgstr "Detalles de la entrada:"
+
+msgid "ENTITY_TYPE_CHASSIS"
+msgstr "chasis"
+
+msgid "ENTITY_TYPE_CPU"
+msgstr "CPU"
+
+msgid "ENTITY_TYPE_DSS_CACHE_MODULE"
+msgstr "módulo caché"
+
+msgid "ENTITY_TYPE_DSS_CHASSIS"
+msgstr "chasis de almacenamiento"
+
+msgid "ENTITY_TYPE_DSS_CHASSIS_CONTROLLER"
+msgstr "controlador"
+
+msgid "ENTITY_TYPE_DSS_CHASSIS_IO_MODULE"
+msgstr "módulo de E/S"
+
+msgid "ENTITY_TYPE_OTHER"
+msgstr "otros equipos"
+
+msgid "ENTITY_TYPE_PCI"
+msgstr "Dispositivos PCI"
+
+msgid "ENTITY_TYPE_PDU"
+msgstr "PDU"
+
+msgid "ENTITY_TYPE_PSU"
+msgstr "suministro eléctrico"
+
+msgid "ENTITY_TYPE_RAM"
+msgstr "RAM"
+
+msgid "ENTITY_TYPE_SERVER"
+msgstr "servidor"
+
+msgid "ENTITY_TYPE_STORAGE"
+msgstr "almacenamiento"
+
+msgid "ENTITY_TYPE_SWITCH"
+msgstr "interruptor"
+
+msgid "ENTITY_TYPE_UPS"
+msgstr "UPS"
+
+msgid "ERRORS_FIELD"
+msgstr "Errors:"
+
+msgid "ERROR_FIELD"
+msgstr "Error:"
+
+msgid "ERROR_LIST_IPMI"
+msgstr "Error al verificar la disponibilidad de IPMI después de la configuración"
+
+msgid "ERROR_LIST_LOCAL_SPEED"
+msgstr "Se detectó una conexión local de baja velocidad"
+
+msgid "ERROR_LIST_SMART"
+msgstr "%(count)d %(smart_error_word)s detectado por la tecnología SMART del disco"
+
+msgid "ERROR_ONE"
+msgid_plural "ERROR_ONE_MANY"
+msgstr[0] "error"
+msgstr[1] "errores"
+msgstr[2] "errores"
+
+msgid "EXPIRING_OR_EXPIRED_RESERVATION_UNIT_PERIOD"
+msgid_plural "EXPIRING_OR_EXPIRED_RESERVATION_UNIT_PERIOD_MANY"
+msgstr[0] "El %(count)s de la reserva de una unidad caduca o ha caducado"
+msgstr[1] "%(count)s de unidades se están agotando o se han agotado las reservas"
+msgstr[2] "%(count)s unidades tienen un período de reserva vencido o por vencer"
+
+msgid "FAN"
+msgstr "la velocidad del ventilador"
+
+msgid "FAN_BACK"
+msgstr "la velocidad del ventilador ha vuelto"
+
+msgid "FINISH_REGISTRATION_GUIDE"
+msgstr "Para completar su registro, por favor confirme su correo electrónico. Si no ha creado ninguna cuenta en VMmanager, ignore este mensaje."
+
+msgid "FOUND_ONE"
+msgid_plural "FOUND_ONE_MANY"
+msgstr[0] "encontrado"
+msgstr[1] "encontrado"
+msgstr[2] "se encontraron"
+
+msgid "GET_STARTED"
+msgstr "Empezar ahora"
+
+msgid "GO_TO"
+msgstr "Ir a"
+
+msgid "GO_TO_COMPONENTS"
+msgstr "Ir a componentes"
+
+msgid "GO_TO_DEVICE"
+msgid_plural "GO_TO_DEVICE_MANY"
+msgstr[0] "Ir al dispositivo"
+msgstr[1] "Ir a los dispositivos"
+msgstr[2] "Ir a los dispositivos"
+
+msgid "GO_TO_RACK"
+msgstr "Ir al rack"
+
+msgid "GO_TO_SERVER"
+msgstr "Ir al servidor"
+
+msgid "GO_TO_SERVER_COMPONENTS"
+msgstr "Ir a los componentes del servidor"
+
+msgid "GO_TO_SERVER_EQUIPMENT"
+msgstr "Ir al equipo de servidores"
+
+msgid "GO_TO_SERVER_SETTINGS"
+msgstr "Ir a la configuración del servidor"
+
+msgid "GO_TO_VM_MANAGER"
+msgstr "Ir a VMmanager"
+
+msgid "GRANTED_ACCESS_TO_DEMO_VERSION"
+msgstr "¡Se le ha concedido acceso a una versión de demostración de DCImanager, una plataforma para la gestión de infraestructura TI en una única interfaz. Conozca las posibilidades de automatización, monitoreo e inventario basadas en el equipo que hemos agregado a la plataforma. Una parte de la funcionalidad no está disponible en la versión de demostración."
+
+msgid "HEALTH_STATUS_FIELD"
+msgstr "Estado de salud:"
+
+msgid "HELLO_WORD"
+msgstr "¡Hola!"
+
+msgid "HELP_PHONE_NUMBER"
+msgstr "+1-415-697-1531"
+
+msgid "HELP_PHONE_NUMBER_INTER"
+msgstr "-"
+
+msgid "HELP_PHONE_NUMBER_INTER_RAW"
+msgstr "-"
+
+msgid "HELP_PHONE_NUMBER_RAW"
+msgstr "+14156971531"
+
+msgid "HELP_PHONE_NUMBER_SPAN_1"
+msgstr "+1-415-"
+
+msgid "HELP_PHONE_NUMBER_SPAN_2"
+msgstr "697-1531"
+
+msgid "INCONSISTENCIES_IN_SERVER_COMPONENTS"
+msgstr "Incoherencias en los componentes del servidor"
+
+msgid "INCONSISTENCIES_IN_SERVER_COMPONENTS_DETECTED"
+msgstr "Se detectaron incoherencias en los componentes del servidor"
+
+msgid "INCONSISTENCIES_IN_SERVER_PROFILE_PARAMETERS"
+msgstr "Se detectaron incoherencias en los parámetros del perfil del servidor"
+
+msgid "INCONSISTENCIES_SERVER_PROFILE_PARAMS"
+msgstr "Incoherencias en los parámetros del perfil del servidor"
+
+msgid "INVITED_MSG"
+msgstr "Ha sido invitado/a a VMmanager con permisos de “%(role)s”. Para acceder al panel, ingrese su nombre de usuario %(email)s."
+
+msgid "IN_WAREHOUSE"
+msgstr "en almacén %(name)s"
+
+msgid "IP_ADDRESS_FIELD"
+msgstr "Dirección IP:"
+
+msgid "LAST_VALUE_FIELD"
+msgstr "Último valor:"
+
+msgid "LETS_START"
+msgstr "Empecemos"
+
+msgid "LINK_ERROR_PHRASE_EMPTY"
+msgstr "Más"
+
+msgid "LINK_ERROR_PHRASE_PLURAL"
+msgstr "Más información sobre los errores"
+
+msgid "LINK_ERROR_PHRASE_SINGULAR"
+msgstr "Más información sobre el error"
+
+msgid "LINK_PHONE_NUMBER"
+msgstr "US: <a href=\"tel:19414621069\" class=\"footer-link text-right\" style=\"color: #344A5E; font-family: Roboto,Tahoma,sans-serif; font-size: 12px; font-weight: 400; line-height: 1.5; margin: 0; padding: 0; text-align: right; text-decoration: underline;\">1-941-462-10-69</a>, Cyprus: <a href=\"tel:35722052781\" class=\"footer-link text-right\" style=\"color: #344A5E; font-family: Roboto,Tahoma,sans-serif; font-size: 12px; font-weight: 400; line-height: 1.5; margin: 0; padding: 0; text-align: right; text-decoration: underline;\">3-572-205-27-81</a>"
+
+msgid "LOCATION:"
+msgstr "Ubicación:"
+
+msgid "LOGIN_FIELD"
+msgstr "Inicio de sesión:"
+
+msgid "LOG_IN"
+msgstr "Iniciar sesión"
+
+msgid "MANAGE_VM_VIA_SSH_GUIDE"
+msgstr "Para gestionar la máquina virtual mediante SSH, utilice los datos de acceso:"
+
+msgid "MANUAL_BACKUP_CREATION_FAILED_TEXT"
+msgstr "La copia de seguridad falló en la etapa %(NAME)s de la tarea %(ID)s. Se creó una tarea para eliminar la nueva copia de seguridad. Compruebe el estado de los nodos y el almacenamiento de las copias de seguridad de las máquinas virtuales."
+
+msgid "MASTER;"
+msgstr "principal;"
+
+msgid "NEW_PASSWORD_FIELD"
+msgstr "Nueva contraseña:"
+
+msgid "NEW_PLATFORM_ADDRESS_FIELD"
+msgstr "Nueva dirección de la plataforma:"
+
+msgid "NODE_AVAILABLE"
+msgstr "El nodo de clúster ya está disponible"
+
+msgid "NODE_DESCRIPTION"
+msgstr "Nodo del clúster %(id)s %(name)s"
+
+msgid "NODE_LOAD_BELOW_CRITICAL_VALUE"
+msgstr "%(type)s Carga de nodos por debajo del valor crítico"
+
+msgid "NODE_TIME_EMPTY"
+msgstr "La hora del nodo está vacía"
+
+msgid "NODE_TIME_EMPTY_DETAILED"
+msgstr "La hora en el nodo %(name)s #%(id)s está vacía porque el servicio NTP no se está ejecutando en el nodo"
+
+msgid "NODE_TIME_NOT_SYNCHRONIZED"
+msgstr "La hora del nodo no está sincronizada"
+
+msgid "NODE_TIME_NOT_SYNCHRONIZED_DETAILED"
+msgstr "La hora en el nodo %(name)s #%(id)s no está sincronizada"
+
+msgid "NODE_TIME_PACKAGE_ERROR"
+msgstr "La hora del nodo no está siendo sincronizada"
+
+msgid "NODE_TIME_PACKAGE_ERROR_DETAILED"
+msgstr "La hora en el nodo %(name)s #%(id)s no está siendo sincronizada porque se ha producido un error en los paquetes"
+
+msgid "NODE_TIME_SYNCHRONIZED"
+msgstr "La hora del nodo está sincronizada"
+
+msgid "NODE_TIME_SYNCHRONIZED_DETAILED"
+msgstr "Hora en el nodo de clúster %(name)s #%(id)s sincronizado"
+
+msgid "NODE_TIME_TIMEDRIFT_ERROR"
+msgstr "La hora del nodo no está sincronizada"
+
+msgid "NODE_TIME_TIMEDRIFT_ERROR_DETAILED"
+msgstr "La hora en el nodo %(name)s #%(id)s no está sincronizada: la desviación horaria supera el límite permitido"
+
+msgid "NODE_TIME_UNDEFINED"
+msgstr "La hora del nodo no está definida"
+
+msgid "NODE_TIME_UNDEFINED_DETAILED"
+msgstr "La hora en el nodo %(name)s #%(id)s no está definida porque se ha producido un error de Nodewarden"
+
+msgid "NODE_TIME_UNKNOWN"
+msgstr "La hora del nodo es desconocida"
+
+msgid "NODE_TIME_UNKNOWN_DETAILED"
+msgstr "La hora en el nodo %(name)s #%(id)s es desconocida porque se ha producido un error interno. Compruebe las notificaciones o los registros"
+
+msgid "NODE_UNAVAILABLE"
+msgstr "El nodo de clúster no está disponible"
+
+msgid "OPEN_DEMO"
+msgstr "Abrir la demostración"
+
+msgid "OS_FIELD"
+msgstr "Sistema operativo:"
+
+msgid "PARAMS_FIELD"
+msgstr "Parámetros:"
+
+msgid "PASSWORD_CHANGE_ERROR_FIELD"
+msgstr "Error al cambiar la contraseña:"
+
+msgid "PASSWORD_FIELD"
+msgstr "Contraseña:"
+
+msgid "PASSWORD_RECOVERY"
+msgstr "Recuperación de contraseña"
+
+msgid "PERMISSIBLE RANGE:"
+msgstr "Rango permitido:"
+
+msgid "PLATFORM_MANAGMENT_INTERFACE_INVITE"
+msgstr "Ha sido invitado a Platform Management Interface"
+
+msgid "PLATFORM_MANAGMENT_INTERFACE_INVITE_PERMISSION"
+msgstr "Ha sido invitado/a a la Interfaz de Gestión de Plataformas con permisos de “%(role)s”."
+
+msgid "PLATFORM_MIGRATION"
+msgstr "La plataforma VMmanager se ha migrado a VM"
+
+msgid "PLATFORM_MIGRATION_ERROR"
+msgstr "Error al migrar la plataforma VMmanager a VM"
+
+msgid "PLATFORM_MIGRATION_STOPPED"
+msgstr "Se detiene la migración de la plataforma. La plataforma está disponible y funciona en el estado de guardado anterior al inicio de la migración."
+
+msgid "PLATFORM_MIGRATION_TO_VM"
+msgstr "La plataforma migró a VM"
+
+msgid "PLATFORM_MIGRATION_TO_VM_ERROR"
+msgstr "La migración de plataforma a VM falló con un error."
+
+msgid "PLATFORM_MIGRATION_TO_VM_SUCCESS"
+msgstr "La migración de la plataforma a VM se completó con éxito."
+
+msgid "RACK"
+msgstr "Rack"
+
+msgid "RACK_INFO"
+msgstr ", Rack: %(rack)s"
+
+msgid "RECOVER"
+msgstr "Recuperar"
+
+msgid "RESERVED_UNTIL"
+msgstr "En garantía hasta %(end_date)s"
+
+msgid "RESERVED_UNTIL:"
+msgstr "En garantía hasta:"
+
+msgid "RESOLVE_RECOMMENDATIONS"
+msgstr "Para resolver este problema, se recomienda comprobar la capacidad de servicio del hardware del servidor y, a continuación, volver a ejecutar los diagnósticos."
+
+msgid "ROOT_PASSWORD_FIELD"
+msgstr "Contraseña raíz:"
+
+msgid "Reserved until %(date)s"
+msgstr "Reservado hasta %(date)s"
+
+msgid "SCHEDULE_ID"
+msgstr "Horario Id:"
+
+msgid "SECONDS"
+msgstr "s"
+
+msgid "SENSOR_BACK_TO_NORMAL"
+msgstr "Servidor %(server)s, %(sensor)s: %(status)s a los límites normales"
+
+msgid "SENSOR_EXCEEDS_LIMIT"
+msgstr "Servidor %(server)s, %(sensor)s: %(type)s supera el rango permitido"
+
+msgid "SENSOR_EXCEEDS_LIMIT_TIME"
+msgstr "Servidor %(server)s, %(sensor)s: %(type)s supera el rango permitido%(time)s"
+
+msgid "SERVER_ERROR_PHRASE_PLURAL"
+msgstr "Errores del servidor:"
+
+msgid "SERVER_ERROR_PHRASE_SINGULAR"
+msgstr "Error del servidor:"
+
+msgid "SERVER_FIELD"
+msgstr "Servidor:"
+
+msgid "SET_PASSWORD_LINK"
+msgstr "Siga el enlace para establecer una contraseña para su cuenta."
+
+msgid "SLOT"
+msgstr "ranura"
+
+msgid "SUBJECT_CRITICAL"
+msgstr "El estado %(component)s es crítico. Revise el dispositivo inmediatamente."
+
+msgid "SUBJECT_RESOLVED"
+msgstr "El estado de %(component)s ha vuelto a la normalidad"
+
+msgid "SUBJECT_WARNING"
+msgstr "Puede haber un problema con %(component)s. Verifique el estado del dispositivo."
+
+msgid "SUPPORT_CONTACT"
+msgstr "No dude en contactar a nuestro <a href=\"https://www.ispsystem.com/support\" target=\"_blank\" style=\"color: #2F82C4;text-decoration: underline;\">equipo de Soporte</a> si tiene alguna pregunta o problema.<br /> Estamos en línea 24/7."
+
+msgid "TASK_SUBJECT_FAILED"
+msgstr "Tarea fallida: %(task)s"
+
+msgid "TASK_SUBJECT_RUNNING"
+msgstr "Nueva tarea iniciada: %(task)s"
+
+msgid "TEMPERATURE"
+msgstr "la temperatura"
+
+msgid "TEMPERATURE_BACK"
+msgstr "la temperatura ha vuelto"
+
+msgid "TEST_EMAIL_SUBJECT"
+msgstr "Mensaje de correo electrónico de prueba."
+
+msgid "TEST_EMAIL_TEXT"
+msgstr "Este es un correo electrónico de prueba para comprobar la configuración del correo. No hay necesidad de responderlo."
+
+msgid "TIME_RANGE_ONE"
+msgid_plural "TIME_RANGE_ONE_MANY"
+msgstr[0] " en %(minutes)s de un minuto"
+msgstr[1] " durante %(minutes)s minutos"
+msgstr[2] " en %(minutes)s minutos"
+
+msgid "TIMING_UNIT_RESERVATIONS_VARIES."
+msgstr "El momento de las reservas de unidades varía."
+
+msgid "UNIT_HAS_REACHED_THE_END_OF_ITS_RESERVATION_PERIOD"
+msgid_plural "UNIT_HAS_REACHED_THE_END_OF_ITS_RESERVATION_PERIOD_MANY"
+msgstr[0] "La reserva de la unidad ha caducado."
+msgstr[1] "Las unidades están al final de su periodo de reserva."
+msgstr[2] "Las unidades han llegado al final de su período de reserva."
+
+msgid "UNIT_NEARING_RESERVATION_PERIOD_WARNING"
+msgid_plural "UNIT_NEARING_RESERVATION_PERIOD_WARNING_MANY"
+msgstr[0] "El periodo de reserva de la unidad está llegando a su fin."
+msgstr[1] "Se acerca la fecha límite para reservar unidades."
+msgstr[2] "Las unidades se acercan al final de su período de reserva."
+
+msgid "UNIT_RANGE"
+msgstr ", U: %(u_start)s-%(u_end)s (%(u_size)sU)"
+
+msgid "UNIT_RESERVATION_HAS_EXPIRED"
+msgid_plural "UNIT_RESERVATION_HAS_EXPIRED_MANY"
+msgstr[0] "La reserva de la unidad ha finalizado"
+msgstr[1] "La reserva de %(count)s de unidades ha finalizado"
+msgstr[2] "La reserva de %(count)s unidades ha expirado"
+
+msgid "UNIT_RESERVATION_WILL_EXPIRE_IN"
+msgid_plural "UNIT_RESERVATION_WILL_EXPIRE_IN_MANY"
+msgstr[0] "La reserva de la unidad finalizará en %(days)s %(day_word)s"
+msgstr[1] "La reserva %(count)s de unidades terminará en %(days)s %(day_word)s"
+msgstr[2] "La reserva de %(count)s unidades expirará en %(days)s %(day_word)s"
+
+msgid "UNIT_SINGLE"
+msgstr ", U: %(u)s"
+
+msgid "UNIT_START_END"
+msgstr "U: %(start)s-%(end)s"
+
+msgid "USER"
+msgstr "Usuario"
+
+msgid "VALUE_RETURNED_TO_NORMAL"
+msgstr "el valor ha vuelto a la normalidad"
+
+msgid "VIRTUAL_MACHINE"
+msgstr "Máquina virtual:"
+
+msgid "VIRTUAL_MACHINE_PARAMS_FIELD"
+msgstr "Parámetros de la máquina virtual:"
+
+msgid "VM_ACCESS_GUIDE"
+msgstr "Utilice las siguientes credenciales para acceder a su máquina virtual:"
+
+msgid "VM_ACCOUNT_CREATED"
+msgstr "Ha creado una nueva cuenta en VMmanager. Utilice %(email)s para gestionar su servicio."
+
+msgid "VM_ACTIVE"
+msgstr "La máquina virtual ahora está activa"
+
+msgid "VM_ACTIVE_NOW"
+msgstr "La máquina virtual %(name)s (#%(id)s) ahora está activa"
+
+msgid "VM_CHANGE_PASSWORD"
+msgstr "Se ha cambiado la contraseña de la máquina virtual"
+
+msgid "VM_CHANGE_PASSWORD_DETAILED"
+msgstr "La contraseña de su máquina virtual \"%(name)s\" ha sido cambiada exitosamente. Utilice las siguientes credenciales para gestionar su servicio:"
+
+msgid "VM_CHANGE_PASSWORD_ERROR"
+msgstr "La contraseña no se ha cambiado. Para acceder a la máquina virtual, actualice la contraseña:"
+
+msgid "VM_CRASHED"
+msgstr "La máquina virtual está bloqueada"
+
+msgid "VM_CRASHED_DETAILED"
+msgstr "La máquina virtual %(name)s (#%(id)s) está bloqueada"
+
+msgid "VM_CREATED"
+msgstr "Se ha creado la máquina virtual"
+
+msgid "VM_CREATED_DETAILED"
+msgstr "Se ha creado para usted una máquina virtual \"%(name)s\" en el servidor %(link)s con los siguientes parámetros:"
+
+msgid "VM_DESCRIPTION"
+msgstr "Máquina virtual #%(id)s %(name)s"
+
+msgid "VM_EMAIL_CONFIRMATION"
+msgstr "Gestor de máquinas virtuales. Confirmación por correo"
+
+msgid "VM_LOAD_BELOW_CRITICAL_VALUE"
+msgstr "La carga %(type)s de la VM está por debajo del valor crítico"
+
+msgid "VM_LOAD_BELOW_DETAILED"
+msgstr "La carga %(type)s en la VM %(name)s (#%(id)s) está por debajo de %(value)s%%:"
+
+msgid "VM_LOAD_EXCEEDED"
+msgstr "La carga %(type)s en la VM %(name)s (#%(id)s) ha superado %(value)s%%:"
+
+msgid "VM_MANAGER_INVITE"
+msgstr "Ha sido invitado/a a VMmanager"
+
+msgid "VM_PASSWORD_RECOVERY"
+msgstr "Gestor de máquinas virtuales. Recuperación de contraseña"
+
+msgid "VM_REINSTALLED"
+msgstr "La máquina virtual ha sido reinstalada"
+
+msgid "VM_REINSTALLED_ON_SERVER_SUCCESSFULLY"
+msgstr "Su máquina virtual \"%(name)s\" en el servidor %(server)s ha sido reinstalada correctamente."
+
+msgid "VM_SUBMITTED_PASSWORD_RECOVERY"
+msgstr "Ha solicitado la recuperación de contraseña para VMmanager. Siga este enlace para restablecer su contraseña."
+
+msgid "VOLTAGE"
+msgstr "el voltaje"
+
+msgid "VOLTAGE_BACK"
+msgstr "el voltaje ha vuelto"
+
+msgid "WAREHOUSE_ENTITY_COUNT:"
+msgstr "Número de equipos:"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_RESERVATION_EXPIRED_MANY"
+msgstr[0] "La copia de seguridad del dispositivo ha finalizado"
+msgstr[1] "El %(count)s de dispositivos han llegado al final de su periodo de reserva"
+msgstr[2] "La reserva de %(count)s dispositivos ha expirado"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_EXPIRING_OR_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_RESERVATION_EXPIRING_OR_EXPIRED_MANY"
+msgstr[0] "El dispositivo ha caducado o se le está acabando el tiempo de reserva"
+msgstr[1] "En %(count)s de dispositivos, el periodo de reserva está expirando o ha expirado."
+msgstr[2] "La reserva de dispositivos %(count)s caduca o ha caducado"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_PERIOD_EXPIRED"
+msgstr "WAREHOUSE_ENTITY_RESERVATION_PERIOD_EXPIRED"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_VARIES."
+msgstr "El calendario de reservas de dispositivos varía"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_WILL_EXPIRED_IN_DAYS"
+msgid_plural "WAREHOUSE_ENTITY_RESERVATION_WILL_EXPIRED_IN_DAYS_MANY"
+msgstr[0] "La reserva del dispositivo expirará en %(days)s %(day_word)s"
+msgstr[1] "La reserva %(count)s de dispositivos expirará en %(days)s %(day_word)s"
+msgstr[2] "La reserva de %(count)s dispositivos expirará en %(days)s %(day_word)s"
+
+msgid "WAREHOUSE_ENTITY_RESERVED_UNTIL"
+msgstr "Los aparatos están en garantía hasta %(date)s"
+
+msgid "WAREHOUSE_ENTITY_TYPE:"
+msgstr "Tipo de equipo:"
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_WARRANTY_EXPIRED_MANY"
+msgstr[0] "La garantía del aparato ha expirado"
+msgstr[1] "%(count)s de dispositivos fuera de garantía"
+msgstr[2] "La garantía de los dispositivos %(count)s ha expirado"
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_EXPIRING_OR_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_WARRANTY_EXPIRING_OR_EXPIRED_MANY"
+msgstr[0] "Su dispositivo está fuera de garantía o está caducando"
+msgstr[1] "%(count)s de dispositivos caducados o fuera de garantía"
+msgstr[2] "La garantía finaliza en los dispositivos de %(count)s"
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_VARIES."
+msgstr "Los periodos de garantía de los dispositivos varían"
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_WILL_EXPIRED_IN_DAYS"
+msgid_plural "WAREHOUSE_ENTITY_WARRANTY_WILL_EXPIRED_IN_DAYS_MANY"
+msgstr[0] "La garantía del dispositivo expirará en %(days)s %(day_word)s"
+msgstr[1] "La garantía %(count)s de los dispositivos expirará en %(days)s %(day_word)s"
+msgstr[2] "La garantía de %(count)s dispositivos expirará en %(days)s %(day_word)s"
+
+msgid "WARRANTY_UNTIL"
+msgstr "Bajo garantía hasta %(date)s"
+
+msgid "WARRANTY_UNTIL:"
+msgstr "En garantía hasta:"
+
+msgid "WELCOME_TO_VM_MANAGER"
+msgstr "Bienvenido a VMManager"
+
+msgid "WELCOME_TO_VM_MANAGER!"
+msgstr "¡Bienvenido/a a VMmanager!"
+
+msgid "alert_exp_active"
+msgstr "Carga de %(subtype)s en el nodo %(name)s #%(id)s supera el %(value)s%%:"
+
+msgid "alert_exp_resolved"
+msgstr "Carga de %(subtype)s en el nodo %(name)s #%(id)s está por debajo del %(value)s%%:"
+
+msgid "alert_subject_active"
+msgstr "Carga crítica del nodo %(subtype)s"
+
+msgid "alert_subject_resolved"
+msgstr "Nodo %(subtype)s carga por debajo del valor crítico"
+
+msgid "fan"
+msgstr "velocidad del ventilador"
+
+msgid "status_exp_active"
+msgstr "Nodo %(name)s #%(id)s no está disponible"
+
+msgid "status_exp_resolved"
+msgstr "Nodo %(name)s #%(id)s ahora está disponible"
+
+msgid "status_subject_active"
+msgstr "Nodo del clúster no disponible"
+
+msgid "status_subject_resolved"
+msgstr "El nodo del clúster ahora está disponible"
+
+msgid "task_entity_host"
+msgstr "Máquina virtual #%(id)s %(name)s"
+
+msgid "task_entity_node"
+msgstr "Nodo del clúster #%(id)s %(name)s"
+
+msgid "task_name_change_password"
+msgstr "Cambiar la contraseña de la VM"
+
+msgid "task_name_check_storage"
+msgstr "Comprobación del almacenamiento"
+
+msgid "task_name_connect_storages"
+msgstr "Conexión de los almacenes"
+
+msgid "task_name_disk_resize"
+msgstr "Cambiar el tamaño del disco"
+
+msgid "task_name_ha_generate_metadata"
+msgstr "Actualización de metadatos de alta disponibilidad"
+
+msgid "task_name_host_boot_order"
+msgstr "Cambio del orden de arranque del disco VM"
+
+msgid "task_name_host_change_params"
+msgstr "Cambiar los parámetros de la máquina virtual"
+
+msgid "task_name_host_clone"
+msgstr "Clon de máquina virtual"
+
+msgid "task_name_host_create"
+msgstr "Crear una VM"
+
+msgid "task_name_host_delete"
+msgstr "Eliminar máquina virtual"
+
+msgid "task_name_host_hibernate"
+msgstr "Suspender la máquina virtual a disco"
+
+msgid "task_name_host_iface_create"
+msgstr "Añade una interfaz de red"
+
+msgid "task_name_host_iface_delete"
+msgstr "Eliminar una interfaz de red"
+
+msgid "task_name_host_iface_edit"
+msgstr "Edite la interfaz de red"
+
+msgid "task_name_host_image_create"
+msgstr "Creación de imágenes de VM"
+
+msgid "task_name_host_iso_mount"
+msgstr "Montar ISO en una VM"
+
+msgid "task_name_host_iso_unmount"
+msgstr "Desmontar la ISO de la VM"
+
+msgid "task_name_host_migrate"
+msgstr "Migración de máquinas virtuales"
+
+msgid "task_name_host_recipe"
+msgstr "Ejecutar un script en una VM"
+
+msgid "task_name_host_recover_domain"
+msgstr "Restaurar el archivo VM xml"
+
+msgid "task_name_host_reinstall"
+msgstr "Reinstalación de la VM"
+
+msgid "task_name_host_relocate"
+msgstr "Recuperación ante desastres de máquinas virtuales"
+
+msgid "task_name_host_rescue_enter"
+msgstr "Acceso al modo de rescate de máquinas virtuales"
+
+msgid "task_name_host_rescue_exit"
+msgstr "Salir del modo de rescate de la máquina virtual"
+
+msgid "task_name_host_restart"
+msgstr "Reiniciar la VM"
+
+msgid "task_name_host_resume"
+msgstr "Reanudar VM"
+
+msgid "task_name_host_run_recipe"
+msgstr "Ejecutar un script en una VM"
+
+msgid "task_name_host_spice_configure"
+msgstr "La conexión SPICE para VM es activado"
+
+msgid "task_name_host_start"
+msgstr "Inicio de la VM"
+
+msgid "task_name_host_stop"
+msgstr "Parada de la VM"
+
+msgid "task_name_host_suspend"
+msgstr "Suspender VM"
+
+msgid "task_name_host_update_metadata"
+msgstr "Actualización de los metadatos de la VM"
+
+msgid "task_name_host_vnc_password"
+msgstr "Cambiar la contraseña de VNC en la VM"
+
+msgid "task_name_ip_allocate"
+msgstr "Asignar direcciones IP"
+
+msgid "task_name_ip_delete"
+msgstr "Eliminar dirección IP"
+
+msgid "task_name_node_create"
+msgstr "Conexión del nodo"
+
+msgid "task_name_node_create_finish"
+msgstr "La verificación del estado del nodo ha finalizado"
+
+msgid "task_name_node_ha_disable"
+msgstr "Suspensión de la alta disponibilidad en el nodo"
+
+msgid "task_name_node_ha_enable"
+msgstr "Activación de la alta disponibilidad en el nodo"
+
+msgid "task_name_node_timesync_check"
+msgstr "Comprobación de la sincronización horaria en el nodo"
+
+msgid "task_name_node_timesync_config"
+msgstr "Configuración de la sincronización horaria en el nodo"
+
+msgid "task_name_node_timesync_prepare"
+msgstr "Preparar el nodo para la sincronización horaria"
+
+msgid "task_name_node_update_certificate"
+msgstr "Actualización de los certificados TSL en el nodo"
+
+msgid "task_name_node_update_certificates"
+msgstr "Actualización de los certificados TSL en el nodo"
+
+msgid "task_name_ptr_change"
+msgstr "Cambiar el registro PTR"
+
+msgid "task_name_snapshot_create"
+msgstr "Crear instantánea de VM"
+
+msgid "task_name_snapshot_delete2"
+msgstr "Eliminar instantáneas de máquinas virtuales"
+
+msgid "temperature"
+msgstr "temperatura"
+
+msgid "test_remove_sync_branch"
+msgstr ""
+
+msgid "voltage"
+msgstr "Voltaje"

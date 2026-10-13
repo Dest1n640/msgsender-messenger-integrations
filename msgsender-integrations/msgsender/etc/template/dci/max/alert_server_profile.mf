@@ -1,0 +1,11 @@
+{% extends "dci/max/base.jinja" %}
+
+{%- block header -%}
+{{ gettext("INCONSISTENCIES_IN_SERVER_PROFILE_PARAMETERS") }}
+{%- endblock header -%}
+
+{%- block body -%}
+{% include "dci/max/server_information.jinja" %}
+
+{% include "dci/max/server_link.jinja" %}
+{%- endblock body -%}

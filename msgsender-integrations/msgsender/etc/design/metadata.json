@@ -1,0 +1,46 @@
+{
+  "design": [
+    {
+      "name": "default_vm",
+      "categories": ["vm"],
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": { "body": "vm/default_vm.mf" }
+        },
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": { "body": "vm/default_vm.mf" }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": { "body": "vm/default_vm.mf" }
+        }
+      ]
+    },
+    {
+      "name": "plain_text",
+      "categories": ["vm"],
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": { "body": "vm/plain_text.mf" }
+        },
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": { "body": "vm/plain_text.mf" }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": { "body": "vm/plain_text.mf" }
+        }
+      ]
+    }
+  ]
+}

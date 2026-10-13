@@ -1,0 +1,52 @@
+{%- set resolved = params.resolved is defined and params.resolved -%}
+
+{%- set diag_errors = params.message.diag_error -%}
+{%- set diag_error_ns = namespace(cancel_found=false, finish_found=false, other_found=false) -%}
+{%- set diag_count_ns = namespace(local_speed=0, smart=0, ipmi_check=0) -%}
+{%- for diag_error in diag_errors -%}
+  {%- if diag_error.type == "canceled" -%}
+    {%- set diag_error_ns.cancel_found = true -%}
+  {%- elif diag_error.type == "finish" -%}
+    {%- set diag_error_ns.finish_found = true -%}
+  {%- elif diag_error.type == "ipmi_check" -%}
+    {%- set diag_error_ns.other_found = true -%}
+    {%- set diag_count_ns.ipmi_check = diag_count_ns.ipmi_check + 1 -%}
+  {%- elif diag_error.type == "local_speed" -%}
+    {%- set diag_error_ns.other_found = true -%}
+    {%- set diag_count_ns.local_speed = diag_count_ns.local_speed + 1 -%}
+  {%- elif diag_error.type == "smart" -%}
+    {%- set diag_error_ns.other_found = true -%}
+    {%- set diag_count_ns.smart = diag_count_ns.smart + 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- set diag_error_count = diag_count_ns.smart + diag_count_ns.local_speed + diag_count_ns.ipmi_check -%}
+
+{%- set diag_error_type = "" -%}
+{%- if diag_error_ns.other_found and not diag_error_ns.finish_found and not diag_error_ns.cancel_found -%}
+  {%- set diag_error_type = "error" -%}
+{%- elif diag_error_ns.other_found and diag_error_ns.finish_found and not diag_error_ns.cancel_found -%}
+  {%- set diag_error_type = "error_finish" -%}
+{%- elif not diag_error_ns.other_found and diag_error_ns.finish_found and not diag_error_ns.cancel_found -%}
+  {%- set diag_error_type = "finish" -%}
+{%- elif diag_error_ns.other_found and not diag_error_ns.finish_found and diag_error_ns.cancel_found -%}
+  {%- set diag_error_type = "error_cancel" -%}
+{%- elif not diag_error_ns.other_found and not diag_error_ns.finish_found and diag_error_ns.cancel_found -%}
+  {%- set diag_error_type = "cancel" -%}
+{%- endif -%}
+
+{%- set found_phrase = ngettext("FOUND_ONE", "FOUND_MANY", diag_error_count, count=diag_error_count) -%}
+{%- set error_word = ngettext("ERROR_ONE", "ERROR_MANY", diag_error_count, count=diag_error_count) -%}
+{%- set error_found_phrase = found_phrase ~ " " ~ diag_error_count|string ~ " " ~ error_word ~ "." -%}
+
+{%- if diag_error_type == "error" -%}
+  {{ gettext("DIAGNOSIS_COMPLETE_SUCCESS", error_found_phrase=error_found_phrase) }} 
+{%- elif diag_error_type == "error_finish" -%}
+  {{ gettext("DIAGNOSIS_COMPLETE_WITH_ERROR", error_found_phrase=error_found_phrase) }} 
+{%- elif diag_error_type == "finish" -%}
+  {{ gettext("DIAGNOSIS_COMPLETE_ONLY_ERROR") }}.
+{%- elif diag_error_type == "error_cancel" -%}
+  {{ gettext("DIAGNOSIS_CANCELLED_BY_ADMIN", error_found_phrase=error_found_phrase) }} 
+{%- elif diag_error_type == "cancel" -%}
+  {{ gettext("DIAGNOSIS_CANCELLED_BY_ADMIN_ONLY") }}.
+{%- endif -%}

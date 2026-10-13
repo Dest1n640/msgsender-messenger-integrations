@@ -1,0 +1,14 @@
+{%- set resolved = params.resolved is defined and params.resolved -%}
+{%- if params.alert is defined -%}
+  {%- if resolved -%}
+    {{ gettext("VM_LOAD_BELOW_CRITICAL_VALUE", type=params.alert.type|upper) }}
+  {%- else -%}
+    {{ gettext("CRITICAL_VM_LOAD", type=params.alert.type|upper) }}
+  {%- endif -%}
+{%- elif params.status is defined and params.status.value == "crashed" -%}
+  {%- if resolved -%}
+    {{ gettext("VM_ACTIVE") }}
+  {%- else -%}
+    {{ gettext("VM_CRASHED") }}
+  {%- endif -%}
+{%- endif -%}

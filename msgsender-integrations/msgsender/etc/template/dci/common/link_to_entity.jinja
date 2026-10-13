@@ -1,0 +1,41 @@
+
+{%- set url = params.message.product_info.url -%}
+
+{%- set entity_counter = params.message.component.barcodes|length-%}
+{%- set warehouse_state = params.message.component.warehouse_state -%}
+{%- set entity_name = params.message.component.entity -%}
+{%- set entity_id = params.message.component.entity_id -%}
+{%- set url_part = params.message.component.url_condition_part -%}
+
+{%- set ns.link_to_entity = [url, "dci/devices/", entity_name, "/", entity_id, "/settings"]|join -%}
+{%- set ns.button_text = ngettext("GO_TO_DEVICE", "GO_TO_DEVICE_PLURAL", entity_counter) -%}
+{%- set ns.button_url = [url, "dci/warehouse/devices", entity_name, "?filter=barcode:(", url_part, ");"]|join -%}
+
+{%- if entity_counter == 1 -%}
+  {%- if entity_name != "other" -%}
+      {%- if warehouse_state in status_in_rack_list -%}
+        {%- if entity_name == "server" -%}
+          {%- set link_to_entity = [url, "dci/server/", entity_id, "/settings"]|join -%}
+          {%- set ns.geoposition_block = [gettext("LOCATION:"), " ", location_name, gettext("RACK_INFO", rack=rack_name), unit_show]|join -%}
+          {%- set ns.device_visible_link = link_to_entity -%}
+        {%- else -%}
+          {%- set link_to_entity = [url, "dci/devices/", entity_name, "/", entity_id, "/settings"]|join -%}
+          {%- set ns.device_visible_link = link_to_entity -%}
+          {%- set ns.geoposition_block = [gettext("LOCATION:"), " ", location_name, gettext("RACK_INFO", rack=rack_name), unit_show]|join -%}
+        {%- endif -%}
+      {%- elif entity_name == "ups" and warehouse_state == "at_location" -%}
+        {%- set link_to_entity = [url, "dci/devices/ups/", entity_id, "/settings"]|join -%}
+        {%- set ns.device_visible_link = link_to_entity -%}
+        {%- set ns.geoposition_block = [gettext("LOCATION:"), " ", location_name]|join -%}
+      {%- else -%}
+        {%- set link_to_entity = [url, "warehouse/", entity_name, "/", entity_id, "/settings"]|join -%}
+        {%- set ns.device_visible_link = link_to_entity -%}
+        {%- set ns.geoposition_block = [gettext("LOCATION:"), " " , gettext("IN_WAREHOUSE", name=warehouse_name)]|join -%}
+      {%- endif -%}
+  {%- else -%}
+    {%- set link_to_entity = [url, "warehouse/", entity_name, "/", entity_id, "/settings"]|join -%}
+    {%- set ns.device_visible_link = link_to_entity -%}
+    {%- set ns.geoposition_block = [gettext("LOCATION:"), " " , gettext("IN_WAREHOUSE", name=warehouse_name)]|join -%}
+  {%- endif -%}
+  {%- set ns.button_url = link_to_entity -%}
+{%- endif -%}

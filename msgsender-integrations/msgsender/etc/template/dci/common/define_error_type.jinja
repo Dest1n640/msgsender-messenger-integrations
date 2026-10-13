@@ -1,0 +1,58 @@
+{# --- Определяем флаги --- #}
+{%- set diag_errors = params.message.diag_error -%}
+
+
+{%- for diag_error in diag_errors -%}
+  {%- if diag_error.type == "canceled" -%}
+    {%- set diag_error_ns.cancel_found = true -%}
+  {%- elif diag_error.type == "finish" -%}
+    {%- set diag_error_ns.finish_found = true -%}
+  {%- elif diag_error.type == "ipmi_check" -%}
+    {%- set diag_error_ns.other_found = true -%}
+    {%- set diag_count_ns.ipmi_check = diag_count_ns.ipmi_check + 1 -%}
+  {%- elif diag_error.type == "local_speed" -%}
+    {%- set diag_error_ns.other_found = true -%}
+    {%- set diag_count_ns.local_speed = diag_count_ns.local_speed + 1 -%}
+  {%- elif diag_error.type == "smart" -%}
+    {%- set diag_error_ns.other_found = true -%}
+    {%- set diag_count_ns.smart = diag_count_ns.smart + 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- set ns.diag_error_count = diag_count_ns.smart + diag_count_ns.local_speed + diag_count_ns.ipmi_check -%}
+
+{%- set diag_error_type = "" -%}
+{%- if diag_error_ns.other_found and not diag_error_ns.finish_found and not diag_error_ns.cancel_found -%}
+  {%- set diag_error_type = "error" -%}
+{%- elif diag_error_ns.other_found and diag_error_ns.finish_found and not diag_error_ns.cancel_found -%}
+  {%- set diag_error_type = "error_finish" -%}
+{%- elif not diag_error_ns.other_found and diag_error_ns.finish_found and not diag_error_ns.cancel_found -%}
+  {%- set diag_error_type = "finish" -%}
+{%- elif diag_error_ns.other_found and not diag_error_ns.finish_found and diag_error_ns.cancel_found -%}
+  {%- set diag_error_type = "error_cancel" -%}
+{%- elif not diag_error_ns.other_found and not diag_error_ns.finish_found and diag_error_ns.cancel_found -%}
+  {%- set diag_error_type = "cancel" -%}
+{%- endif -%}
+
+{# --- Формируем множественное число через ngettext --- #}
+
+{%- set error_word = ngettext("ERROR_ONE", "ERROR_MANY", ns.diag_error_count) -%}
+{%- set ns.smart_error_word = ngettext("ERROR_ONE", "ERROR_MANY", diag_count_ns.smart) -%}
+
+{%- set found_phrase = ngettext("FOUND_ONE", "FOUND_MANY", ns.diag_error_count, count=ns.diag_error_count) -%}
+{%- set error_found_phrase = found_phrase ~ " " ~ ns.diag_error_count|string ~ " " ~ error_word ~ "." -%}
+
+{# --- Формируем ns.subject с параметрами --- #}
+{%- if diag_error_type == "error" -%}
+  {%- set ns.subject = gettext("DIAGNOSIS_COMPLETE_SUCCESS", error_found_phrase=error_found_phrase) -%}
+{%- elif diag_error_type == "error_finish" -%}
+  {%- set ns.subject = gettext("DIAGNOSIS_COMPLETE_WITH_ERROR", error_found_phrase=error_found_phrase) -%}
+{%- elif diag_error_type == "finish" -%}
+  {%- set ns.subject = gettext("DIAGNOSIS_COMPLETE_ONLY_ERROR") -%}
+{%- elif diag_error_type == "error_cancel" -%}
+  {%- set ns.subject = gettext("DIAGNOSIS_CANCELLED_BY_ADMIN", error_found_phrase=error_found_phrase) -%}
+{%- elif diag_error_type == "cancel" -%}
+  {%- set ns.subject = gettext("DIAGNOSIS_CANCELLED_BY_ADMIN_ONLY") -%}
+{%- else -%}
+  {%- set ns.subject = "" -%}
+{%- endif -%}

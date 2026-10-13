@@ -1,0 +1,1 @@
+{{ gettext("WELCOME_TO_VM_MANAGER") }}

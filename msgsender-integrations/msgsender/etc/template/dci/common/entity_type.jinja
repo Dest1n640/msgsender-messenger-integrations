@@ -1,0 +1,18 @@
+{%- set entity_type_msgid = {
+    "server": "ENTITY_TYPE_SERVER",
+    "switch": "ENTITY_TYPE_SWITCH",
+    "ups": "ENTITY_TYPE_UPS",
+    "pdu": "ENTITY_TYPE_PDU",
+    "chassis": "ENTITY_TYPE_CHASSIS",
+    "ram": "ENTITY_TYPE_RAM",
+    "cpu": "ENTITY_TYPE_CPU",
+    "pci": "ENTITY_TYPE_PCI",
+    "psu": "ENTITY_TYPE_PSU",
+    "storage": "ENTITY_TYPE_STORAGE",
+    "dss_chassis": "ENTITY_TYPE_DSS_CHASSIS",
+    "dss_chassis_controller": "ENTITY_TYPE_DSS_CHASSIS_CONTROLLER",
+    "dss_chassis_io_module": "ENTITY_TYPE_DSS_CHASSIS_IO_MODULE",
+    "dss_cache_module": "ENTITY_TYPE_DSS_CACHE_MODULE",
+    "other": "ENTITY_TYPE_OTHER",
+} -%}
+{%- set ns.entity_type = gettext(entity_type_msgid[entity_name]) -%}

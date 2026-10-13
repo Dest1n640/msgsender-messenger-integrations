@@ -1,0 +1,1 @@
+{{ gettext("TEST_EMAIL_SUBJECT") }}

@@ -1,0 +1,16 @@
+{%- set resolved = params.resolved is defined and params.resolved -%}
+
+{%- set component_name = params.message.server_component.name -%}
+{%- if params.message.server_component.serial_number -%}
+  {%- set component_name = component_name ~ ", S/N " ~ params.message.server_component.serial_number -%}
+{%- endif -%}
+
+{%- if resolved -%}
+  {{ gettext("COMPONENT_STATUS_NORMAL", component_name=component_name) }}
+{%- else -%}
+  {%- if params.message.server_component.health == "warning" -%}
+    {{ gettext("COMPONENT_STATUS_WARNING", component_name=component_name) }}
+  {%- else -%}
+    {{ gettext("COMPONENT_STATUS_CRITICAL", component_name=component_name) }}
+  {%- endif -%}
+{%- endif -%}

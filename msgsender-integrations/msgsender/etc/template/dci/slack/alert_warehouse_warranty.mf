@@ -1,0 +1,70 @@
+{# vim: set ft=jinja: #}
+
+{%- extends "dci/slack/base.jinja" -%}
+
+{%- set ns = namespace() -%}
+
+{%- set date_shift = params.message.component.date_shift -%}
+{%- set entity_name = params.message.component.entity -%}
+{%- set entity_counter = params.message.component.barcodes|length -%}
+{%- set identical_date = params.message.component.identical_date -%}
+
+{%- include "dci/common/entity_type.jinja" with context -%}
+
+{%- set day_word = ngettext("DAY", "DAYS", date_shift) -%}
+
+{%- set entity_readable_name = params.message.component.barcodes[0] -%}
+{%- if entity_name == "other" -%}
+    {%- set entity_readable_name = params.message.component.other_name -%}
+{%- endif -%}
+
+{%- set ns.title = ngettext(
+    "WAREHOUSE_ENTITY_WARRANTY_EXPIRING_OR_EXPIRED",
+    "WAREHOUSE_ENTITY_WARRANTY_EXPIRING_OR_EXPIRED_PLURAL",
+    entity_counter,
+    count=entity_counter
+) -%}
+{%- set ns.body_message = gettext("WAREHOUSE_ENTITY_WARRANTY_VARIES.") -%}
+{%- if identical_date -%}
+    {%- if date_shift > 0 -%}
+        {%- set ns.title = ngettext(
+            "WAREHOUSE_ENTITY_WARRANTY_WILL_EXPIRED_IN_DAYS",
+            "WAREHOUSE_ENTITY_WARRANTY_WILL_EXPIRED_IN_DAYS_PLURAL",
+            entity_counter,
+            count=entity_counter,
+            days=date_shift,
+            day_word=day_word
+        ) -%}
+    {%- else -%}
+        {%- set ns.title = ngettext(
+            "WAREHOUSE_ENTITY_WARRANTY_EXPIRED",
+            "WAREHOUSE_ENTITY_WARRANTY_EXPIRED_PLURAL",
+            entity_counter,
+            count=entity_counter,
+            days=date_shift,
+            day_word=day_word
+        ) -%}
+    {%- endif -%}
+    {%- set ns.body_message = "" -%}
+{%- endif -%}
+
+{%- block header -%}
+{{ ns.title }}
+{%- endblock header -%}
+
+{%- block body -%}
+{{ ns.body_message }}
+{% include "dci/slack/warehouse_entity_information.jinja" %}
+{{ gettext("WAREHOUSE_ENTITY_TYPE:") }} {{ ns.entity_type }}
+{{ gettext("WAREHOUSE_ENTITY_COUNT:") }} {{ entity_counter }}
+{% if entity_counter == 1 -%}
+    {{ gettext("BARCODE:") }} {{ entity_readable_name }}
+{% endif -%}
+{% if identical_date and date_shift > 0 -%}
+    {{ gettext("WARRANTY_UNTIL", date=params.message.component.end_date) }}
+{%- endif %}
+
+{{ gettext("END_WARRANTY_WARNING") }}
+
+{% include 'dci/common/warehouse_entity_link.jinja' with context %}
+{%- endblock body -%}

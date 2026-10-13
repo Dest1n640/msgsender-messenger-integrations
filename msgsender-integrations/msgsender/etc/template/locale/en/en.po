@@ -1,0 +1,1076 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VMmanager 1.0\n"
+"POT-Creation-Date: 2026-05-28 16:27+0000\n"
+"PO-Revision-Date: 2026-05-28 16:27+0000\n"
+"Last-Translator: Your Name <you@example.com>\n"
+"Language-Team: English <you@example.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid ":"
+msgstr ":"
+
+msgid ";"
+msgstr ";"
+
+msgid "ADDITIONAL"
+msgstr "additional"
+
+msgid "ADMINISTRATOR"
+msgstr "Administrator"
+
+msgid "ADVANCED_USER"
+msgstr "Advanced user"
+
+msgid "BACKUP_CREATION_ERROR"
+msgstr "Backup creation error"
+
+msgid "BACKUP_CREATION_FAILED_TEXT"
+msgstr "A scheduled backup failed at the %(NAME)s stage of the %(ID)s task. A task was created to delete a new backup. Check the status of hosts and storage for virtual machine backups."
+
+msgid "BACKUP_ID"
+msgstr "Backup Id:"
+
+msgid "BACKUP_NAME"
+msgstr "Backup Name:"
+
+msgid "BARCODE:"
+msgstr "Barcode:"
+
+msgid "CHASSIS"
+msgstr "chassis"
+
+msgid "CHASSIS_SLOT"
+msgstr ", Chassis: %(chassis)s, slot: %(slot)s"
+
+msgid "COMPONENT_STATUS_CRITICAL"
+msgstr "The %(component_name)s status is critical"
+
+msgid "COMPONENT_STATUS_NORMAL"
+msgstr "Status of the %(component_name)s has returned to normal"
+
+msgid "COMPONENT_STATUS_WARNING"
+msgstr "There may be a problem with the %(component_name)s"
+
+msgid "CONFIRM"
+msgstr "Confirm"
+
+msgid "CONGRATULATIONS"
+msgstr "Congratulations!"
+
+msgid "CREATION_DATE_FIELD"
+msgstr "Creation date:"
+
+msgid "CRITICAL_NODE_LOAD"
+msgstr "Critical node %(type)s load"
+
+msgid "CRITICAL_VM_LOAD"
+msgstr "Critical VM %(type)s load"
+
+msgid "CUSTOMER_GREETINGS"
+msgstr "Dear customer!"
+
+msgid "DAY"
+msgid_plural "DAY_MANY"
+msgstr[0] "day"
+msgstr[1] "days"
+
+msgid "DCI_PASSWORD_RECOVERY"
+msgstr "DCImanager. Password recovery"
+
+msgid "DCI_SUBMITTED_PASSWORD_RECOVERY"
+msgstr "You have submitted a DCImanager password recovery request. Follow the link to reset your password."
+
+msgid "DEFAULT_PHONE_NUMBER"
+msgstr "1-941-487-8209"
+
+msgid "DEMO_VALID_TIME"
+msgstr "The demo version is valid for 12 hours after you have followed the link."
+
+msgid "DEMO_VERSION_ACCESS"
+msgstr "Access to demo version of DCImanager"
+
+msgid "DIAGNOSIS_CANCELLED_BY_ADMIN"
+msgstr "Diagnostic operation was canceled by the administrator. On server %(error_found_phrase)s"
+
+msgid "DIAGNOSIS_CANCELLED_BY_ADMIN_ONLY"
+msgstr "Diagnostic operation was canceled by the administrator."
+
+msgid "DIAGNOSIS_COMPLETE_ONLY_ERROR"
+msgstr "Diagnostic operation completed with an error."
+
+msgid "DIAGNOSIS_COMPLETE_SUCCESS"
+msgstr "Diagnostic operation completed successfully. On server %(error_found_phrase)s"
+
+msgid "DIAGNOSIS_COMPLETE_WITH_ERROR"
+msgstr "Diagnostic operation completed with an error. On server %(error_found_phrase)s"
+
+msgid "DISKS_FIELD"
+msgstr "Disks:"
+
+msgid "DISK_ID"
+msgstr "Disk Id:"
+
+msgid "DISK_NAME"
+msgstr "Disk Name:"
+
+msgid "DOCUMENTATION_LINK"
+msgstr "More details in the documentation..."
+
+msgid "DOMAIN_FIELD"
+msgstr "Domain:"
+
+msgid "DSS:"
+msgstr "DSS:"
+
+msgid "DSS_CONTROLLER_CPU_UTILIZATION"
+msgstr "Controllers - CPU utilization, %%: exceeds %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_CPU_UTILIZATION_RESOLVED"
+msgstr "Controllers - CPU utilization, %%: value returned to normal"
+
+msgid "DSS_CONTROLLER_HEALTH"
+msgstr "Controllers - Health-status: not as expected %(time_period)s"
+
+msgid "DSS_CONTROLLER_HEALTH_RESOLVED"
+msgstr "Controllers - Health-status: value returned to normal"
+
+msgid "DSS_CONTROLLER_IOPS"
+msgstr "Controllers - IOPS: exceeds %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_IOPS_RESOLVED"
+msgstr "Controllers - IOPS: the value is back to normal"
+
+msgid "DSS_CONTROLLER_READ_RATE"
+msgstr "Controllers - Read rate, MB/s: exceeds %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_READ_RATE_RESOLVED"
+msgstr "Controllers - Read speed, MB/s: value returned to normal"
+
+msgid "DSS_CONTROLLER_STATUS"
+msgstr "Controllers - Status: not as expected %(time_period)s"
+
+msgid "DSS_CONTROLLER_STATUS_RESOLVED"
+msgstr "Controllers - Status: value returned to normal"
+
+msgid "DSS_CONTROLLER_WRITE_RATE"
+msgstr "Controllers - Write rate, MB/s: exceeds %(threshold)s %(time_period)s"
+
+msgid "DSS_CONTROLLER_WRITE_RATE_RESOLVED"
+msgstr "Controllers - Write speed, MB/s: value returned to normal"
+
+msgid "DSS_DISK_GROUP_HEALTH"
+msgstr "Disk groups - Health status: not as expected %(time_period)s"
+
+msgid "DSS_DISK_GROUP_HEALTH_RESOLVED"
+msgstr "Disk groups - Health-status: value returned to normal"
+
+msgid "DSS_DISK_GROUP_IOPS"
+msgstr "Disk groups - IOPS: exceeds %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_IOPS_RESOLVED"
+msgstr "Disk groups - IOPS: the value is back to normal"
+
+msgid "DSS_DISK_GROUP_READ_RATE"
+msgstr "Disk groups - Read rate, MB/s: exceeds %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_READ_RATE_RESOLVED"
+msgstr "Disk groups - Read speed, MB/s: value returned to normal"
+
+msgid "DSS_DISK_GROUP_SPACE_UTILIZATION"
+msgstr "Disk groups - Storage utilization, %%: exceeds : более %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_SPACE_UTILIZATION_RESOLVED"
+msgstr "Disk Groups - Disk Space Utilization, %%: value returned to normal"
+
+msgid "DSS_DISK_GROUP_STATUS"
+msgstr "Disk groups - Status: not as expected %(time_period)s"
+
+msgid "DSS_DISK_GROUP_STATUS_RESOLVED"
+msgstr "Disk groups - Status: value returned to normal"
+
+msgid "DSS_DISK_GROUP_WRITE_RATE"
+msgstr "Disk groups - Write rate, MB/s: exceeds %(threshold)s %(time_period)s"
+
+msgid "DSS_DISK_GROUP_WRITE_RATE_RESOLVED"
+msgstr "Disk groups - Write speed, MB/s: value returned to normal"
+
+msgid "DSS_DISK_HEALTH"
+msgstr "Disks - Health status: not as expected %(time_period)s"
+
+msgid "DSS_DISK_HEALTH_RESOLVED"
+msgstr "Disks - Health-status: value has returned to normal"
+
+msgid "DSS_DISK_TEMPERATURE_STATUS"
+msgstr "Disks - Status: not as expected %(time_period)s"
+
+msgid "DSS_DISK_TEMPERATURE_STATUS_RESOLVED"
+msgstr "Disks - Status: value has returned to normal"
+
+msgid "DSS_ENCLOSURE_HEALTH"
+msgstr "Enclosures - Health status: not as expected %(time_period)s"
+
+msgid "DSS_ENCLOSURE_HEALTH_RESOLVED"
+msgstr "Disk shelves - Health-status: value returned to normal"
+
+msgid "DSS_ENCLOSURE_STATUS"
+msgstr "Enclosures - Status: not as expected %(time_period)s"
+
+msgid "DSS_ENCLOSURE_STATUS_RESOLVED"
+msgstr "Disk shelves - Status: value returned to normal"
+
+msgid "DSS_FAN_HEALTH"
+msgstr "Fans - Health status: not as expected %(time_period)s"
+
+msgid "DSS_FAN_HEALTH_RESOLVED"
+msgstr "Fans - Health-status: value has returned to normal"
+
+msgid "DSS_FAN_STATUS"
+msgstr "Fans - Status: not as expected %(time_period)s"
+
+msgid "DSS_FAN_STATUS_RESOLVED"
+msgstr "Fans - Status: value returned to normal"
+
+msgid "DSS_HOST_PORT_HEALTH"
+msgstr "Ports - Health status: not as expected %(time_period)s"
+
+msgid "DSS_HOST_PORT_HEALTH_RESOLVED"
+msgstr "Ports - Health-status: value has returned to normal"
+
+msgid "DSS_HOST_PORT_STATUS"
+msgstr "Ports - Status: not as expected %(time_period)s"
+
+msgid "DSS_HOST_PORT_STATUS_RESOLVED"
+msgstr "Ports - Status: value returned to normal"
+
+msgid "DSS_MANAGEMENT_PORT_HEALTH"
+msgstr "Ports - Health status: not as expected %(time_period)s"
+
+msgid "DSS_MANAGEMENT_PORT_HEALTH_RESOLVED"
+msgstr "Ports - Health-status: value has returned to normal"
+
+msgid "DSS_POOL_HEALTH"
+msgstr "Pools - Status: not as expected %(time_period)s"
+
+msgid "DSS_POOL_HEALTH_RESOLVED"
+msgstr "Pools - Status: value has returned to normal"
+
+msgid "DSS_POWER_SUPPLY_HEALTH"
+msgstr "Power supplies - Health status: not as expected %(time_period)s"
+
+msgid "DSS_POWER_SUPPLY_HEALTH_RESOLVED"
+msgstr "Power Supplies - Health-status: value has returned to normal"
+
+msgid "DSS_POWER_SUPPLY_STATUS"
+msgstr "Power supplies - Status: not as expected %(time_period)s"
+
+msgid "DSS_POWER_SUPPLY_STATUS_RESOLVED"
+msgstr "Power Supplies - Status: value returned to normal"
+
+msgid "DSS_SYSTEM_HEALTH"
+msgstr "System - Health status: not as expected %(time_period)s"
+
+msgid "DSS_SYSTEM_HEALTH_RESOLVED"
+msgstr "System - Health-status: value has returned to normal"
+
+msgid "DSS_SYSTEM_STATUS"
+msgstr "System - Status: not as expected %(time_period)s"
+
+msgid "DSS_SYSTEM_STATUS_RESOLVED"
+msgstr "System - Status: value returned to normal"
+
+msgid "DSS_VOLUME_HEALTH"
+msgstr "Volumes - Health status: not as expected %(time_period)s"
+
+msgid "DSS_VOLUME_HEALTH_RESOLVED"
+msgstr "Volumes - Health-status: value has returned to normal"
+
+msgid "DSS_VOLUME_IOPS"
+msgstr "Volumes - IOPS: exceeds %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_IOPS_RESOLVED"
+msgstr "Volumes - IOPS: the value has returned to normal"
+
+msgid "DSS_VOLUME_READ_RATE"
+msgstr "Volumes - Read rate, MB/s: exceeds %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_READ_RATE_RESOLVED"
+msgstr "Volumes - Read speed, MB/s: value returned to normal"
+
+msgid "DSS_VOLUME_SPACE_UTILIZATION"
+msgstr "Volumes - Storage utilization, %%: exceeds %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_SPACE_UTILIZATION_RESOLVED"
+msgstr "Volume - Disk Space Utilization, %%: value returned to normal"
+
+msgid "DSS_VOLUME_WRITE_RATE"
+msgstr "Volumes - Write rate, MB/s: exceeds %(threshold)s %(time_period)s"
+
+msgid "DSS_VOLUME_WRITE_RATE_RESOLVED"
+msgstr "Volume - Write speed, MB/s: value returned to normal"
+
+msgid "DURATION_FIELD"
+msgstr "Duration:"
+
+msgid "EMAIL_CONFIRMATION"
+msgstr "Email confirmation"
+
+msgid "END_WARRANTY_WARNING"
+msgstr "We recommend taking measures to ensure safe and reliable operation of the equipment after the expiration of the warranty period."
+
+msgid "ENTER_PARAMS"
+msgstr "Entry details:"
+
+msgid "ENTITY_TYPE_CHASSIS"
+msgstr "chassis"
+
+msgid "ENTITY_TYPE_CPU"
+msgstr "CPU"
+
+msgid "ENTITY_TYPE_DSS_CACHE_MODULE"
+msgstr "cache module"
+
+msgid "ENTITY_TYPE_DSS_CHASSIS"
+msgstr "DSS chassis"
+
+msgid "ENTITY_TYPE_DSS_CHASSIS_CONTROLLER"
+msgstr "controller"
+
+msgid "ENTITY_TYPE_DSS_CHASSIS_IO_MODULE"
+msgstr "I/O module"
+
+msgid "ENTITY_TYPE_OTHER"
+msgstr "other equipment"
+
+msgid "ENTITY_TYPE_PCI"
+msgstr "PCI devices"
+
+msgid "ENTITY_TYPE_PDU"
+msgstr "PDU"
+
+msgid "ENTITY_TYPE_PSU"
+msgstr "power supply"
+
+msgid "ENTITY_TYPE_RAM"
+msgstr "RAM"
+
+msgid "ENTITY_TYPE_SERVER"
+msgstr "server"
+
+msgid "ENTITY_TYPE_STORAGE"
+msgstr "storage"
+
+msgid "ENTITY_TYPE_SWITCH"
+msgstr "switch"
+
+msgid "ENTITY_TYPE_UPS"
+msgstr "UPS"
+
+msgid "ERRORS_FIELD"
+msgstr "Errors:"
+
+msgid "ERROR_FIELD"
+msgstr "Error:"
+
+msgid "ERROR_LIST_IPMI"
+msgstr "Failed to check IPMI availability after configuring"
+
+msgid "ERROR_LIST_LOCAL_SPEED"
+msgstr "Low speed local connection detected"
+
+msgid "ERROR_LIST_SMART"
+msgstr "%(count)d %(smart_error_word)s detected by SMART disk technology"
+
+msgid "ERROR_ONE"
+msgid_plural "ERROR_ONE_MANY"
+msgstr[0] "mistake"
+msgstr[1] "errors"
+
+msgid "EXPIRING_OR_EXPIRED_RESERVATION_UNIT_PERIOD"
+msgid_plural "EXPIRING_OR_EXPIRED_RESERVATION_UNIT_PERIOD_MANY"
+msgstr[0] "A unit's %(count)s has an expired or expired reservation period"
+msgstr[1] "%(count)s units have an expiring or expired reservation period"
+
+msgid "FAN"
+msgstr "fan speed"
+
+msgid "FAN_BACK"
+msgstr "fan speed is back"
+
+msgid "FINISH_REGISTRATION_GUIDE"
+msgstr "To finish your registration process please confirm your email. If you did not register any accounts on VMmanager please ignore this message."
+
+msgid "FOUND_ONE"
+msgid_plural "FOUND_ONE_MANY"
+msgstr[0] "found"
+msgstr[1] "found"
+
+msgid "GET_STARTED"
+msgstr "Get started"
+
+msgid "GO_TO"
+msgstr "Go to"
+
+msgid "GO_TO_COMPONENTS"
+msgstr "Go to components"
+
+msgid "GO_TO_DEVICE"
+msgid_plural "GO_TO_DEVICE_MANY"
+msgstr[0] "Go to device"
+msgstr[1] "Go to devices"
+
+msgid "GO_TO_RACK"
+msgstr "Go to rack"
+
+msgid "GO_TO_SERVER"
+msgstr "Go to server"
+
+msgid "GO_TO_SERVER_COMPONENTS"
+msgstr "Go to server components"
+
+msgid "GO_TO_SERVER_EQUIPMENT"
+msgstr "Go to server equipment"
+
+msgid "GO_TO_SERVER_SETTINGS"
+msgstr "Go to server settings"
+
+msgid "GO_TO_VM_MANAGER"
+msgstr "Go to VMmanager"
+
+msgid "GRANTED_ACCESS_TO_DEMO_VERSION"
+msgstr "You have been granted access to a demo version of DCImanager, a platform for IT&nbsp;infrastructure management in a single interface. Get acquainted with the possibilities for automation, monitoring and inventorying on the basis of equipment we have added to the platform. A part of functionality is not available in the demo version."
+
+msgid "HEALTH_STATUS_FIELD"
+msgstr "Health-status:"
+
+msgid "HELLO_WORD"
+msgstr "Hello there!"
+
+msgid "HELP_PHONE_NUMBER"
+msgstr "+1-415-697-1531"
+
+msgid "HELP_PHONE_NUMBER_INTER"
+msgstr "-"
+
+msgid "HELP_PHONE_NUMBER_INTER_RAW"
+msgstr "-"
+
+msgid "HELP_PHONE_NUMBER_RAW"
+msgstr "+14156971531"
+
+msgid "HELP_PHONE_NUMBER_SPAN_1"
+msgstr "+1-415-"
+
+msgid "HELP_PHONE_NUMBER_SPAN_2"
+msgstr "697-1531"
+
+msgid "INCONSISTENCIES_IN_SERVER_COMPONENTS"
+msgstr "Inconsistencies in server components"
+
+msgid "INCONSISTENCIES_IN_SERVER_COMPONENTS_DETECTED"
+msgstr "Inconsistencies were detected in server components"
+
+msgid "INCONSISTENCIES_IN_SERVER_PROFILE_PARAMETERS"
+msgstr "Inconsistencies were detected in server profile parameters"
+
+msgid "INCONSISTENCIES_SERVER_PROFILE_PARAMS"
+msgstr "Inconsistencies in server profile parameters"
+
+msgid "INVITED_MSG"
+msgstr "You have been invited to VMmanager with “%(role)s” permissions. To log in to the panel, enter your username %(email)s."
+
+msgid "IN_WAREHOUSE"
+msgstr "in warehouse %(name)s"
+
+msgid "IP_ADDRESS_FIELD"
+msgstr "IP-address:"
+
+msgid "LAST_VALUE_FIELD"
+msgstr "Last value:"
+
+msgid "LETS_START"
+msgstr "Let's start"
+
+msgid "LINK_ERROR_PHRASE_EMPTY"
+msgstr "More"
+
+msgid "LINK_ERROR_PHRASE_PLURAL"
+msgstr "More about the errors"
+
+msgid "LINK_ERROR_PHRASE_SINGULAR"
+msgstr "More about the error"
+
+msgid "LINK_PHONE_NUMBER"
+msgstr "US: <a href=\"tel:19414621069\" class=\"footer-link text-right\" style=\"color: #344A5E; font-family: Roboto,Tahoma,sans-serif; font-size: 12px; font-weight: 400; line-height: 1.5; margin: 0; padding: 0; text-align: right; text-decoration: underline;\">1-941-462-10-69</a>, Cyprus: <a href=\"tel:35722052781\" class=\"footer-link text-right\" style=\"color: #344A5E; font-family: Roboto,Tahoma,sans-serif; font-size: 12px; font-weight: 400; line-height: 1.5; margin: 0; padding: 0; text-align: right; text-decoration: underline;\">3-572-205-27-81</a>"
+
+msgid "LOCATION:"
+msgstr "Location:"
+
+msgid "LOGIN_FIELD"
+msgstr "Login:"
+
+msgid "LOG_IN"
+msgstr "Log in"
+
+msgid "MANAGE_VM_VIA_SSH_GUIDE"
+msgstr "To manage the virtual machine via SSH, use the login details:"
+
+msgid "MANUAL_BACKUP_CREATION_FAILED_TEXT"
+msgstr "Backup failed at stage %(NAME)s of task %(ID)s. A task was created to delete the new backup. Check the status of the nodes and storage for the virtual machine backups."
+
+msgid "MASTER;"
+msgstr "master;"
+
+msgid "NEW_PASSWORD_FIELD"
+msgstr "New password:"
+
+msgid "NEW_PLATFORM_ADDRESS_FIELD"
+msgstr "New platform address:"
+
+msgid "NODE_AVAILABLE"
+msgstr "Cluster node is now available"
+
+msgid "NODE_DESCRIPTION"
+msgstr "Cluster node %(id)s %(name)s"
+
+msgid "NODE_LOAD_BELOW_CRITICAL_VALUE"
+msgstr "Node %(type)s load below critical value"
+
+msgid "NODE_TIME_EMPTY"
+msgstr "Time on the node is empty"
+
+msgid "NODE_TIME_EMPTY_DETAILED"
+msgstr "Time on node %(name)s #%(id)s is empty because the NTP service is not running on the node"
+
+msgid "NODE_TIME_NOT_SYNCHRONIZED"
+msgstr "Time on the node is not synchronized"
+
+msgid "NODE_TIME_NOT_SYNCHRONIZED_DETAILED"
+msgstr "Time on node %(name)s #%(id)s is not synchronized"
+
+msgid "NODE_TIME_PACKAGE_ERROR"
+msgstr "Time on the node is not being synchronized"
+
+msgid "NODE_TIME_PACKAGE_ERROR_DETAILED"
+msgstr "Time on node %(name)s #%(id)s is not being synchronized because a package error has occurred"
+
+msgid "NODE_TIME_SYNCHRONIZED"
+msgstr "The time on the node is synchronized"
+
+msgid "NODE_TIME_SYNCHRONIZED_DETAILED"
+msgstr "Time on cluster node %(name)s #%(id)s synchronized"
+
+msgid "NODE_TIME_TIMEDRIFT_ERROR"
+msgstr "Time on the node is not synchronized"
+
+msgid "NODE_TIME_TIMEDRIFT_ERROR_DETAILED"
+msgstr "Time on node %(name)s #%(id)s is not synchronized: the time drift exceeds the allowed limit"
+
+msgid "NODE_TIME_UNDEFINED"
+msgstr "Time on the node is undefined"
+
+msgid "NODE_TIME_UNDEFINED_DETAILED"
+msgstr "Time on node %(name)s #%(id)s is undefined because a Nodewarden error has occurred"
+
+msgid "NODE_TIME_UNKNOWN"
+msgstr "Time on the node is unknown"
+
+msgid "NODE_TIME_UNKNOWN_DETAILED"
+msgstr "Time on node %(name)s #%(id)s is unknown because an internal error has occurred. Check notifications or logs"
+
+msgid "NODE_UNAVAILABLE"
+msgstr "Cluster node is unavailable"
+
+msgid "OPEN_DEMO"
+msgstr "Open the demo"
+
+msgid "OS_FIELD"
+msgstr "ОS:"
+
+msgid "PARAMS_FIELD"
+msgstr "Parameters:"
+
+msgid "PASSWORD_CHANGE_ERROR_FIELD"
+msgstr "Password change error:"
+
+msgid "PASSWORD_FIELD"
+msgstr "Password:"
+
+msgid "PASSWORD_RECOVERY"
+msgstr "Password recovery"
+
+msgid "PERMISSIBLE RANGE:"
+msgstr "Permissible range:"
+
+msgid "PLATFORM_MANAGMENT_INTERFACE_INVITE"
+msgstr "You have been invited to Platform Management Interface"
+
+msgid "PLATFORM_MANAGMENT_INTERFACE_INVITE_PERMISSION"
+msgstr "You have been invited to Platform Management Interface with “%(role)s” permissions."
+
+msgid "PLATFORM_MIGRATION"
+msgstr "VMmanager platform has been migrated to VM"
+
+msgid "PLATFORM_MIGRATION_ERROR"
+msgstr "Error of platform migration to VM"
+
+msgid "PLATFORM_MIGRATION_STOPPED"
+msgstr "Platform migration is stopped. The platform is available and working  in the save state as before the migration started."
+
+msgid "PLATFORM_MIGRATION_TO_VM"
+msgstr "Platform migrated to VM"
+
+msgid "PLATFORM_MIGRATION_TO_VM_ERROR"
+msgstr "The platform migration to VM failed with an error."
+
+msgid "PLATFORM_MIGRATION_TO_VM_SUCCESS"
+msgstr "The platform migration to VM was completed successfully."
+
+msgid "RACK"
+msgstr "Rack"
+
+msgid "RACK_INFO"
+msgstr ", Rack: %(rack)s"
+
+msgid "RECOVER"
+msgstr "Recover"
+
+msgid "RESERVED_UNTIL"
+msgstr "Reserved until %(end_date)s"
+
+msgid "RESERVED_UNTIL:"
+msgstr "Reserved until:"
+
+msgid "RESOLVE_RECOMMENDATIONS"
+msgstr "To resolve this, we recommend checking the serviceability of the server hardware and then re-running the diagnostics."
+
+msgid "ROOT_PASSWORD_FIELD"
+msgstr "Root password:"
+
+msgid "Reserved until %(date)s"
+msgstr "Reserved until %(date)s"
+
+msgid "SCHEDULE_ID"
+msgstr "Schedule Id:"
+
+msgid "SECONDS"
+msgstr "sec"
+
+msgid "SENSOR_BACK_TO_NORMAL"
+msgstr "Server %(server)s, %(sensor)s: %(status)s within normal limits"
+
+msgid "SENSOR_EXCEEDS_LIMIT"
+msgstr "Server %(server)s, %(sensor)s: %(type)s exceeds the permissible range"
+
+msgid "SENSOR_EXCEEDS_LIMIT_TIME"
+msgstr "Server %(server)s, %(sensor)s: %(type)s exceeds the permissible range%(time)s"
+
+msgid "SERVER_ERROR_PHRASE_PLURAL"
+msgstr "Server errors:"
+
+msgid "SERVER_ERROR_PHRASE_SINGULAR"
+msgstr "Server error:"
+
+msgid "SERVER_FIELD"
+msgstr "Server:"
+
+msgid "SET_PASSWORD_LINK"
+msgstr "Follow the link to set a password for your account."
+
+msgid "SLOT"
+msgstr "slot"
+
+msgid "SUBJECT_CRITICAL"
+msgstr "The %(component)s status is critical. Check the device immediately"
+
+msgid "SUBJECT_RESOLVED"
+msgstr "Status of %(component)s has returned to normal"
+
+msgid "SUBJECT_WARNING"
+msgstr "There may be a problem with the %(component)s. Check the status of the device"
+
+msgid "SUPPORT_CONTACT"
+msgstr "Feel free to contact our <a href=\"https://www.ispsystem.com/support\" target=\"_blank\" style=\"color: #2F82C4;text-decoration: underline;\">Support&nbsp;team</a> should you have any questions or issues.<br />We are online 24/7."
+
+msgid "TASK_SUBJECT_FAILED"
+msgstr "Task failed: %(task)s"
+
+msgid "TASK_SUBJECT_RUNNING"
+msgstr "New task has started: %(task)s"
+
+msgid "TEMPERATURE"
+msgstr "temperature"
+
+msgid "TEMPERATURE_BACK"
+msgstr "temperature is back"
+
+msgid "TEST_EMAIL_SUBJECT"
+msgstr "Test email message."
+
+msgid "TEST_EMAIL_TEXT"
+msgstr "This is a test email for checking mail settings. There is no need to answer it."
+
+msgid "TIME_RANGE_ONE"
+msgid_plural "TIME_RANGE_ONE_MANY"
+msgstr[0] " within %(minutes)s of a minute"
+msgstr[1] " in %(minutes)s minutes"
+
+msgid "TIMING_UNIT_RESERVATIONS_VARIES."
+msgstr "The timing of unit reservations varies."
+
+msgid "UNIT_HAS_REACHED_THE_END_OF_ITS_RESERVATION_PERIOD"
+msgid_plural "UNIT_HAS_REACHED_THE_END_OF_ITS_RESERVATION_PERIOD_MANY"
+msgstr[0] "The unit's reservation has expired."
+msgstr[1] "Units have reached the end of their reservation period."
+
+msgid "UNIT_NEARING_RESERVATION_PERIOD_WARNING"
+msgid_plural "UNIT_NEARING_RESERVATION_PERIOD_WARNING_MANY"
+msgstr[0] "The unit's reservation period is coming to an end."
+msgstr[1] "Units are nearing the end of their reservation period."
+
+msgid "UNIT_RANGE"
+msgstr ", U: %(u_start)s-%(u_end)s (%(u_size)sU)"
+
+msgid "UNIT_RESERVATION_HAS_EXPIRED"
+msgid_plural "UNIT_RESERVATION_HAS_EXPIRED_MANY"
+msgstr[0] "The unit's reservation has ended"
+msgstr[1] "Reservation of %(count)s units has expired"
+
+msgid "UNIT_RESERVATION_WILL_EXPIRE_IN"
+msgid_plural "UNIT_RESERVATION_WILL_EXPIRE_IN_MANY"
+msgstr[0] "Unit reservation will end in %(days)s %(day_word)s"
+msgstr[1] "Reservation of %(count)s units will expire in %(days)s %(day_word)s"
+
+msgid "UNIT_SINGLE"
+msgstr ", U: %(u)s"
+
+msgid "UNIT_START_END"
+msgstr "U: %(start)s-%(end)s"
+
+msgid "USER"
+msgstr "User"
+
+msgid "VALUE_RETURNED_TO_NORMAL"
+msgstr "value has returned to normal"
+
+msgid "VIRTUAL_MACHINE"
+msgstr "Virtual machine:"
+
+msgid "VIRTUAL_MACHINE_PARAMS_FIELD"
+msgstr "Virtual Machine Parameters:"
+
+msgid "VM_ACCESS_GUIDE"
+msgstr "Use the following credentials to access your virtual machine:"
+
+msgid "VM_ACCOUNT_CREATED"
+msgstr "You have created a new VMmanager account. Please use %(email)s to manage your service."
+
+msgid "VM_ACTIVE"
+msgstr "Virtual machine is now active"
+
+msgid "VM_ACTIVE_NOW"
+msgstr "VM %(name)s (#%(id)s) is now active"
+
+msgid "VM_CHANGE_PASSWORD"
+msgstr "Virtual machine password has been changed"
+
+msgid "VM_CHANGE_PASSWORD_DETAILED"
+msgstr "The password of your virtual machine \"%(name)s\" has been changed successfully. Use the following credentials to manage your service:"
+
+msgid "VM_CHANGE_PASSWORD_ERROR"
+msgstr "The password has not been changed. To access the virtual machine, please update the password:"
+
+msgid "VM_CRASHED"
+msgstr "Virtual machine is crashed"
+
+msgid "VM_CRASHED_DETAILED"
+msgstr "VM %(name)s (#%(id)s) is crashed"
+
+msgid "VM_CREATED"
+msgstr "Virtual machine has been created"
+
+msgid "VM_CREATED_DETAILED"
+msgstr "A virtual machine \"%(name)s\" with the following parameters was created on the server %(link)s:"
+
+msgid "VM_DESCRIPTION"
+msgstr "Virtual machine #%(id)s %(name)s"
+
+msgid "VM_EMAIL_CONFIRMATION"
+msgstr "VMmanager. Email confirmation"
+
+msgid "VM_LOAD_BELOW_CRITICAL_VALUE"
+msgstr "VM %(type)s load below critical value"
+
+msgid "VM_LOAD_BELOW_DETAILED"
+msgstr "VM %(name)s (#%(id)s) %(type)s load is below %(value)s%%:"
+
+msgid "VM_LOAD_EXCEEDED"
+msgstr "VM %(name)s (#%(id)s) %(type)s load exceeded %(value)s%%:"
+
+msgid "VM_MANAGER_INVITE"
+msgstr "You have been invited to VMmanager"
+
+msgid "VM_PASSWORD_RECOVERY"
+msgstr "VMmanager. Password recovery"
+
+msgid "VM_REINSTALLED"
+msgstr "Virtual machine has been reinstalled"
+
+msgid "VM_REINSTALLED_ON_SERVER_SUCCESSFULLY"
+msgstr "Your virtual machine \"%(name)s\" on the server %(server)s has been successfully reinstalled."
+
+msgid "VM_SUBMITTED_PASSWORD_RECOVERY"
+msgstr "You have submitted a VMmanager password recovery request. Follow the link to reset your password."
+
+msgid "VOLTAGE"
+msgstr "voltage"
+
+msgid "VOLTAGE_BACK"
+msgstr "voltage is back"
+
+msgid "WAREHOUSE_ENTITY_COUNT:"
+msgstr "Number of equipment:"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_RESERVATION_EXPIRED_MANY"
+msgstr[0] "Device backup has ended"
+msgstr[1] "Reservation of %(count)s devices has expired"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_EXPIRING_OR_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_RESERVATION_EXPIRING_OR_EXPIRED_MANY"
+msgstr[0] "The device has expired or is running out of backup time"
+msgstr[1] "Reservation of %(count)s devices is expiring or has expired"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_PERIOD_EXPIRED"
+msgstr "WAREHOUSE_ENTITY_RESERVATION_PERIOD_EXPIRED"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_VARIES."
+msgstr "The timing of device reservations varies"
+
+msgid "WAREHOUSE_ENTITY_RESERVATION_WILL_EXPIRED_IN_DAYS"
+msgid_plural "WAREHOUSE_ENTITY_RESERVATION_WILL_EXPIRED_IN_DAYS_MANY"
+msgstr[0] "The device reservation will end in %(days)s %(day_word)s"
+msgstr[1] "Reservation of %(count)s devices will expire in %(days)s %(day_word)s"
+
+msgid "WAREHOUSE_ENTITY_RESERVED_UNTIL"
+msgstr "Devices are under warranty until %(date)s"
+
+msgid "WAREHOUSE_ENTITY_TYPE:"
+msgstr "Equipment type:"
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_WARRANTY_EXPIRED_MANY"
+msgstr[0] "The warranty of the device has expired"
+msgstr[1] "Warranty of %(count)s devices has expired"
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_EXPIRING_OR_EXPIRED"
+msgid_plural "WAREHOUSE_ENTITY_WARRANTY_EXPIRING_OR_EXPIRED_MANY"
+msgstr[0] "Your device is out of warranty or is expiring"
+msgstr[1] "The warranty is ending on %(count)s devices"
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_VARIES."
+msgstr "The warranty periods of the devices vary"
+
+msgid "WAREHOUSE_ENTITY_WARRANTY_WILL_EXPIRED_IN_DAYS"
+msgid_plural "WAREHOUSE_ENTITY_WARRANTY_WILL_EXPIRED_IN_DAYS_MANY"
+msgstr[0] "Device warranty will expire in %(days)s %(day_word)s"
+msgstr[1] "Warranty of %(count)s devices will expire in %(days)s %(day_word)s"
+
+msgid "WARRANTY_UNTIL"
+msgstr "Under warranty until %(date)s"
+
+msgid "WARRANTY_UNTIL:"
+msgstr "Under warranty until:"
+
+msgid "WELCOME_TO_VM_MANAGER"
+msgstr "Welcome to VMmanager"
+
+msgid "WELCOME_TO_VM_MANAGER!"
+msgstr "Welcome to VMmanager!"
+
+msgid "alert_exp_active"
+msgstr "%(subtype)s load on node %(name)s #%(id)s is above %(value)s%%:"
+
+msgid "alert_exp_resolved"
+msgstr "%(subtype)s load on node %(name)s #%(id)s is below %(value)s%%:"
+
+msgid "alert_subject_active"
+msgstr "Critical node %(subtype)s load"
+
+msgid "alert_subject_resolved"
+msgstr "Node %(subtype)s load below critical value"
+
+msgid "fan"
+msgstr "fan speed"
+
+msgid "status_exp_active"
+msgstr "Node %(name)s #%(id)s is unavailable"
+
+msgid "status_exp_resolved"
+msgstr "Node %(name)s #%(id)s is now available"
+
+msgid "status_subject_active"
+msgstr "Cluster node is unavailable"
+
+msgid "status_subject_resolved"
+msgstr "Cluster node is now available"
+
+msgid "task_entity_host"
+msgstr "Virtual machine #%(id)s %(name)s"
+
+msgid "task_entity_node"
+msgstr "Cluster node #%(id)s %(name)s"
+
+msgid "task_name_change_password"
+msgstr "Change VM password"
+
+msgid "task_name_check_storage"
+msgstr "Check of the storage"
+
+msgid "task_name_connect_storages"
+msgstr "Connection of the storages"
+
+msgid "task_name_disk_resize"
+msgstr "Resize disk"
+
+msgid "task_name_ha_generate_metadata"
+msgstr "High availability metadata update"
+
+msgid "task_name_host_boot_order"
+msgstr "Change of the VM disk boot order"
+
+msgid "task_name_host_change_params"
+msgstr "Change VM params"
+
+msgid "task_name_host_clone"
+msgstr "VM clone"
+
+msgid "task_name_host_create"
+msgstr "VM create"
+
+msgid "task_name_host_delete"
+msgstr "VM delete"
+
+msgid "task_name_host_hibernate"
+msgstr "Suspend VM to disk"
+
+msgid "task_name_host_iface_create"
+msgstr "Add a network interface"
+
+msgid "task_name_host_iface_delete"
+msgstr "Delete a network interface"
+
+msgid "task_name_host_iface_edit"
+msgstr "Edit the network interface"
+
+msgid "task_name_host_image_create"
+msgstr "VM image create"
+
+msgid "task_name_host_iso_mount"
+msgstr "Mount ISO to VM"
+
+msgid "task_name_host_iso_unmount"
+msgstr "Unmount ISO from VM"
+
+msgid "task_name_host_migrate"
+msgstr "VM migrate"
+
+msgid "task_name_host_recipe"
+msgstr "Run script on VM"
+
+msgid "task_name_host_recover_domain"
+msgstr "Restoring the VM xml file"
+
+msgid "task_name_host_reinstall"
+msgstr "VM reinstall"
+
+msgid "task_name_host_relocate"
+msgstr "VM disaster recovery"
+
+msgid "task_name_host_rescue_enter"
+msgstr "Entering the VM rescue mode"
+
+msgid "task_name_host_rescue_exit"
+msgstr "Exiting the VM rescue mode"
+
+msgid "task_name_host_restart"
+msgstr "VM restart"
+
+msgid "task_name_host_resume"
+msgstr "Resuming VM"
+
+msgid "task_name_host_run_recipe"
+msgstr "Run script on VM"
+
+msgid "task_name_host_spice_configure"
+msgstr "SPICE connection for VM is enabled"
+
+msgid "task_name_host_start"
+msgstr "VM start"
+
+msgid "task_name_host_stop"
+msgstr "VM stop"
+
+msgid "task_name_host_suspend"
+msgstr "Suspending VM"
+
+msgid "task_name_host_update_metadata"
+msgstr "Updating VM metadata"
+
+msgid "task_name_host_vnc_password"
+msgstr "Change VNC password on VM"
+
+msgid "task_name_ip_allocate"
+msgstr "IP address allocate"
+
+msgid "task_name_ip_delete"
+msgstr "IP address delete"
+
+msgid "task_name_node_create"
+msgstr "Connection of the node"
+
+msgid "task_name_node_create_finish"
+msgstr "The node status check has been completed"
+
+msgid "task_name_node_ha_disable"
+msgstr "Suspension of high availability on the node"
+
+msgid "task_name_node_ha_enable"
+msgstr "Activation of high availability on the node"
+
+msgid "task_name_node_timesync_check"
+msgstr "Checking time synchronization on the node"
+
+msgid "task_name_node_timesync_config"
+msgstr "Configuration of time synchronization on the node"
+
+msgid "task_name_node_timesync_prepare"
+msgstr "Preparing the node for time synchronization"
+
+msgid "task_name_node_update_certificate"
+msgstr "Update of the TSL certificates on the node"
+
+msgid "task_name_node_update_certificates"
+msgstr "Update of the TSL certificates on the node"
+
+msgid "task_name_ptr_change"
+msgstr "Changing the PTR record"
+
+msgid "task_name_snapshot_create"
+msgstr "Create VM snapshot"
+
+msgid "task_name_snapshot_delete2"
+msgstr "Delete VM snapshots"
+
+msgid "temperature"
+msgstr "temperature"
+
+msgid "test_remove_sync_branch"
+msgstr ""
+
+msgid "voltage"
+msgstr "voltage"

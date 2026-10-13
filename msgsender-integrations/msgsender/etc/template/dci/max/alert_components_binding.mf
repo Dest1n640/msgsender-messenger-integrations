@@ -1,0 +1,11 @@
+{% extends "dci/max/base.jinja" %}
+
+{%- block header -%}
+{{ gettext("INCONSISTENCIES_IN_SERVER_COMPONENTS_DETECTED") }}
+{%- endblock header -%}
+
+{%- block body -%}
+{% include "dci/max/server_information.jinja" %}
+
+<a href="{{ params.message.product_info.url }}dci/server/{{ params.entity.server.id }}/equipment">{{ gettext("GO_TO_SERVER_EQUIPMENT") }}</a>
+{%- endblock body -%}

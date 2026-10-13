@@ -1,0 +1,1730 @@
+{
+  "template": [
+    {
+      "name": "vm_host_create_success",
+      "categories": [
+        "vm"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "vm/email/host_create_success_subject.mf",
+            "body": "vm/email/host_create_success_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "vm/email/host_create_success_subject.mf",
+            "body": "vm/email/host_create_success_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "vm/email/host_create_success_subject.mf",
+            "body": "vm/email/host_create_success_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "vm_host_reinstall_success",
+      "categories": [
+        "vm"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "vm/email/host_reinstall_success_subject.mf",
+            "body": "vm/email/host_reinstall_success_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "vm/email/host_reinstall_success_subject.mf",
+            "body": "vm/email/host_reinstall_success_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "vm/email/host_reinstall_success_subject.mf",
+            "body": "vm/email/host_reinstall_success_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "vm_host_change_password_success",
+      "categories": [
+        "vm"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "vm/email/host_change_password_success_subject.mf",
+            "body": "vm/email/host_change_password_success_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "vm/email/host_change_password_success_subject.mf",
+            "body": "vm/email/host_change_password_success_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "vm/email/host_change_password_success_subject.mf",
+            "body": "vm/email/host_change_password_success_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dci_test_email",
+      "categories": [
+        "dci"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "dci/email/test_email_subject.mf",
+            "body": "dci/email/test_email_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "dci/email/test_email_subject.mf",
+            "body": "dci/email/test_email_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "dci/email/test_email_subject.mf",
+            "body": "dci/email/test_email_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "vm_test_email",
+      "categories": [
+        "vm"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "vm/email/test_email_subject.mf",
+            "body": "vm/email/test_email_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "vm/email/test_email_subject.mf",
+            "body": "vm/email/test_email_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "vm/email/test_email_subject.mf",
+            "body": "vm/email/test_email_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "auth_custom_message",
+      "categories": [
+        "auth"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "auth/email/custom_message_subject.mf",
+            "body": "auth/email/custom_message_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "auth/email/custom_message_subject.mf",
+            "body": "auth/email/custom_message_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "auth/email/custom_message_subject.mf",
+            "body": "auth/email/custom_message_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "auth_vm_email_confirm",
+      "categories": [
+        "auth"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "auth/email/vm_email_confirm_subject.mf",
+            "body": "auth/email/vm_email_confirm_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "auth/email/vm_email_confirm_subject.mf",
+            "body": "auth/email/vm_email_confirm_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "auth/email/vm_email_confirm_subject.mf",
+            "body": "auth/email/vm_email_confirm_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "auth_vm_invite_exist_user",
+      "categories": [
+        "auth"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "auth/email/vm_invite_exist_user_subject.mf",
+            "body": "auth/email/vm_invite_exist_user_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "auth/email/vm_invite_exist_user_subject.mf",
+            "body": "auth/email/vm_invite_exist_user_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "auth/email/vm_invite_exist_user_subject.mf",
+            "body": "auth/email/vm_invite_exist_user_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "auth_vm_invite_new_user",
+      "categories": [
+        "auth"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "auth/email/vm_invite_new_user_subject.mf",
+            "body": "auth/email/vm_invite_new_user_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "auth/email/vm_invite_new_user_subject.mf",
+            "body": "auth/email/vm_invite_new_user_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "auth/email/vm_invite_new_user_subject.mf",
+            "body": "auth/email/vm_invite_new_user_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "auth_vm_password_recovery",
+      "categories": [
+        "auth"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "auth/email/vm_password_recovery_subject.mf",
+            "body": "auth/email/vm_password_recovery_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "auth/email/vm_password_recovery_subject.mf",
+            "body": "auth/email/vm_password_recovery_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "auth/email/vm_password_recovery_subject.mf",
+            "body": "auth/email/vm_password_recovery_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "auth_vm_welcome",
+      "categories": [
+        "auth"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "auth/email/vm_welcome_subject.mf",
+            "body": "auth/email/vm_welcome_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "auth/email/vm_welcome_subject.mf",
+            "body": "auth/email/vm_welcome_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "auth/email/vm_welcome_subject.mf",
+            "body": "auth/email/vm_welcome_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "auth_invite_platform_admin",
+      "categories": [
+        "auth"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "auth/email/invite_platform_admin_subject.mf",
+            "body": "auth/email/invite_platform_admin_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "auth/email/invite_platform_admin_subject.mf",
+            "body": "auth/email/invite_platform_admin_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "auth/email/invite_platform_admin_subject.mf",
+            "body": "auth/email/invite_platform_admin_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dci_demo_welcome",
+      "categories": [
+        "demo",
+        "dci"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "dci/email/demo_welcome_subject.mf",
+            "body": "dci/email/demo_welcome_body.mf",
+            "sender": {
+              "name": "ISPsystem",
+              "address": "notify@ispsystem.com"
+            }
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "dci/email/demo_welcome_subject.mf",
+            "body": "dci/email/demo_welcome_body.mf",
+            "sender": {
+              "name": "ISPsystem",
+              "address": "notify@ispsystem.com"
+            }
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "dci/email/demo_welcome_subject.mf",
+            "body": "dci/email/demo_welcome_body.mf",
+            "sender": {
+              "name": "ISPsystem",
+              "address": "notify@ispsystem.com"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_node",
+      "categories": [
+        "vm"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "vm/email/alert_node_subject.mf",
+            "body": "vm/email/alert_node_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "vm/email/alert_node_subject.mf",
+            "body": "vm/email/alert_node_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "vm/email/alert_node_subject.mf",
+            "body": "vm/email/alert_node_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "vm/telegram/alert_node.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "vm/telegram/alert_node.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "vm/telegram/alert_node.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "vm/slack/alert_node.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "vm/slack/alert_node.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "vm/slack/alert_node.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "vm/max/alert_node.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "vm/max/alert_node.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "vm/max/alert_node.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_host",
+      "categories": [
+        "vm"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "vm/email/alert_host_subject.mf",
+            "body": "vm/email/alert_host_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "vm/email/alert_host_subject.mf",
+            "body": "vm/email/alert_host_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "vm/email/alert_host_subject.mf",
+            "body": "vm/email/alert_host_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "vm/telegram/alert_host.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "vm/telegram/alert_host.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "vm/telegram/alert_host.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "vm/slack/alert_host.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "vm/slack/alert_host.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "vm/slack/alert_host.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "vm/max/alert_host.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "vm/max/alert_host.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "vm/max/alert_host.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_task",
+      "categories": [
+        "vm"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "vm/email/alert_task_subject.mf",
+            "body": "vm/email/alert_task_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "vm/email/alert_task_subject.mf",
+            "body": "vm/email/alert_task_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "vm/email/alert_task_subject.mf",
+            "body": "vm/email/alert_task_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "vm/telegram/alert_task.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "vm/telegram/alert_task.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "vm/telegram/alert_task.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "vm/slack/alert_task.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "vm/slack/alert_task.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "vm/slack/alert_task.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "vm/max/alert_task.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "vm/max/alert_task.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "vm/max/alert_task.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "auth_dci_password_recovery",
+      "categories": [
+        "auth"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "auth/email/dci_password_recovery_subject.mf",
+            "body": "auth/email/dci_password_recovery_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "auth/email/dci_password_recovery_subject.mf",
+            "body": "auth/email/dci_password_recovery_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "auth/email/dci_password_recovery_subject.mf",
+            "body": "auth/email/dci_password_recovery_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_diag_operation",
+      "categories": [
+        "dci"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "dci/email/alert_diag_operation_subject.mf",
+            "body": "dci/email/alert_diag_operation_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "dci/email/alert_diag_operation_subject.mf",
+            "body": "dci/email/alert_diag_operation_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "dci/email/alert_diag_operation_subject.mf",
+            "body": "dci/email/alert_diag_operation_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "dci/telegram/alert_diag_operation.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "dci/telegram/alert_diag_operation.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "dci/telegram/alert_diag_operation.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "dci/slack/alert_diag_operation.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "dci/slack/alert_diag_operation.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "dci/slack/alert_diag_operation.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "dci/max/alert_diag_operation.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "dci/max/alert_diag_operation.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "dci/max/alert_diag_operation.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_server_component",
+      "categories": [
+        "dci"
+      ],
+      "priority": "high",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "dci/email/alert_server_component_subject.mf",
+            "body": "dci/email/alert_server_component_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "dci/email/alert_server_component_subject.mf",
+            "body": "dci/email/alert_server_component_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "dci/email/alert_server_component_subject.mf",
+            "body": "dci/email/alert_server_component_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "dci/telegram/alert_server_component.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "dci/telegram/alert_server_component.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "dci/telegram/alert_server_component.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "dci/slack/alert_server_component.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "dci/slack/alert_server_component.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "dci/slack/alert_server_component.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "dci/max/alert_server_component.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "dci/max/alert_server_component.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "dci/max/alert_server_component.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_server_profile",
+      "categories": [
+        "dci"
+      ],
+      "priority": "high",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "dci/email/alert_server_profile_subject.mf",
+            "body": "dci/email/alert_server_profile_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "dci/email/alert_server_profile_subject.mf",
+            "body": "dci/email/alert_server_profile_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "dci/email/alert_server_profile_subject.mf",
+            "body": "dci/email/alert_server_profile_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "dci/telegram/alert_server_profile.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "dci/telegram/alert_server_profile.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "dci/telegram/alert_server_profile.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "dci/slack/alert_server_profile.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "dci/slack/alert_server_profile.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "dci/slack/alert_server_profile.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "dci/max/alert_server_profile.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "dci/max/alert_server_profile.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "dci/max/alert_server_profile.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_components_binding",
+      "categories": [
+        "dci"
+      ],
+      "priority": "high",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "dci/email/alert_components_binding_subject.mf",
+            "body": "dci/email/alert_components_binding_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "dci/email/alert_components_binding_subject.mf",
+            "body": "dci/email/alert_components_binding_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "dci/email/alert_components_binding_subject.mf",
+            "body": "dci/email/alert_components_binding_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "dci/telegram/alert_components_binding.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "dci/telegram/alert_components_binding.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "dci/telegram/alert_components_binding.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "dci/slack/alert_components_binding.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "dci/slack/alert_components_binding.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "dci/slack/alert_components_binding.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "dci/max/alert_components_binding.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "dci/max/alert_components_binding.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "dci/max/alert_components_binding.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_server_sensor",
+      "categories": [
+        "dci"
+      ],
+      "priority": "high",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "dci/email/alert_server_sensor_subject.mf",
+            "body": "dci/email/alert_server_sensor_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "dci/email/alert_server_sensor_subject.mf",
+            "body": "dci/email/alert_server_sensor_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "dci/email/alert_server_sensor_subject.mf",
+            "body": "dci/email/alert_server_sensor_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "dci/telegram/alert_server_sensor.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "dci/telegram/alert_server_sensor.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "dci/telegram/alert_server_sensor.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "dci/slack/alert_server_sensor.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "dci/slack/alert_server_sensor.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "dci/slack/alert_server_sensor.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "dci/max/alert_server_sensor.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "dci/max/alert_server_sensor.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "dci/max/alert_server_sensor.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_unit_reserved",
+      "categories": [
+        "dci"
+      ],
+      "priority": "high",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "dci/email/alert_unit_reservation_subject.mf",
+            "body": "dci/email/alert_unit_reservation_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "dci/email/alert_unit_reservation_subject.mf",
+            "body": "dci/email/alert_unit_reservation_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "dci/email/alert_unit_reservation_subject.mf",
+            "body": "dci/email/alert_unit_reservation_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "dci/telegram/alert_unit_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "dci/telegram/alert_unit_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "dci/telegram/alert_unit_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "dci/slack/alert_unit_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "dci/slack/alert_unit_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "dci/slack/alert_unit_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "dci/max/alert_unit_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "dci/max/alert_unit_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "dci/max/alert_unit_reservation.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_warehouse_reserved",
+      "categories": [
+        "dci"
+      ],
+      "priority": "high",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "dci/email/alert_warehouse_reservation_subject.mf",
+            "body": "dci/email/alert_warehouse_reservation_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "dci/email/alert_warehouse_reservation_subject.mf",
+            "body": "dci/email/alert_warehouse_reservation_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "dci/email/alert_warehouse_reservation_subject.mf",
+            "body": "dci/email/alert_warehouse_reservation_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "dci/telegram/alert_warehouse_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "dci/telegram/alert_warehouse_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "dci/telegram/alert_warehouse_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "dci/slack/alert_warehouse_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "dci/slack/alert_warehouse_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "dci/slack/alert_warehouse_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "dci/max/alert_warehouse_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "dci/max/alert_warehouse_reservation.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "dci/max/alert_warehouse_reservation.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_warehouse_warranty",
+      "categories": [
+        "dci"
+      ],
+      "priority": "high",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "dci/email/alert_warehouse_warranty_subject.mf",
+            "body": "dci/email/alert_warehouse_warranty_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "dci/email/alert_warehouse_warranty_subject.mf",
+            "body": "dci/email/alert_warehouse_warranty_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "dci/email/alert_warehouse_warranty_subject.mf",
+            "body": "dci/email/alert_warehouse_warranty_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "dci/telegram/alert_warehouse_warranty.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "dci/telegram/alert_warehouse_warranty.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "dci/telegram/alert_warehouse_warranty.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "dci/slack/alert_warehouse_warranty.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "dci/slack/alert_warehouse_warranty.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "dci/slack/alert_warehouse_warranty.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "dci/max/alert_warehouse_warranty.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "dci/max/alert_warehouse_warranty.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "dci/max/alert_warehouse_warranty.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "alert_dss_chassis",
+      "categories": [
+        "dci"
+      ],
+      "priority": "high",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "dci/email/alert_dss_chassis_subject.mf",
+            "body": "dci/email/alert_dss_chassis_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "dci/email/alert_dss_chassis_subject.mf",
+            "body": "dci/email/alert_dss_chassis_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "dci/email/alert_dss_chassis_subject.mf",
+            "body": "dci/email/alert_dss_chassis_body.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "ru",
+          "params": {
+            "body": "dci/telegram/alert_dss_chassis.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "en",
+          "params": {
+            "body": "dci/telegram/alert_dss_chassis.mf"
+          }
+        },
+        {
+          "delivery_method": "telegram",
+          "language": "es",
+          "params": {
+            "body": "dci/telegram/alert_dss_chassis.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "ru",
+          "params": {
+            "body": "dci/slack/alert_dss_chassis.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "en",
+          "params": {
+            "body": "dci/slack/alert_dss_chassis.mf"
+          }
+        },
+        {
+          "delivery_method": "slack",
+          "language": "es",
+          "params": {
+            "body": "dci/slack/alert_dss_chassis.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "ru",
+          "params": {
+            "body": "dci/max/alert_dss_chassis.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "en",
+          "params": {
+            "body": "dci/max/alert_dss_chassis.mf"
+          }
+        },
+        {
+          "delivery_method": "max",
+          "language": "es",
+          "params": {
+            "body": "dci/max/alert_dss_chassis.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "vm_platform_move_success",
+      "categories": [
+        "vm"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "vm/email/platform_move_success_subject.mf",
+            "body": "vm/email/platform_move_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "vm/email/platform_move_success_subject.mf",
+            "body": "vm/email/platform_move_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "vm/email/platform_move_success_subject.mf",
+            "body": "vm/email/platform_move_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "backup_failed",
+      "categories": [
+        "vm"
+      ],
+      "priority": "high",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "vm/email/backup_failed_subject.mf",
+            "body": "vm/email/backup_failed_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "vm/email/backup_failed_subject.mf",
+            "body": "vm/email/backup_failed_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "vm/email/backup_failed_subject.mf",
+            "body": "vm/email/backup_failed_body.mf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "vm_platform_move_fail",
+      "categories": [
+        "vm"
+      ],
+      "priority": "low",
+      "variants": [
+        {
+          "delivery_method": "email",
+          "language": "ru",
+          "params": {
+            "subject": "vm/email/platform_move_fail_subject.mf",
+            "body": "vm/email/platform_move_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "en",
+          "params": {
+            "subject": "vm/email/platform_move_fail_subject.mf",
+            "body": "vm/email/platform_move_body.mf"
+          }
+        },
+        {
+          "delivery_method": "email",
+          "language": "es",
+          "params": {
+            "subject": "vm/email/platform_move_fail_subject.mf",
+            "body": "vm/email/platform_move_body.mf"
+          }
+        }
+      ]
+    }
+  ]
+}

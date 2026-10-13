@@ -1,0 +1,19 @@
+{%- if params.task.status == "failed" -%}
+  {%- set subject = gettext("TASK_SUBJECT_FAILED", task=gettext("task_name_" ~ params.task.name)) -%}
+{%- elif params.task.status == "running" -%}
+  {%- set subject = gettext("TASK_SUBJECT_RUNNING", task=gettext("task_name_" ~ params.task.name)) -%}
+{%- endif -%}
+{%- set subject_exp = "" -%}
+{%- set entity_params = none -%}
+
+{%- if params.task.entity == "node" -%}
+  {%- set entity_params = params.entity.node -%}
+  {%- set subject_exp = gettext("NODE_DESCRIPTION", id=entity_params.id, name=entity_params.name) -%}
+{%- elif params.task.entity == "host" -%}
+  {%- set entity_params = params.entity.host -%}
+  {%- set subject_exp = gettext("VM_DESCRIPTION", id=entity_params.id, name=entity_params.name) -%}
+{%- endif -%}
+
+{{ subject }}
+{{ subject_exp }}
+  <b>{{ gettext("IP_ADDRESS_FIELD") }}</b> {{ entity_params.ip }}

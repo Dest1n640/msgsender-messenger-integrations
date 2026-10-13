@@ -1,0 +1,32 @@
+{% extends "dci/telegram/base.jinja" %}
+
+{%- set resolved = params.resolved is defined and params.resolved -%}
+
+{%- set alert_type_lower = params.alert.type|lower -%}
+
+{%- set sensor_type = gettext(params.alert.type|upper) -%}
+{%- set sensor_type_back = gettext((params.alert.type|upper) ~ "_BACK") -%}
+{%- set measure_sign = "°C" if alert_type_lower == "temperature" else "V" if alert_type_lower == "voltage" else "RPM" -%}
+
+{%- set minutes = params.alert.time // 60 -%}
+{%- set time_str = ngettext("TIME_RANGE_ONE", "TIME_RANGE_N", minutes, minutes=minutes) -%}
+
+{%- if resolved -%}
+  {%- set subject = gettext("SENSOR_BACK_TO_NORMAL", server=params.entity.server.name, sensor=params.message.sensor_name, status=sensor_type_back) -%}
+{%- else -%}
+  {%- set subject = gettext("SENSOR_EXCEEDS_LIMIT_TIME", server=params.entity.server.name, sensor=params.message.sensor_name, type=sensor_type, time=time_str) -%}
+{%- endif -%}
+
+{%- block header -%}
+{{ subject }}
+{%- endblock header -%}
+
+
+
+{%- block body -%}
+{% include "dci/telegram/server_information.jinja" %}
+{{ gettext("LAST_VALUE_FIELD") }} {{ params.message.last_value }} {{ measure_sign }}
+{{ gettext("PERMISSIBLE RANGE:") }} {{ params.message.lower_threshold }} – {{ params.message.higher_threshold }} {{ measure_sign }}
+
+{% include "dci/telegram/server_link.jinja" %}
+{%- endblock body -%}

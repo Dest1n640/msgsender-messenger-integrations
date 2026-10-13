@@ -1,0 +1,56 @@
+{%- set time_str = ngettext("TIME_RANGE_ONE", "TIME_RANGE_N", params.alert.time_period, minutes=params.alert.time_period) -%}
+
+{%- set ns.dss_alert_titles = {
+    "controller_health"           : ["DSS_CONTROLLER_HEALTH", "DSS_CONTROLLER_HEALTH_RESOLVED"],
+    "controller_status"           : ["DSS_CONTROLLER_STATUS", "DSS_CONTROLLER_STATUS_RESOLVED"],
+    "controller_iops"             : ["DSS_CONTROLLER_IOPS", "DSS_CONTROLLER_IOPS_RESOLVED"],
+    "controller_read_rate"        : ["DSS_CONTROLLER_READ_RATE", "DSS_CONTROLLER_READ_RATE_RESOLVED"],
+    "controller_write_rate"       : ["DSS_CONTROLLER_WRITE_RATE", "DSS_CONTROLLER_WRITE_RATE_RESOLVED"],
+    "controller_cpu_utilization"  : ["DSS_CONTROLLER_CPU_UTILIZATION", "DSS_CONTROLLER_CPU_UTILIZATION_RESOLVED"],
+    "disk_health"                 : ["DSS_DISK_HEALTH", "DSS_DISK_HEALTH_RESOLVED"],
+    "disk_temperature_status"     : ["DSS_DISK_TEMPERATURE_STATUS", "DSS_DISK_TEMPERATURE_STATUS_RESOLVED"],
+    "disk_group_health"           : ["DSS_DISK_GROUP_HEALTH", "DSS_DISK_GROUP_HEALTH_RESOLVED"],
+    "disk_group_status"           : ["DSS_DISK_GROUP_STATUS", "DSS_DISK_GROUP_STATUS_RESOLVED"],
+    "disk_group_iops"             : ["DSS_DISK_GROUP_IOPS", "DSS_DISK_GROUP_IOPS_RESOLVED"],
+    "disk_group_read_rate"        : ["DSS_DISK_GROUP_READ_RATE", "DSS_DISK_GROUP_READ_RATE_RESOLVED"],
+    "disk_group_write_rate"       : ["DSS_DISK_GROUP_WRITE_RATE", "DSS_DISK_GROUP_WRITE_RATE_RESOLVED"],
+    "disk_group_space_utilization": ["DSS_DISK_GROUP_SPACE_UTILIZATION", "DSS_DISK_GROUP_SPACE_UTILIZATION_RESOLVED"],
+    "enclosure_health"            : ["DSS_ENCLOSURE_HEALTH", "DSS_ENCLOSURE_HEALTH_RESOLVED"],
+    "enclosure_status"            : ["DSS_ENCLOSURE_STATUS", "DSS_ENCLOSURE_STATUS_RESOLVED"],
+    "fan_health"                  : ["DSS_FAN_HEALTH", "DSS_FAN_HEALTH_RESOLVED"],
+    "fan_status"                  : ["DSS_FAN_STATUS", "DSS_FAN_STATUS_RESOLVED"],
+    "host_port_health"            : ["DSS_HOST_PORT_HEALTH", "DSS_HOST_PORT_HEALTH_RESOLVED"],
+    "host_port_status"            : ["DSS_HOST_PORT_STATUS", "DSS_HOST_PORT_STATUS_RESOLVED"],
+    "management_port_health"      : ["DSS_MANAGEMENT_PORT_HEALTH", "DSS_MANAGEMENT_PORT_HEALTH_RESOLVED"],
+    "pool_health"                 : ["DSS_POOL_HEALTH", "DSS_POOL_HEALTH_RESOLVED"],
+    "power_supply_health"         : ["DSS_POWER_SUPPLY_HEALTH", "DSS_POWER_SUPPLY_HEALTH_RESOLVED"],
+    "power_supply_status"         : ["DSS_POWER_SUPPLY_STATUS", "DSS_POWER_SUPPLY_STATUS_RESOLVED"],
+    "system_health"               : ["DSS_SYSTEM_HEALTH", "DSS_SYSTEM_HEALTH_RESOLVED"],
+    "system_status"               : ["DSS_SYSTEM_STATUS", "DSS_SYSTEM_STATUS_RESOLVED"],
+    "volume_health"               : ["DSS_VOLUME_HEALTH", "DSS_VOLUME_HEALTH_RESOLVED"],
+    "volume_iops"                 : ["DSS_VOLUME_IOPS", "DSS_VOLUME_IOPS_RESOLVED"],
+    "volume_read_rate"            : ["DSS_VOLUME_READ_RATE", "DSS_VOLUME_READ_RATE_RESOLVED"],
+    "volume_write_rate"           : ["DSS_VOLUME_WRITE_RATE", "DSS_VOLUME_WRITE_RATE_RESOLVED"],
+    "volume_space_utilization"    : ["DSS_VOLUME_SPACE_UTILIZATION", "DSS_VOLUME_SPACE_UTILIZATION_RESOLVED"],
+} -%}
+
+{%- if params.alert.type == "custom" -%}
+    {%- set ns.subject = params.alert.custom_name ~ ": " ~ params.alert.custom_text -%}
+    {%- if params.resolved -%}
+        {%- set ns.subject = ns.subject ~ " " ~ gettext("VALUE_RETURNED_TO_NORMAL") -%}
+    {%- else -%}
+        {%- set ns.subject = ns.subject ~ time_str -%}
+    {%- endif -%}
+{%- else -%}
+    {%- if params.resolved -%}
+       {%- set msgid = ns.dss_alert_titles[params.alert.type][1] -%}
+    {%- else -%}
+       {%- set msgid = ns.dss_alert_titles[params.alert.type][0] -%}
+    {%- endif -%}
+
+    {%- set ns.subject=gettext(
+        msgid,
+        threshold=params.alert.threshold_gt,
+        time_period=time_str
+    ) -%}
+{%- endif -%}

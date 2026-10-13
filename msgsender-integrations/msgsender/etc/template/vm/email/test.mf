@@ -1,0 +1,3 @@
+{%- set subject = gettext(("task_subject_" ~ params.task.status), 
+    task=gettext("task_name_" ~ params.task.name)
+) -%}

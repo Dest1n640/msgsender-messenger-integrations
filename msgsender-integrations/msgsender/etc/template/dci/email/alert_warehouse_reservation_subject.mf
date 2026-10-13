@@ -1,0 +1,38 @@
+{# vim: set ft=jinja: #}
+
+{%- set ns = namespace() -%}
+
+{%- set date_shift = params.message.component.date_shift -%}
+{%- set identical_date = params.message.component.identical_date -%}
+{%- set entity_counter = params.message.component.barcodes|length -%}
+
+{%- set day_word = ngettext("DAY", "DAYS", date_shift) -%}
+
+{%- set ns.title_block = ngettext(
+    "WAREHOUSE_ENTITY_RESERVATION_EXPIRING_OR_EXPIRED",
+    "WAREHOUSE_ENTITY_RESERVATION_EXPIRING_OR_EXPIRED_PLURAL",
+    entity_counter,
+    count=entity_counter
+) -%}
+
+{%- if identical_date -%}
+    {%- if date_shift < 1 -%}
+        {%- set ns.title_block = ngettext(
+            "WAREHOUSE_ENTITY_RESERVATION_EXPIRED",
+            "WAREHOUSE_ENTITY_RESERVATION_EXPIRED_PLURAL",
+            entity_counter,
+            count=entity_counter
+        ) -%}
+    {%- else -%}
+        {%- set ns.title_block = ngettext(
+            "WAREHOUSE_ENTITY_RESERVATION_WILL_EXPIRED_IN_DAYS",
+            "WAREHOUSE_ENTITY_RESERVATION_WILL_EXPIRED_IN_DAYS_PLURAL",
+            entity_counter,
+            count=entity_counter,
+            days=date_shift,
+            day_word=day_word
+        ) -%}
+    {%- endif -%}
+{%- endif -%}
+
+{{ ns.title_block }}

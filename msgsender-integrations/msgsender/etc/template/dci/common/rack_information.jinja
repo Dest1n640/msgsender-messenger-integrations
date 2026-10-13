@@ -1,0 +1,7 @@
+{%- set unit_location = "" -%}
+{%- if params.message.component.ids|length == 1 -%}
+    {%- set unit_location = ", U: " ~ params.message.component.ids[0] -%}
+{%- endif -%}
+
+{%- set rack_info_text = gettext("RACK_INFO", rack=params.entity.extra.unit.rack_name) -%}
+{%- set ns.geoposition_block = gettext("LOCATION:") ~ " " ~ params.entity.extra.unit.location_name ~ rack_info_text ~ unit_location -%}

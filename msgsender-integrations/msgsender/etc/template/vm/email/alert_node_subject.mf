@@ -1,0 +1,30 @@
+{%- set resolved = params.resolved is defined and params.resolved -%}
+{%- set timesync_undef_status = params.message.timesync_status is defined and (params.message.timesync_status == "undefined" or params.message.timesync_status == "unknown") -%}
+
+{%- if params.alert is defined -%}
+  {%- if resolved -%}
+    {{ gettext("NODE_LOAD_BELOW_CRITICAL_VALUE", type=params.alert.type|upper) }}
+  {%- else -%}
+    {{ gettext("CRITICAL_NODE_LOAD", type=params.alert.type|upper) }}
+  {%- endif -%}
+{%- elif params.status is defined and params.status.value == "unavailable" -%}
+  {%- if resolved -%}
+    {{ gettext("NODE_AVAILABLE") }}
+  {%- else -%}
+    {{ gettext("NODE_UNAVAILABLE") }}
+  {%- endif -%}
+{%- elif params.timesync is defined -%}
+  {%- if params.timesync.value == "unavailable"-%}
+    {%- if resolved -%}
+      {{ gettext("NODE_TIME_SYNCHRONIZED") }}
+    {%- elif timesync_undef_status -%}
+      {%- if params.message.timesync_status == "unknown" -%}
+          {{ gettext("NODE_TIME_UNKNOWN") }}
+      {%- elif params.message.timesync_status == "undefined" -%}
+          {{ gettext("NODE_TIME_UNDEFINED") }}
+      {%- endif -%}
+    {%- else -%}
+      {{ gettext("NODE_TIME_NOT_SYNCHRONIZED") }}
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}

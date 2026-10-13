@@ -1,0 +1,63 @@
+{% extends "dci/slack/base.jinja" %}
+
+{%- set ns = namespace() -%}
+
+{%- set units_count = params.message.component.ids|length -%}
+{%- set date_shift = params.message.component.date_shift -%}
+{%- set identical_date = params.message.component.identical_date -%}
+
+{%- set title = ngettext(
+    "EXPIRING_OR_EXPIRED_RESERVATION_UNIT_PERIOD",
+    "EXPIRING_OR_EXPIRED_RESERVATION_UNIT_PERIOD_PLURAL",
+    units_count,
+    count=units_count) -%}
+
+{# Geoposition block #}
+{% include "dci/common/rack_information.jinja" %}
+
+{%- set body_message = _("TIMING_UNIT_RESERVATIONS_VARIES.") -%}
+
+{%- if identical_date -%}
+    {%- if date_shift > 0 -%}
+        {%- set day_word = ngettext("DAY", "DAYS", date_shift) -%}
+        {%- set title = ngettext(
+           "UNIT_RESERVATION_WILL_EXPIRE_IN",
+            "RESERVATION_OF_UNITS_WILL_EXPIRE_IN",
+            units_count,
+            count=units_count,
+            days=date_shift,
+            day_word=day_word
+        ) -%}
+        {%- set body_message = ngettext(
+            "UNIT_NEARING_RESERVATION_PERIOD_WARNING",
+            "Units are nearing the end of their reservation period.",
+            units_count
+        ) -%}
+    {%- else -%}
+        {%- set title = ngettext(
+            "UNIT_RESERVATION_HAS_EXPIRED",
+            "UNITS_RESERVATION_EXPIRED",
+            units_count,
+            count=units_count
+        ) -%}
+        {%- set body_message = ngettext(
+            "UNIT_HAS_REACHED_THE_END_OF_ITS_RESERVATION_PERIOD",
+            "UNITS_HAS_REACHED_THE_END_OF_ITS_RESERVATION_PERIOD",
+            units_count
+        ) -%}
+    {%- endif -%}
+{%- endif -%}
+
+{%- block header -%}
+{{ title }}
+{%- endblock header -%}
+
+{%- block body -%}
+{{ body_message }}
+{{ ns.geoposition_block }}
+{%- if identical_date and date_shift > 0 %}
+{{ gettext("RESERVED_UNTIL", end_date=params.entity.extra.unit.end_date) }}
+{%- endif %}
+
+{% include "dci/slack/rack_link.jinja" %}
+{%- endblock body -%}

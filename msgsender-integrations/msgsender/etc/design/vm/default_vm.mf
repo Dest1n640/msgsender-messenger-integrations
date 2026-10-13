@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>VMmanager</title>
+  <style type="text/css">
+      * {
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+
+      html, body {
+          margin: 0;
+          padding: 0;
+      }
+
+      html {
+          min-height: 100%;
+      }
+
+      body {
+          min-width: 100%;
+          width: 100% !important;
+      }
+
+      .root {
+          -ms-text-size-adjust: 100%;
+          -webkit-text-size-adjust: 100%;
+          width: 580px;
+          margin: 0 auto;
+          color: #344a5e;
+          font-family: Tahoma, sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.7;
+          text-align: left;
+          background: #ffffff;
+      }
+
+      .root {
+          padding: 0 20px 20px 20px;
+      }
+
+      p {
+          margin: 0;
+      }
+
+      h1, h2, h3 {
+          line-height: 1.5;
+          margin: 0;
+          font-weight: 700;
+      }
+
+      h1 {
+          font-size: 25px;
+      }
+
+      h2 {
+          font-size: 20px;
+      }
+
+      h3 {
+          font-size: 18px;
+      }
+
+      ul {
+          margin: 0;
+          padding: 0 0 0 18px;
+      }
+
+      a {
+          cursor: pointer;
+          transition: color 0.2s ease;
+          text-align: left;
+          text-decoration: none;
+          color: #0279c0;
+          border: none;
+          outline: none;
+          background-color: transparent;
+      }
+
+      a:hover, a:focus {
+          color: #0991e2;
+      }
+
+      hr {
+          padding: 0;
+          margin: 10px 0 10px 0;
+          height: 0;
+          border: none;
+          border-top: 1px solid #d9d9d9;
+      }
+
+      button, .button {
+          display: inline-block;
+          min-height: 30px;
+          max-height: 30px;
+          padding: 0 15px;
+          margin: 0;
+          font-family: Tahoma, sans-serif;
+          font-size: 14px;
+          color: {{ params.button_text_color }};
+          line-height: 30px;
+          background-color: {{ params.button_background_color }};
+          border: none;
+          border-radius: 3px;
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .43);
+          outline: none;
+          cursor: pointer;
+          vertical-align: baseline;
+          text-decoration: none;
+          transition: background-color .3s ease;
+      }
+
+      button:hover, .button:hover {
+          color: #344a5e;
+          background: #fff680;
+      }
+
+      button:active, .button:active {
+          color: #344a5e;
+          background: #ffd200;
+      }
+
+      .button_blue {
+          color: #ffffff;
+          background-color: #0279c0;
+      }
+
+      .button_blue:hover {
+          color: #ffffff;
+          background: #0991e2;
+      }
+
+      .button_blue:active {
+          color: #ffffff;
+          background: #035b90;
+      }
+
+      .logo-container {
+          padding: 20px 0 20px 0;
+      }
+
+      .logo {
+          -ms-interpolation-mode: bicubic;
+          max-width: 100%;
+          outline: 0;
+          text-decoration: none;
+          width: {{ params.email_notify_logo_width }} !important;
+      }
+  </style>
+</head>
+<body>
+<div class="root">
+  <p class="logo-container">
+  <span>
+    <a href="{{ params.email_notify_url }}" target="_blank">
+        <img
+        src="{{ params.email_notify_logo }}"
+        class="logo"
+        alt="vm-logo"
+        />
+    </a>
+  </span>
+  </p>
+
+  <div>
+    {{ params.body }}
+  </div>
+</div>
+</body>
+</html>

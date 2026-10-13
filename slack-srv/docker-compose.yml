@@ -1,0 +1,17 @@
+services:
+  slack-srv:
+    build: .
+    container_name: slack-srv
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - MAX_RETRIES=5
+    networks:
+      - vm_vm_box_net
+    volumes:
+      - ./logs:/var/log
+
+networks:
+  vm_vm_box_net:
+    external: true

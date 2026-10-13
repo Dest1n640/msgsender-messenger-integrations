@@ -1,0 +1,1 @@
+{{ gettext("VM_EMAIL_CONFIRMATION") }}

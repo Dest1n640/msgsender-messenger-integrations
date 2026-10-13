@@ -1,0 +1,1 @@
+{{ gettext("BACKUP_CREATION_ERROR") }}

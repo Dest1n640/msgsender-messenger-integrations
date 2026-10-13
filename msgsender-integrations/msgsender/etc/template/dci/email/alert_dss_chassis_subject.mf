@@ -1,0 +1,4 @@
+{%- set ns = namespace() -%}
+{%- include 'dci/common/define_dss_alert_title.jinja' with context -%}
+
+{{ ns.subject }}

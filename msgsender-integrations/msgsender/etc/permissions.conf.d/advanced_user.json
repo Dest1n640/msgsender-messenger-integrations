@@ -1,0 +1,13 @@
+{
+  "@advanced_user": {
+    "GET": [
+      "@user"
+    ],
+    "POST": [
+      "@user"
+    ],
+    "DELETE": [
+      "@user"
+    ]
+  }
+}

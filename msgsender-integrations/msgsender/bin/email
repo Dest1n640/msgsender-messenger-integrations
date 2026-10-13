@@ -1,0 +1,220 @@
+#!/usr/bin/python3
+
+
+from email.header import Header
+from email.mime.application import MIMEApplication
+from email.mime.image import MIMEImage
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.utils import formatdate, formataddr
+import argparse
+import base64
+import json
+import logging
+import smtplib
+import sys
+import subprocess
+import gettext
+import os
+import stat
+
+from pydci_logging import init_logger
+from jinja2 import Environment, FileSystemLoader
+
+DEFAULT_SMTP_TIMEOUT = 20
+
+def get_smtp_timeout():
+    value = os.getenv("SMTP_TIMEOUT", DEFAULT_SMTP_TIMEOUT)
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        logging.exception("Invalid SMTP_TIMEOUT value, using default")
+        return DEFAULT_SMTP_TIMEOUT
+
+def setup_environment(lang, base_path='/opt/ispsystem/msgsender/etc/template'):
+    locale_dir = os.path.join(base_path+'/locale')
+    try:
+        translation = gettext.translation('messages', localedir=locale_dir, languages=[lang])
+    except FileNotFoundError:
+        translation = gettext.NullTranslations()
+    env = Environment(loader=FileSystemLoader(base_path), extensions=['jinja2.ext.i18n', 'jinja2.ext.do'])
+    env.install_gettext_translations(translation, newstyle=True)
+    return env
+
+class Server:
+    def __init__(self, params):
+        self.__smtp_params = params
+        self.__ssl = self.__smtp_params.get('use_ssl', False)
+        self.__timeout = get_smtp_timeout()
+        if self.__ssl:
+            logging.debug("Using SSL, SMTP Timeout = %s", self.__timeout)
+            self.__server = smtplib.SMTP_SSL(self.__smtp_params['address'], self.__smtp_params['port'], timeout=self.__timeout )
+        else:
+            logging.debug("Using StartTLS or no encryption, SMTP Timeout = %s", self.__timeout)
+            self.__server = smtplib.SMTP(self.__smtp_params['address'], self.__smtp_params['port'], timeout=self.__timeout )
+
+    def __connect(self):
+        self.__server.set_debuglevel(1)
+        logging.debug("Say EHLO")
+        self.__server.ehlo()
+        if not self.__ssl and self.__server.has_extn('STARTTLS'):
+            logging.debug("STARTTLS option found, say EHLO again")
+            self.__server.starttls()
+            self.__server.ehlo()
+        if self.__server.has_extn('AUTH'):
+            if self.__smtp_params['mail_auth_enabled']:
+                logging.debug("AUTH option found, username: " + self.__smtp_params['username'])
+                self.__server.login(self.__smtp_params['username'], self.__smtp_params['password'])
+            else:
+                logging.debug("AUTH: authentication is disabled, skipping it")
+
+    def __connector(func):
+        def wrapped(self, *args, **kwargs):
+            try:
+                self.__connect()
+                func(self, *args, **kwargs)
+            except smtplib.SMTPResponseException as e:
+                error_message = e.smtp_error.decode('utf-8') if isinstance(e.smtp_error, bytes) else e.smtp_error
+                logging.exception(f'Error code: {e.smtp_code}, Error message: {error_message}')
+                raise
+            except Exception as e:
+                logging.exception(e)
+                raise
+            finally:
+                self.__server.quit()
+        return wrapped
+
+    @__connector
+    def test_connection(self):
+        logging.info("Connected successfully")
+
+    @__connector
+    def send_mail(self, from_addr, to_addrs, msg):
+        logging.debug("Sending email, from: " + from_addr + " to: " + to_addrs + " message: " + msg)
+        self.__server.sendmail(from_addr, to_addrs, msg)
+
+
+def apply_template(tmpl, params, env):
+    template =  env.from_string(tmpl)
+    return template.render(params=params, date=formatdate(usegmt=True))
+
+
+def get_sender(params, default):
+    sender = params['template'].get('sender')
+    if sender is not None and sender.get('name') is not None and sender.get('address') is not None:
+        return formataddr((sender['name'], sender['address']))
+    return formataddr((default, default))
+
+
+def create_message(params):
+    message = MIMEMultipart('related')
+    language = params["msg"]["language"]
+    env = setup_environment(lang=language) 
+    message['From'] = get_sender(params, params['smtp']['username'])
+    message['Subject'] = Header(apply_template(params['template']['subject'], params['msg'], env).encode('utf-8', 'surrogateescape'), 'utf-8')
+    message['Date'] = formatdate(usegmt=True)
+
+    message.attach(MIMEText(apply_template(params['template']['body'], params['msg'], env).encode('utf-8'), 'html', 'UTF-8'))
+
+    if params['template'].get('files') is not None:
+        for key, value in params['template']['files'].items():
+            part = MIMEApplication(base64.b64decode(value), Name=key)
+            part['Content-Disposition'] = f'attachment; filename="{key}"'
+            message.attach(part)
+
+    if params['template'].get('dirs') is not None:
+        for archive_name, value in params['template']['dirs'].items():
+
+            cmd_file = f"""#!/bin/bash
+            echo "{value}" | base64 -d > /tmp/{archive_name}"""
+
+            with open(f"/tmp/script.sh", "w") as f:
+                f.write(cmd_file)
+            os.chmod('/tmp/script.sh', stat.S_IEXEC)
+            subprocess.run('/tmp/script.sh').check_returncode()
+            with open(f"/tmp/{archive_name}", "rb") as f:
+                logging.debug("opened file")
+                part = MIMEApplication(f.read(), Name=archive_name)
+            os.remove(f"/tmp/{archive_name}")
+            os.remove(f"/tmp/script.sh")
+
+            part['Content-Disposition'] = f'attachment; filename="{archive_name}"'
+            message.attach(part)
+
+    if params['msg'].get('embedded_images') is not None:
+        for key, value in params['msg']['embedded_images'].items():
+            embedded_image = MIMEImage(base64.b64decode(value))
+            embedded_image.add_header('Content-ID', f'<{key}>')
+            embedded_image.add_header('Content-Disposition', 'inline')
+            message.attach(embedded_image)
+
+    message['To'] = ', '.join([params['user']['email']])
+
+    return message.as_string()
+
+def hide_password(data):
+    """
+    Рекурсивно обходит JSON-структуру и заменяет все значения ключа "password".
+    Возвращает новый объект, исходный не изменяется.
+    
+    :param data: JSON-данные (dict, list, str)
+    :param new_password: Новый пароль
+    :return: Обновлённая копия данных
+    """
+    copy_data = json.loads(json.dumps(data))  # Создаём полную копию
+    
+    def _inner(obj):
+        if isinstance(obj, dict):
+            for key, value in obj.items():
+                if key == "password":
+                    obj[key] = "*"
+                else:
+                    _inner(value)
+        elif isinstance(obj, list):
+            for item in obj:
+                _inner(item)
+
+    _inner(copy_data)  # Запускаем рекурсивный обход
+    return copy_data
+
+def main():
+    init_logger('/var/log/email.log')
+    logging.debug("Start")
+    parser = argparse.ArgumentParser(description='Mail actions')
+    parser.add_argument('--check', action='store_true')
+    args = parser.parse_args()
+    params = json.load(sys.stdin)
+
+    # logging.debug("argv " + str(sys.argv))
+    logging.debug("Stdin params: " + json.dumps(hide_password(params)))
+    # return
+
+    if args.check:
+        logging.info("Testing connection")
+        server = Server(params['smtp'])
+        server.test_connection()
+        return
+
+    params = params['stdin']
+
+    logging.info("Sending email")
+    sender = params['smtp'].get('username') or f"no-reply@{params['smtp'].get('address')}"
+    logging.debug("Sender: " + sender)
+    emails = params['user']['email']
+    # if 'cc' in params['msg']:
+    #     emails += params['msg']['cc']
+    # if 'bcc' in params['msg']:
+    #     emails += params['msg']['bcc']
+    logging.debug("Receivers: " + emails)
+    result = {}
+    try:
+        server = Server(params['smtp'])
+        server.send_mail(from_addr=sender, to_addrs=emails, msg=create_message(params))
+    except Exception as e:
+        result['error'] = str(e)
+
+    json.dump(result, sys.stdout)
+
+
+if __name__ == '__main__':
+    main()

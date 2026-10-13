@@ -1,0 +1,69 @@
+#!/usr/bin/python3
+
+import json
+import logging
+import gettext
+import os
+import requests
+import sys
+from pathlib import Path
+
+from pydci_logging import init_logger
+from jinja2 import Environment, FileSystemLoader
+
+SUCCESS_RESPONSE_CODE = 200
+MAX_SRV_HOST = f'http://{os.getenv("MAX_SRV_HOST", "max-srv:8080")}'
+TEMPLATES_PATH = Path("/opt/ispsystem/msgsender/etc/template")
+LOCALES_PATH = TEMPLATES_PATH / "locale"
+
+def setup_environment(lang, base_path='/opt/ispsystem/msgsender/etc/template'):
+    locale_dir = os.path.join(base_path, 'locale')
+    try:
+        translation = gettext.translation('messages', localedir=locale_dir, languages=[lang])
+    except FileNotFoundError:
+        translation = gettext.NullTranslations()
+    env = Environment(loader=FileSystemLoader(base_path), extensions=['jinja2.ext.i18n', 'jinja2.ext.do'])
+    env.install_gettext_translations(translation, newstyle=True)
+    return env
+
+class Message:
+    def __init__(self, template, params):
+        self.template = template
+        self.params = params
+
+    def render(self):
+        lang = self.params.get("language", "en")
+        environment = setup_environment(lang)
+        return environment.from_string(self.template['body']).render(params=self.params)
+
+
+def parse_params(params):
+    chat_id = params['chat_id']
+    message = Message(params['template'], params['msg']).render()
+    fmt = params.get('format') or params.get('parse_mode') or 'html'
+    return chat_id, message, fmt
+
+
+def main():
+    stdin_params = json.load(sys.stdin)
+
+    chat_id, message, fmt = parse_params(stdin_params['stdin'])
+    logging.debug(f'Chat id: {chat_id}')
+    logging.debug(f'Message:\n{message}')
+
+    payload = {'msg': message, 'chat': chat_id, 'format': fmt}
+
+    response = requests.post(url=MAX_SRV_HOST+'/sendMsg', json=payload)
+    if response.status_code not in (200, 202):
+        logging.error(f"HTTP error {response.status_code}: {response.reason}")
+        exit(1)
+
+if __name__ == '__main__':
+    log_file = '/var/log/max.log' if os.access('/var/log', os.W_OK) else 'max.log'
+    init_logger(log_file)
+    try:
+        main()
+    except Exception as error:
+        logging.exception("Unexpected error occurred")
+        print(error)
+        exit(1)

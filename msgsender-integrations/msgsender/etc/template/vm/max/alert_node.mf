@@ -1,0 +1,90 @@
+{%- set resolved = params.resolved is defined and params.resolved -%}
+
+{%- set type = "alert" -%}
+{%- set subtype = "cpu" -%}
+{%- if params.alert is defined -%}
+  {%- set subtype = params.alert.type -%}
+{%- elif params.status is defined -%}
+  {%- set type = "status" -%}
+  {%- set subtype = params.status.value -%}
+{%- elif params.timesync is defined -%}
+  {%- set type = "timesync" -%}
+  {%- set subtype = params.timesync.value -%}
+  {%- set substatus = "" -%}
+  {%- if params.message.timesync_status is defined -%}
+    {%- set substatus = params.message.timesync_status -%}
+  {%- endif -%}
+{%- endif -%}
+
+{# -- Основная часть: заголовки и пояснение -- #}
+{%- if type == "alert" -%}
+  {%- if resolved -%}
+    {%- set subject = gettext("NODE_LOAD_BELOW_CRITICAL_VALUE", type=subtype|upper) -%}
+    {%- set subject_exp =  gettext("alert_exp_resolved",
+      name=params.entity.node.name,
+      id=params.entity.node.id,
+      subtype=subtype|upper,
+      value=params.alert.value
+    )-%}
+  {%- else -%}
+    {%- set subject = gettext("CRITICAL_NODE_LOAD", type=subtype|upper) -%}
+    {%- set subject_exp =  gettext("alert_exp_active",
+      name=params.entity.node.name,
+      id=params.entity.node.id,
+      subtype=subtype|upper,
+      value=params.alert.value
+    )-%}
+  {%- endif -%}
+{%- elif type == "status" and subtype == "unavailable" -%}
+  {%- if resolved -%}
+    {%- set subject = gettext("status_subject_resolved", type=subtype|upper) -%}
+    {%- set subject_exp =  gettext("status_exp_resolved",
+      name=params.entity.node.name,
+      id=params.entity.node.id
+    )-%}
+  {%- else -%}
+    {%- set subject = gettext("status_subject_active", type=subtype|upper) -%}
+    {%- set subject_exp =  gettext("status_exp_active",
+      name=params.entity.node.name,
+      id=params.entity.node.id
+    )-%}
+  {%- endif -%}
+{%- elif type == "timesync" -%}
+  {%- if subtype == "unavailable" -%}
+    {%- if resolved -%}
+      {%- set subject = gettext("NODE_TIME_SYNCHRONIZED")  -%}
+      {%- set subject_exp = gettext("NODE_TIME_SYNCHRONIZED_DETAILED", name=params.entity.node.name, id=params.entity.node.id) -%}
+    {%- else -%}
+      {%- if substatus == "undefined" -%}
+        {%- set subject = gettext("NODE_TIME_UNDEFINED") -%}
+        {%- set subject_exp = gettext("NODE_TIME_UNDEFINED_DETAILED", name=params.entity.node.name, id=params.entity.node.id) -%}
+      {%- elif substatus == "unknown" -%}
+        {%- set subject = gettext("NODE_TIME_UNKNOWN") -%}
+        {%- set subject_exp = gettext("NODE_TIME_UNKNOWN_DETAILED", name=params.entity.node.name, id=params.entity.node.id) -%}
+      {%- elif substatus == "empty" -%}
+        {%- set subject = gettext("NODE_TIME_EMPTY") -%}
+        {%- set subject_exp = gettext("NODE_TIME_EMPTY_DETAILED", name=params.entity.node.name, id=params.entity.node.id) -%}
+      {%- elif substatus == "package_error" -%}
+        {%- set subject = gettext("NODE_TIME_PACKAGE_ERROR") -%}
+        {%- set subject_exp = gettext("NODE_TIME_PACKAGE_ERROR_DETAILED", name=params.entity.node.name, id=params.entity.node.id) -%}
+      {%- elif substatus == "time_drift_error" -%}
+        {%- set subject = gettext("NODE_TIME_TIMEDRIFT_ERROR") -%}
+        {%- set subject_exp = gettext("NODE_TIME_TIMEDRIFT_ERROR_DETAILED", name=params.entity.node.name, id=params.entity.node.id) -%}
+      {%- elif substatus == "not_synced" -%}
+        {%- set subject = gettext("NODE_TIME_NOT_SYNCHRONIZED") -%}
+        {%- set subject_exp = gettext("NODE_TIME_NOT_SYNCHRONIZED_DETAILED", name=params.entity.node.name, id=params.entity.node.id) -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+
+{{ subject_exp }}
+  <b>{{ gettext("IP_ADDRESS_FIELD") }}</b> {{ params.entity.node.ip }}
+  {%- if type == "alert" -%}
+    {%- if params.message.last_val is defined %}
+  <b>{{ gettext("LAST_VALUE_FIELD") }}</b> {{ params.message.last_val }}%
+    {%- endif -%}
+    {%- if params.message.time is defined %}
+  <b>{{ gettext("DURATION_FIELD") }}</b> {{ params.message.time }} {{ gettext("SECONDS") }}
+    {%- endif -%}
+  {%- endif -%}

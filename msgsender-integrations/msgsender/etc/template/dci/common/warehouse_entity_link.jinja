@@ -1,0 +1,16 @@
+{%- set entity_counter = params.message.component.barcodes|length-%}
+{%- set go_to_devices_link = 'dci/warehouse/devices/' ~ params.message.component.entity ~ '?filter=barcode:(' ~ params.message.component.url_condition_part ~ ');' -%}
+
+{%- if entity_counter == 1 -%}
+    {%- set entity_link_suffix = "" -%}
+
+    {%- if params.message.component.entity in ("cpu", "storage", "ram", "pci", "other") -%}
+        {%- set entity_link_suffix = "warehouse" -%}
+    {%- elif params.message.component.entity in ("switch", "pdu", "ups") -%}
+        {%- set entity_link_suffix = "devices" -%}
+    {%- endif -%}
+
+    {%- set go_to_devices_link = 'dci/' ~ entity_link_suffix ~ '/' ~ params.message.component.entity ~ '/' ~ params.message.component.entity_id ~ '/settings' -%}
+{%- endif -%}
+
+<a href="{{ params.message.product_info.url }}{{ go_to_devices_link }}">{{ ngettext("GO_TO_DEVICE", "GO_TO_DEVICE_PLURAL", entity_counter) }}</a>

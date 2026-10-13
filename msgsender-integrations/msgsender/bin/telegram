@@ -1,0 +1,65 @@
+#!/usr/bin/python3
+
+import json
+import logging
+import gettext
+import os
+import requests
+import sys
+from pathlib import Path
+
+from pydci_logging import init_logger
+from jinja2 import Environment, FileSystemLoader
+
+SUCCESS_RESPONSE_CODE = 200
+TELEGRAM_SRV_HOST = f'http://{os.getenv("TELEGRAM_SRV_HOST", "telegram-srv:8080")}'
+TEMPLATES_PATH = Path("/opt/ispsystem/msgsender/etc/template")
+LOCALES_PATH = TEMPLATES_PATH / "locale"
+
+def setup_environment(lang, base_path='/opt/ispsystem/msgsender/etc/template'):
+    locale_dir = os.path.join(base_path, 'locale')
+    try:
+        translation = gettext.translation('messages', localedir=locale_dir, languages=[lang])
+    except FileNotFoundError:
+        translation = gettext.NullTranslations()
+    env = Environment(loader=FileSystemLoader(base_path), extensions=['jinja2.ext.i18n', 'jinja2.ext.do'])
+    env.install_gettext_translations(translation, newstyle=True)
+    return env
+
+class Message:
+    def __init__(self, template, params):
+        self.template = template
+        self.params = params
+
+    def render(self):
+        lang = self.params.get("language", "en")
+        environment = setup_environment(lang)
+        return environment.from_string(self.template['body']).render(params=self.params)
+
+
+def parse_params(params):
+    chat_id = params['chat_id']
+    message = Message(params['template'], params['msg']).render()
+    return chat_id, message
+
+
+def main():
+    stdin_params = json.load(sys.stdin)
+
+    chat_id, message = parse_params(stdin_params['stdin'])
+    logging.debug(f'Chat id: {chat_id}')
+    logging.debug(f'Message:\n{message}')
+
+    response = requests.post(url=TELEGRAM_SRV_HOST+'/sendMsg', json={'msg': message, 'chat': chat_id})
+    if response.status_code != SUCCESS_RESPONSE_CODE:
+        logging.error(response.reason)
+        exit(1)
+
+if __name__ == '__main__':
+    init_logger('/var/log/telegram.log')
+    try:
+        main()
+    except Exception as error:
+        logging.exception("Unexpected error occurred")
+        print(error)
+        exit(1)

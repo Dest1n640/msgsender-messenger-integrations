@@ -1,0 +1,76 @@
+#!/usr/bin/python3
+"""Скрипт отправки уведомлений через Slack/Mattermost Incoming Webhooks."""
+
+import gettext
+import json
+import logging
+import os
+import sys
+from pathlib import Path
+
+import requests
+from jinja2 import Environment, FileSystemLoader
+
+from pydci_logging import init_logger
+
+# print("Запуск...")
+
+SUCCESS_RESPONSE_CODE = 200
+TEMPLATES_PATH = Path("/opt/ispsystem/msgsender/etc/template")
+LOCALES_PATH = TEMPLATES_PATH / "locale"
+
+
+def setup_environment(lang, base_path=str(TEMPLATES_PATH)):
+    locale_dir = os.path.join(base_path, "locale")
+    try:
+        translation = gettext.translation("messages", localedir=locale_dir, languages=[lang])
+    except FileNotFoundError:
+        translation = gettext.NullTranslations()
+    env = Environment(
+        loader=FileSystemLoader(base_path),
+        extensions=["jinja2.ext.i18n", "jinja2.ext.do"],
+    )
+    env.install_gettext_translations(translation, newstyle=True)
+    return env
+
+
+class Message:
+    def __init__(self, template, params):
+        self.template = template
+        self.params = params
+
+    def render(self):
+        lang = self.params.get("language", "en")
+        environment = setup_environment(lang)
+        return environment.from_string(self.template["body"]).render(params=self.params)
+
+
+def parse_params(params):
+    webhook_url = params["webhook_url"]
+    message = Message(params["template"], params["msg"]).render()
+    return webhook_url, message
+
+
+def main():
+    stdin_params = json.load(sys.stdin)
+
+    webhook_url, message = parse_params(stdin_params["stdin"])
+    logging.debug(f"Webhook URL: {webhook_url}")
+    logging.debug(f"Message:\n{message}")
+
+    SLACK_SRV_HOST = f'http://{os.getenv("SLACK_SRV_HOST", "slack-srv:8080")}'
+    payload = {"webhook": webhook_url, "text": message}
+    response = requests.post(url=SLACK_SRV_HOST+'/sendMsg', json=payload)
+    if response.status_code not in (SUCCESS_RESPONSE_CODE, 202):
+        logging.error(f"slack-srv error: {response.status_code} {response.text}")
+        exit(1)
+
+
+if __name__ == "__main__":
+    init_logger("/var/log/slack.log")
+    try:
+        main()
+    except Exception as error:
+        logging.exception("Unexpected error occurred")
+        print(error)
+        exit(1)

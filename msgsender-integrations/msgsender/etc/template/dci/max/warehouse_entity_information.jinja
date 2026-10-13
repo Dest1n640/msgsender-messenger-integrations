@@ -1,0 +1,18 @@
+{%- set entity_size = params.message.component.size -%}
+{%- set entity_unit = params.message.component.unit -%}
+
+{%- set status_in_rack_list = ["in_rack", "in_chassis"] -%}
+{%- set warehouse_state = params.message.component.warehouse_state -%}
+
+{%- if entity_size is not none and entity_size == 1 -%}
+    {%- set unit_size_str = gettext("UNIT_SINGLE", u=entity_unit) -%}
+{%- elif entity_size is not none and entity_size > 1 -%}
+    {%- set u_end = entity_unit + entity_size - 1 -%}
+    {%- set unit_size_str = gettext("UNIT_RANGE", u_start=entity_unit, u_end=u_end, u_size=entity_size) -%}
+{%- endif -%}
+
+{%- if warehouse_state in status_in_rack_list -%}
+{{ gettext("LOCATION:") }} {{ params.message.component.location_name }}{{ gettext("RACK_INFO", rack=params.message.component.rack_name) }}{{ unit_size_str }}
+{%- else -%}
+{{ gettext("LOCATION:") }} {{ gettext("IN_WAREHOUSE", name=params.message.component.warehouse_name)}}
+{%- endif -%}

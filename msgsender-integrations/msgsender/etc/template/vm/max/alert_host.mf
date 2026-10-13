@@ -1,0 +1,46 @@
+{%- set resolved = params.resolved is defined and params.resolved -%}
+{%- set type = "alert" -%}
+{%- set subtype = "cpu" -%}
+{%- if params.alert is defined -%}
+  {%- set subtype = params.alert.type -%}
+{%- elif params.status is defined -%}
+  {%- set type = "status" -%}
+  {%- set subtype = params.status.value -%}
+{%- endif -%}
+
+{%- set subject = "" -%}
+{%- set subject_exp = "" -%}
+
+{%- if type == "alert" -%}
+  {%- if resolved -%}
+    {%- set subject = gettext("VM_LOAD_BELOW_CRITICAL_VALUE",type=subtype|upper) -%}
+    {%- set subject_exp = gettext("VM_LOAD_BELOW_DETAILED",
+    type=subtype|upper, name=params.entity.host.name, id=params.entity.host.id, value=params.alert.value) -%}
+  {%- else -%}
+    {%- set subject = gettext("CRITICAL_VM_LOAD",type=subtype|upper) -%}
+    {%- set subject_exp = gettext("VM_LOAD_EXCEEDED",
+    type=subtype|upper, name=params.entity.host.name, id=params.entity.host.id, value=params.alert.value) -%}
+  {%- endif -%}
+{%- elif type == "status" and subtype == "crashed" -%}
+  {%- if resolved -%}
+    {%- set subject = gettext("VM_ACTIVE") -%}
+    {%- set subject_exp = gettext("VM_ACTIVE_NOW",
+    name=params.entity.host.name, id=params.entity.host.id) -%}
+  {%- else -%}
+    {%- set subject = gettext("VM_CRASHED") -%}
+    {%- set subject_exp = gettext("VM_CRASHED_DETAILED",
+    name=params.entity.host.name, id=params.entity.host.id) -%}
+  {%- endif -%}
+{%- endif -%}
+
+{{ subject_exp }}
+  <b>{{ gettext("IP_ADDRESS_FIELD") }}</b> {{ params.entity.host.ip }}
+{%- if type == "alert" -%}
+  {%- if params.message.last_val is defined %}
+  <b>{{ gettext("LAST_VALUE_FIELD") }}</b> {{ params.message.last_val }}%
+  {%- endif -%}
+  {%- if params.message.time is defined %}
+  <b>{{ gettext("DURATION_FIELD") }}</b> {{ params.message.time }} {{ gettext("SECONDS") }}
+  {%- endif -%}
+{%- endif -%}
+

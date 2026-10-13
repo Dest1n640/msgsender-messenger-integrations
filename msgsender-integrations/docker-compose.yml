@@ -1,0 +1,32 @@
+services:
+  msgsender:
+    build: .
+    container_name: dev-msgsender
+    restart: always
+    networks:
+      - vm_vm_box_net
+    volumes:
+      - ./msgsender:/opt/ispsystem/msgsender:rw
+    environment:
+      - PRODUCT=vm
+      - DATABASE_TYPE=pgsql
+      - LANG=en_US.UTF-8
+      - DATABASE_PASSWORD=kTisCEGAE2vkghqSQ5
+      - DATABASE_DRIVER=pgsql
+      - DATABASE_HOST=pgsql
+      - DATABASE_NAME=isp
+      - LOG_SETTINGS_FILE_LEVEL=info
+      - DATABASE_USER=root
+      - TELEGRAM_SRV_HOST=telegram-srv:8080
+      - MAX_SRV_HOST=max-srv:8080
+      - NOTIFIER_ADDRESS=notifier_v4:888
+      - PROXY_SERVICE=localhost:1500
+      - KV_STORAGE_ADDR=consul
+      - CONSUL_PORT_8500_TCP_ADDR=consul
+      - SLACK_SRV_HOST=slack-srv:8080
+    entrypoint: ["/entrypoint.sh"]
+    command: ["bash", "-c", "/supervisor.sh"]
+
+networks:
+  vm_vm_box_net:
+    external: true

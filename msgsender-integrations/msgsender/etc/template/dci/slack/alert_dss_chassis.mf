@@ -1,0 +1,27 @@
+{% extends "dci/slack/base.jinja" %}
+
+{%- set ns = namespace() -%}
+{%- include 'dci/common/define_dss_alert_title.jinja' with context -%}
+
+{%- block header -%}
+❗️ {{ ns.subject }}
+{%- endblock header -%}
+
+{%- block body -%}
+
+{%- set rack_info_text = gettext("RACK_INFO", rack=params.entity.extra.rack_name) -%}
+
+{%- set entity_size = params.entity.extra.rack_size -%}
+{%- set entity_unit = params.entity.extra.rack_unit -%}
+{%- if entity_size == 1 -%}
+  {%- set rack_unit = gettext("UNIT_SINGLE", u=entity_unit) -%}
+{%- elif entity_size > 1 -%}
+  {%- set finish_unit = entity_unit + entity_size - 1 -%}
+  {%- set rack_unit = gettext("UNIT_RANGE", u_start=entity_unit, u_end=finish_unit, u_size=entity_size) -%}
+{%- endif -%}
+
+{{ gettext("DSS:") }} <{{ params.message.product_info.url }}dci/dss/{{ params.entity.extra.entity_id }}|{{ params.entity.extra.entity_name }}>
+{{ gettext("LOCATION:") }} {{ params.entity.extra.location_name }}{{ rack_info_text }}{{ rack_unit }}
+
+<{{ params.message.product_info.url }}dci/notice-center/notices/list|{{ gettext("GO_TO") }}>
+{%- endblock body -%}

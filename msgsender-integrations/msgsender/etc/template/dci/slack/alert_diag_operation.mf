@@ -1,0 +1,44 @@
+{% extends "dci/slack/base.jinja" %}
+
+
+{%- set diag_error_ns = namespace(cancel_found=false, finish_found=false, other_found=false) -%}
+{%- set diag_count_ns = namespace(local_speed=0, smart=0, ipmi_check=0) -%}
+{%- set ns = namespace() -%}
+{%- include 'dci/common/define_error_type.jinja' with context -%}
+
+{# --- Формируем список ошибок --- #}
+
+{%- set error_list_text = "" -%}
+{%- if diag_count_ns.ipmi_check > 0 -%}
+  {%- set error_list_text = error_list_text + " — " + gettext("ERROR_LIST_IPMI")+ ";" -%}
+{%- endif -%}
+{%- if diag_count_ns.local_speed > 0 -%}
+  {%- set error_list_text = error_list_text + " — " + gettext("ERROR_LIST_LOCAL_SPEED")+ ";" -%}
+{%- endif -%}
+{%- if diag_count_ns.smart > 0 -%}
+  {%- set error_list_text = error_list_text + " — " + (gettext("ERROR_LIST_SMART", count=diag_count_ns.smart, smart_error_word=ns.smart_error_word))+ ";" -%}
+{%- endif -%}
+
+{# --- Визуальный вывод --- #}
+
+{%- block header -%}
+{{ ns.subject }}
+{%- endblock header -%}
+
+{%- block body -%}
+{% include "dci/slack/server_information.jinja" %}
+
+{% set error_list_word = gettext("ERRORS_FIELD") %}
+{% if ns.diag_error_count == 1 %}
+    {% set error_list_word = gettext("ERROR_FIELD") %}
+{% endif %}
+
+{%- if ns.diag_error_count > 0 -%}
+*{{ error_list_word }}*
+{{ error_list_text }}
+
+{{ gettext("RESOLVE_RECOMMENDATIONS") }}
+{%- endif %}
+
+{% include "dci/slack/server_link.jinja" %}
+{%- endblock body -%}

@@ -1,0 +1,18 @@
+{%- set resolved = params.resolved is defined and params.resolved -%}
+
+{%- if params.alert.type == "temperature" -%}
+  {%- set sensor_status_back = gettext("TEMPERATURE_BACK") -%}
+  {%- set sensor_status = gettext("TEMPERATURE") -%}
+{%- elif params.alert.type == "voltage" -%}
+  {%- set sensor_status_back = gettext("VOLTAGE_BACK") -%}
+  {%- set sensor_status = gettext("VOLTAGE") -%}
+{%- elif params.alert.type == "fan" -%}
+  {%- set sensor_status_back = gettext("FAN_BACK") -%}
+  {%- set sensor_status = gettext("FAN") -%}
+{%- endif -%}
+
+{%- if resolved -%}
+  {{ gettext("SENSOR_BACK_TO_NORMAL", server=params.entity.server.name, sensor=params.message.sensor_name, status=sensor_status_back) }}
+{%- else -%}
+  {{ gettext("SENSOR_EXCEEDS_LIMIT", server=params.entity.server.name, sensor=params.message.sensor_name, type=sensor_status) }}
+{%- endif -%}

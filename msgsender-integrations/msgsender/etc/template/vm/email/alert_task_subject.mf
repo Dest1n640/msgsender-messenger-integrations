@@ -1,0 +1,7 @@
+{%- set subject = "" -%}
+{%- if params.task.status == "failed" -%}
+  {%- set subject = gettext("TASK_SUBJECT_FAILED", task=gettext("task_name_" ~ params.task.name)) -%}
+{%- elif params.task.status == "running" -%}
+  {%- set subject = gettext("TASK_SUBJECT_RUNNING", task=gettext("task_name_" ~ params.task.name)) -%}
+{%- endif -%}
+{{ subject }}

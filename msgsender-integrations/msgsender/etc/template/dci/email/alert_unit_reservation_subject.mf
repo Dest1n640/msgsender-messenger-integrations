@@ -1,0 +1,34 @@
+{%- set ns = namespace() -%}
+
+{%- set units_count = params.message.component.ids|length -%}
+{%- set date_shift = params.message.component.date_shift -%}
+{%- set identical_date = params.message.component.identical_date -%}
+
+{%- set title = ngettext(
+    "EXPIRING_OR_EXPIRED_RESERVATION_UNIT_PERIOD",
+    "EXPIRING_OR_EXPIRED_RESERVATION_UNIT_PERIOD_PLURAL",
+    units_count,
+    count=units_count) -%}
+
+{%- if identical_date -%}
+    {%- if date_shift > 0 -%}
+        {%- set day_word = ngettext("DAY", "DAYS", date_shift) -%}
+        {%- set title = ngettext(
+            "UNIT_RESERVATION_WILL_EXPIRE_IN",
+            "RESERVATION_OF_UNITS_WILL_EXPIRE_IN",
+            units_count,
+            count=units_count,
+            days=date_shift,
+            day_word=day_word
+        ) -%}
+    {%- else -%}
+        {%- set title = ngettext(
+            "UNIT_RESERVATION_HAS_EXPIRED",
+            "UNITS_RESERVATION_EXPIRED",
+            units_count,
+            count=units_count
+        ) -%}
+    {%- endif -%}
+{%- endif -%}
+
+{{ title }}

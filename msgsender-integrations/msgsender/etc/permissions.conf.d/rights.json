@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "rbac": {
+    "access": {
+      "@rbac_platform_settings_system": {
+        "$include": [
+          "+@delivery_method_get",
+          "+@channel_get"
+        ],
+        "GET": [
+          "categories",
+          "user/{user_id}/method/{delivery_method}/notice_receiver",
+          "user/{user_id}/subscription",
+          "design",
+          "design/{design_name}"
+        ],
+        "POST": [
+          "user/{user_id}/category/{category}/method/{delivery_method}",
+          "user/{user_id}/method/{delivery_method}/notice_receiver",
+          "channel",
+          "channel/{channel_id}",
+          "delivery_method/{name}",
+          "message/test",
+          "template",
+          "template/{name}/category",
+          "template/{name}/variant"
+        ],
+        "DELETE": [
+          "user/{user_id}/category/{category}/method/{delivery_method}",
+          "user/{user_id}/method/{delivery_method}/notice_receiver",
+          "channel/{channel_id}",
+          "delivery_method/{name}"
+        ]
+      },
+      "@rbac_notifications_system": {
+        "$include": [
+          "+@delivery_method_get",
+          "+@channel_get"
+        ]
+      },
+      "@rbac_create_vm": {
+        "$include": [
+          "+@delivery_method_get"
+        ]
+      },
+      "@delivery_method_get": {
+        "GET": [
+          "delivery_method",
+          "delivery_method/{name}"
+        ]
+      },
+      "@channel_get": {
+        "GET": [
+          "channel",
+          "channel/{channel_id}"
+        ]
+      }
+    }
+  },
+  "access": {
+    "@common_read": {
+      "GET": [
+        "categories",
+        "user/{user_id}/method/{delivery_method}/notice_receiver",
+        "user/{user_id}/subscription",
+        "channel",
+        "channel/{channel_id}",
+        "delivery_method",
+        "delivery_method/{name}",
+        "design",
+        "design/{design_name}"
+      ]
+    },
+    "@common_write": {
+      "POST": [
+        "user/{user_id}/category/{category}/method/{delivery_method}",
+        "user/{user_id}/method/{delivery_method}/notice_receiver",
+        "channel",
+        "channel/{channel_id}",
+        "delivery_method/{name}",
+        "message/test",
+        "template",
+        "template/{name}/category",
+        "template/{name}/variant"
+      ],
+      "DELETE": [
+        "user/{user_id}/category/{category}/method/{delivery_method}",
+        "user/{user_id}/method/{delivery_method}/notice_receiver",
+        "channel/{channel_id}",
+        "delivery_method/{name}"
+      ]
+    },
+    "@user": {
+      "GET": [
+        "categories",
+        "user/{user_id}/method/{delivery_method}/notice_receiver",
+        "user/{user_id}/subscription"
+      ],
+      "POST": [
+        "user/{user_id}/category/{category}/method/{delivery_method}",
+        "user/{user_id}/method/{delivery_method}/notice_receiver"
+      ],
+      "DELETE": [
+        "user/{user_id}/category/{category}/method/{delivery_method}",
+        "user/{user_id}/method/{delivery_method}/notice_receiver"
+      ]
+    },
+    "@admin": {
+      "GET": [
+        "@common_read"
+      ],
+      "POST": [
+        "@common_write"
+      ],
+      "DELETE": [
+        "@common_write"
+      ]
+    }
+  }
+}
